@@ -360,7 +360,7 @@ help_body = f'''
 <header class="page-head">
 <p class="eyebrow">How to use</p>
 <h1>Getting started with DiaPetic</h1>
-<p>A short guide from setting up your pet to sharing reports with your veterinarian. New to pet diabetes? Take it one section at a time. The pictures show a sample pet, Biscuit.</p>
+<p>A short guide from setting up your pet to sharing reports with your veterinarian. New to pet diabetes? Take it one section at a time. The pictures show a sample pet, Biscuit. You can open this guide from the app anytime: your pet’s tab › App settings › Help &amp; how-to.</p>
 </header>
 <nav class="toc" aria-label="Contents"><strong>Contents</strong><ol>{toc}</ol></nav>
 <article class="article">
