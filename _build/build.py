@@ -19,8 +19,8 @@ ICONS = {
 
 CSSV = hashlib.md5(open(os.path.join(OUT, "style.css"), "rb").read()).hexdigest()[:8]
 
-def page(fname, title, desc, body):
-    nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == fname else ""}>{t}</a>' for h, t in NAV)
+def page(fname, title, desc, body, nav_key=None):
+    nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == (nav_key or fname) else ""}>{t}</a>' for h, t in NAV)
     foot = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
     html = f'''<!doctype html>
 <html lang="en">
@@ -264,113 +264,56 @@ MOCKS = {
 ''', "Back up to iCloud Drive or Files, and restore on a new iPhone.", "Backup and restore screen with Back up now and Restore from backup"),
 }
 
-# ---------------- How to use ----------------
-help_sections = [
-("setup", "Set up your pet", '''
-<p>The first time you open DiaPetic, you'll add your pet. Have your veterinarian's instructions and the insulin label nearby.</p>
-<ul>
-<li><strong>About your pet:</strong> name, dog or cat, breed, color, sex, weight and (optionally) the microchip number.</li>
-<li><strong>Insulin:</strong> the insulin your vet prescribed, its strength (U-40 or U-100), and the units and time for the morning and evening shots. DiaPetic records what your vet prescribed. It never suggests a dose.</li>
-<li><strong>Meals:</strong> the food and portions for each meal, and the daily calorie target if your vet gave you one.</li>
-<li><strong>Your vet and an emergency clinic:</strong> names, phone numbers and addresses, so they're one tap away when you need them.</li>
-</ul>
-<p>You can change any of this later in the tab named after your pet (the last tab).</p>
-'''),
-("day", "Your daily routine", '''
-<p>The <span class="path">Tracker</span> tab is where your day happens. Morning and evening each get a card with the meal, the shot and any medications.</p>
-<h3>Logging a shot</h3>
-<ol>
-<li>Record how much of the meal was eaten: All, Most, Some or None.</li>
-<li>Tap <strong>Give</strong> on the shot. DiaPetic asks when it was given: just now, at the usual time, or a different time.</li>
-<li>The card shows the units and the time given, so anyone checking later knows it's done.</li>
-</ol>
-<div class="tip">Not sure whether a shot was given? Don't give another. Check the Tracker first, and if it isn't logged and no one remembers, call your veterinarian.</div>
-<h3>The daily check-in</h3>
-<p>Water, urine, energy, sleep, stool and vomiting all start at Normal and are saved that way. Just change anything that was different today.</p>
-<h3>Moving between days</h3>
-<p>Swipe left or right, use the arrows beside the date, or tap the <strong>calendar</strong> button to jump straight to any day. Tap the date to come back to today.</p>
-'''),
-("journal", "The journal", '''
-<p>Under the check-in, the <span class="path">Journal</span> is for anything else worth remembering: how the day went, something new, a question for your vet.</p>
-<ul>
-<li>Tap <strong>Write about today</strong>, then tap the microphone and just talk. Your words appear as text. You can also type, or fix words afterward.</li>
-<li>A day can have several entries, each with its own time.</li>
-<li>Journal entries appear in History and in your reports, so your vet sees them too.</li>
-</ul>
-'''),
-("reminders", "Reminders", '''
-<p>Turn reminders on in <span class="path">your pet's tab › Reminders</span>. You can choose:</p>
-<ul>
-<li>Insulin time, and a nudge if a shot hasn't been logged</li>
-<li>Meals, medications and glucose checks</li>
-<li>Running low on insulin, syringes or food, and time to open a new insulin bottle</li>
-<li>Vet appointments and checkups</li>
-<li>Your own reminders, such as heartworm or flea and tick (Pro)</li>
-</ul>
-<p>When a reminder appears, press and hold it to snooze for 15 minutes or an hour. Tapping it opens the right pet and screen.</p>
-<div class="tip">If reminders don't show up, check that notifications are allowed for DiaPetic in iPhone Settings, and that a Focus mode isn't silencing them.</div>
-'''),
-("supplies", "Insulin, syringes and food", '''
-<p>The <span class="path">Supplies</span> section at the bottom of today's Tracker shows what's on hand and when it runs out.</p>
-<ul>
-<li><strong>Insulin:</strong> the bottle in use, how many days it's been open, and spare bottles in the fridge. When you start a new bottle, tap <strong>Open new bottle</strong>. Add bottles you pick up with <strong>Got a new bottle</strong>.</li>
-<li><strong>Syringes:</strong> the box in use and unopened boxes. When you start a new box early, choose whether to keep the leftovers so the count stays right.</li>
-<li><strong>Food:</strong> how much is left based on the meals you log.</li>
-</ul>
-<p>Prescription details from the label (refills left, Rx number, pharmacy) live in <span class="path">your pet's tab › Insulin bottles</span>.</p>
-'''),
-("vet", "Your veterinarian", '''
-<p>The <span class="path">Vet</span> tab keeps appointments, what to bring, and questions you want to ask.</p>
-<ul>
-<li>Add an appointment with its start and end time. DiaPetic can add it to your iPhone calendar and keep it updated if you change or cancel it.</li>
-<li>Jot down questions as they come up, then email your vet with a summary attached.</li>
-<li>Call or get directions with one tap.</li>
-</ul>
-'''),
-("reports", "Reports and sharing", '''
-<p>The <span class="path">Reports</span> tab shows how things are going over 7 days to 6 months: shots given and missed, appetite, symptoms, weight, nutrition, glucose and your journal.</p>
-<ul>
-<li><strong>PDF report for your vet (Pro):</strong> in Reports, tap <em>Share a PDF report with your veterinarian</em>, pick a period, and send it by email, Messages or AirDrop, or print it.</li>
-<li><strong>Info sheet:</strong> in your pet's tab, tap <strong>Share</strong> beside the name for a one-page sheet with your pet's details, insulin routine, meals, vet and emergency contacts. It's handy for pet sitters, boarding and emergency visits. Free.</li>
-</ul>
-'''),
-("emergency", "When something seems wrong", '''
-<p>The red <strong>emergency button</strong> at the top right of every screen opens help right away:</p>
-<ul>
-<li>One-tap calls to your vet, your emergency clinic and pet poison hotlines</li>
-<li>Nearby emergency vets</li>
-<li>Step-by-step guides for low blood sugar, too much insulin, an unsure or missed shot, not eating, vomiting and possible poisoning</li>
-<li>A summary to read to the clinic: insulin, last shot, last meal and today's notes</li>
-</ul>
-<div class="tip">Signs of low blood sugar include weakness, wobbling, trembling, confusion and seizures. Rub honey or corn syrup on the gums and call your vet or an emergency clinic right away.</div>
-'''),
-("backup", "Backups and a new iPhone", '''
-<p>Everything you enter is stored on your iPhone. To keep it safe:</p>
-<ul>
-<li>Go to <span class="path">your pet's tab › Backup and restore</span> and tap <strong>Back up now</strong>. Save the file to iCloud Drive or anywhere in Files.</li>
-<li>DiaPetic also saves an automatic copy every week and keeps the last four.</li>
-<li>On a new iPhone, install DiaPetic, open <span class="path">Backup and restore</span>, choose <strong>Restore from backup</strong> and pick your file.</li>
-</ul>
-'''),
-]
-toc = "".join(f'<li><a href="#{a}">{t}</a></li>' for a, t, _ in help_sections)
-secs = "".join(f'<h2 id="{a}">{i}. {t}</h2>{b}{MOCKS.get(a, "")}' for i, (a, t, b) in enumerate(help_sections, 1))
-help_body = f'''
+# ---------------- Guide (How to use hub + chapters) ----------------
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guide_content.py")).read())
+
+def chapter_file(slug): return f"guide-{slug}.html"
+
+cards = "".join(
+    f'<a class="chapter" href="{chapter_file(slug)}"><span class="num">{i}</span><span><strong>{title}</strong><span>{summary}</span></span></a>'
+    for i, (slug, title, summary, _intro, _secs, _mocks) in enumerate(CHAPTERS, 1))
+hub = f'''
+<div class="wrap">
+<header class="page-head narrow">
+<p class="eyebrow">How to use</p>
+<h1>The DiaPetic guide</h1>
+<p>Everything DiaPetic does, one area at a time. New? Start with <a href="{chapter_file("getting-started")}">Getting started</a>, then read <a href="{chapter_file("tracker")}">The Daily Tracker</a>. You can open this guide from the app anytime: your pet\u2019s tab \u203a App settings \u203a Help &amp; how-to. The pictures show a sample pet, Biscuit.</p>
+</header>
+<nav class="chapters" aria-label="Guide chapters">{cards}</nav>
+<p class="safety" style="margin-top:32px"><strong>Remember:</strong> DiaPetic keeps records and reminds you. It never recommends insulin doses or changes to treatment. Always follow your veterinarian\u2019s instructions.</p>
+<p style="margin:20px 0 56px">Can\u2019t find something? See the <a href="faq.html">FAQ</a> or email <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
+</div>
+'''
+page("help.html", "How to use DiaPetic", "The complete DiaPetic guide: setup, daily logging, food, medications, glucose, reminders, supplies, vet visits, reports, emergencies and backups.", hub)
+
+for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
+    toc = "".join(f'<li><a href="#{a}">{h}</a></li>' for a, h, _ in secs)
+    # place each illustration after the section it belongs to
+    placed = {"setup": "insulin", "day": "shots", "journal": "journal", "reminders": "insulin",
+              "supplies": "syringes", "vet": "appointments", "reports": "progress", "emergency": "summary", "backup": "restore"}
+    body_secs = ""
+    for a, h, html in secs:
+        body_secs += f'<h2 id="{a}">{h}</h2>{html}'
+        for m in mocks:
+            if placed.get(m) == a:
+                body_secs += MOCKS[m]
+    prev_link = f'<a href="{chapter_file(CHAPTERS[i-1][0])}">\u2039 {CHAPTERS[i-1][1]}</a>' if i > 0 else '<a href="help.html">\u2039 All chapters</a>'
+    next_link = f'<a href="{chapter_file(CHAPTERS[i+1][0])}">{CHAPTERS[i+1][1]} \u203a</a>' if i < len(CHAPTERS) - 1 else '<a href="faq.html">FAQ \u203a</a>'
+    body = f'''
 <div class="wrap narrow">
 <header class="page-head">
-<p class="eyebrow">How to use</p>
-<h1>Getting started with DiaPetic</h1>
-<p>A short guide from setting up your pet to sharing reports with your veterinarian. New to pet diabetes? Take it one section at a time. The pictures show a sample pet, Biscuit. You can open this guide from the app anytime: your pet’s tab › App settings › Help &amp; how-to.</p>
+<p class="eyebrow"><a href="help.html">Guide</a> \u00b7 Chapter {i + 1} of {len(CHAPTERS)}</p>
+<h1>{title}</h1>
+{intro}
 </header>
-<nav class="toc" aria-label="Contents"><strong>Contents</strong><ol>{toc}</ol></nav>
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>{toc}</ol></nav>
 <article class="article">
-{secs}
-<p class="safety" style="margin-top:36px"><strong>Remember:</strong> DiaPetic keeps records and reminds you. It never recommends insulin doses or changes to treatment. Always follow your veterinarian's instructions.</p>
-<p style="margin-top:20px">Still have a question? See the <a href="faq.html">FAQ</a> or email <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
+{body_secs}
+<nav class="pager" aria-label="Chapters">{prev_link}{next_link}</nav>
 </article>
 </div>
 '''
-page("help.html", "How to use DiaPetic", "A step-by-step guide to DiaPetic: setting up your pet, logging shots and meals, reminders, supplies, reports and backups.", help_body)
+    page(chapter_file(slug), f"{title} \u00b7 DiaPetic guide", summary, body, nav_key="help.html")
 
 # ---------------- FAQ ----------------
 faq_groups = [
