@@ -1,5 +1,38 @@
 import os, hashlib
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+# ---- App Store launch switch -------------------------------------------------
+# Leave empty until Apple approves the app. Then paste the numeric App Store ID
+# (App Store Connect › App Information › Apple ID, e.g. "6741234567") and rebuild:
+# every page switches from "Coming soon" to the official badge, the Safari app banner
+# and a QR code. Also set AppContact.appStoreID in the app (Feedback.swift).
+APP_STORE_ID = ""
+
+STORE_URL = f"https://apps.apple.com/app/id{APP_STORE_ID}" if APP_STORE_ID else ""
+# Apple's official badge artwork, served by Apple Marketing Tools (must not be altered).
+BADGE_BLACK = "https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+BADGE_WHITE = "https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/white/en-us?size=250x83"
+
+def store_badge(height=54):
+    """The official Download on the App Store badge, or a Coming soon label before launch."""
+    if not STORE_URL:
+        return '<span class="soon">Coming soon to the App Store</span>'
+    return (f'<a class="store-badge" href="{STORE_URL}" aria-label="Download DiaPetic on the App Store">'
+            f'<picture><source srcset="{BADGE_WHITE}" media="(prefers-color-scheme: dark)">'
+            f'<img src="{BADGE_BLACK}" alt="Download on the App Store" height="{height}" style="height:{height}px;width:auto"></picture></a>')
+
+def store_qr():
+    """QR code to the App Store page, for people reading on a computer (hidden on phones)."""
+    if not STORE_URL:
+        return ""
+    import segno, io
+    buf = io.BytesIO()
+    segno.make(STORE_URL, error="m").save(buf, kind="svg", scale=4, border=2, dark="#1C1B2E", light="#FFFFFF", xmldecl=False, svgns=True)
+    svg = buf.getvalue().decode()
+    return f'<div class="store-qr"><div class="qr-img" role="img" aria-label="QR code linking to DiaPetic on the App Store">{svg}</div><p>Scan with your iPhone camera to open the App Store.</p></div>'
+
+NOTIFY = ('<p class="note">To be notified when DiaPetic is available, email '
+          '<a href="mailto:support@diapetic.com?subject=Notify%20me%20when%20DiaPetic%20is%20available">support@diapetic.com</a>.</p>')
+
 NAV = [("index.html", "Home"), ("help.html", "How to use"), ("faq.html", "FAQ & support"), ("privacy.html", "Privacy")]
 
 def icon(path):
@@ -34,7 +67,7 @@ def page(fname, title, desc, body, nav_key=None):
 <meta property="og:image" content="https://diapetic.com/img/icon-dog.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v={CSSV}">
+<link rel="stylesheet" href="style.css?v={CSSV}">{f'\n<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">' if APP_STORE_ID else ""}
 </head>
 <body>
 <header class="site-head">
@@ -48,6 +81,7 @@ def page(fname, title, desc, body, nav_key=None):
 </main>
 <footer class="site-foot">
 <div class="wrap">
+<div class="foot-get">{store_badge(40)}</div>
 <p>© 2026 Bryan Flynn · <a href="mailto:support@diapetic.com">support@diapetic.com</a></p>
 <nav aria-label="Footer">{foot}</nav>
 </div>
@@ -69,7 +103,7 @@ home = f'''
 <h1>Diabetes care for your pet, organized in one place.</h1>
 <p class="lead">DiaPetic helps you give insulin on schedule, avoid missed or repeated doses, and share accurate records with your veterinarian.</p>
 <div class="cta">
-<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>
+{store_badge(54) if STORE_URL else '<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>'}
 <a class="btn btn-ghost" href="help.html">Read the guide</a>
 </div>
 <p class="note" style="margin-top:14px">Free to download. DiaPetic Pro is a one-time purchase of $9.99.</p>
@@ -156,6 +190,14 @@ home = f'''
 <li>Shared with your Family Sharing group</li>
 </ul>
 </div>
+</div>
+<div class="get-app">
+<div>
+<h3>{"Download DiaPetic" if STORE_URL else "Coming soon to the App Store"}</h3>
+<p>{"Available for iPhone. Free to download, with an optional one-time upgrade." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
+{store_badge(54) if STORE_URL else NOTIFY}
+</div>
+{store_qr()}
 </div>
 <p class="safety" style="margin-top:24px"><strong>Important:</strong> DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care. Always follow your veterinarian's instructions.</p>
 </div>
@@ -363,7 +405,7 @@ faq_body = f'''
 page("faq.html", "DiaPetic FAQ and support", "Answers to common questions about DiaPetic and how to contact support.", faq_body)
 
 # ---------------- Privacy ----------------
-privacy_body = '''
+privacy_body = f'''
 <div class="wrap narrow">
 <header class="page-head">
 <p class="eyebrow">Privacy</p>
@@ -404,7 +446,7 @@ privacy_body = '''
 <p>DiaPetic is intended for adults caring for a pet and is not directed at children. We do not knowingly collect information from anyone.</p>
 
 <h2>This website</h2>
-<p>diapetic.com does not use cookies, analytics or tracking. The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
+<p>diapetic.com does not use cookies, analytics or tracking.{" The App Store badge image is loaded from Apple." if STORE_URL else ""} The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
 
 <h2>Not veterinary advice</h2>
 <p>DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care.</p>

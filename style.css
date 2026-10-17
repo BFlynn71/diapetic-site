@@ -192,3 +192,17 @@ section { padding-block: 44px; }
 .article ul.columns { columns: 2; column-gap: 28px; }
 .article ul.columns li { break-inside: avoid; }
 @media (max-width: 760px) { .article ul.columns { columns: 1; } }
+
+/* App Store: badge, coming-soon label, get-the-app panel, QR (computers only) */
+.store-badge { display: inline-flex; line-height: 0; }
+.store-badge img { display: block; }
+.soon { display: inline-block; font-weight: 700; color: var(--muted); }
+.foot-get { width: 100%; display: flex; }
+.foot-get .soon { font-size: 0.9rem; }
+.get-app { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.get-app > div:first-child { display: flex; flex-direction: column; gap: 10px; min-width: 0; flex: 1 1 280px; }
+.get-app p { color: var(--muted); }
+.store-qr { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; max-width: 180px; }
+.store-qr .qr-img svg { width: 140px; height: 140px; display: block; border-radius: 10px; }
+.store-qr p { font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 760px), (hover: none) { .store-qr { display: none; } }
