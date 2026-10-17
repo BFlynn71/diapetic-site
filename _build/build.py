@@ -1,4 +1,4 @@
-import os
+import os, hashlib
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 NAV = [("index.html", "Home"), ("help.html", "How to use"), ("faq.html", "FAQ & support"), ("privacy.html", "Privacy")]
 
@@ -17,6 +17,8 @@ ICONS = {
  "mic": '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/>',
 }
 
+CSSV = hashlib.md5(open(os.path.join(OUT, "style.css"), "rb").read()).hexdigest()[:8]
+
 def page(fname, title, desc, body):
     nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == fname else ""}>{t}</a>' for h, t in NAV)
     foot = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
@@ -32,7 +34,7 @@ def page(fname, title, desc, body):
 <meta property="og:image" content="https://diapetic.com/img/icon-dog.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={CSSV}">
 </head>
 <body>
 <header class="site-head">
