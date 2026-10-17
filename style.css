@@ -133,3 +133,44 @@ section { padding-block: 44px; }
   .site-head { position: static; }
 }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* App screen illustrations on How to use (drawn in HTML, not photos; demo pet "Biscuit") */
+:root { --m-bg: #F2F2F7; --m-card: #FFFFFF; --m-fg: #000000; --m-sub: #6C6C70; --m-sep: #E5E5EA;
+  --m-orange: #F0901F; --m-indigo: #5E5CE6; --m-green: #2FA36B; --m-blue: #2484C8; --m-red: #D9473F; }
+@media (prefers-color-scheme: dark) { :root { --m-bg: #000000; --m-card: #1C1C1E; --m-fg: #FFFFFF; --m-sub: #98989F; --m-sep: #38383A;
+  --m-orange: #FFAD52; --m-indigo: #8F8DFF; --m-green: #4FD18E; --m-blue: #5CB2FA; --m-red: #FF7066; } }
+.shotfig { margin: 22px auto 6px; max-width: 380px; display: flex; flex-direction: column; gap: 8px; }
+.shotfig figcaption { font-size: 0.85rem; color: var(--muted); text-align: center; }
+.mock { background: var(--m-bg); color: var(--m-fg); border: 1px solid var(--line); border-radius: 28px; padding: 16px 14px;
+  font: 15px/1.35 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; display: flex; flex-direction: column; gap: 6px;
+  box-shadow: 0 10px 30px rgba(46, 45, 134, 0.10); }
+.mock .m-h { font-size: 12px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: var(--m-sub); padding: 8px 6px 2px; display: flex; align-items: center; gap: 6px; }
+.mock .m-title { font-size: 22px; font-weight: 800; padding: 2px 4px 6px; }
+.mock .m-card { background: var(--m-card); border-radius: 12px; overflow: hidden; }
+.mock .m-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-top: 1px solid var(--m-sep); min-width: 0; }
+.mock .m-row:first-child { border-top: 0; }
+.mock .m-row > span:first-child { min-width: 0; }
+.mock .m-v { color: var(--m-sub); text-align: right; }
+.mock .m-sub { display: block; font-size: 12.5px; color: var(--m-sub); margin-top: 2px; }
+.mock .m-b { font-weight: 600; }
+.mock .m-foot { font-size: 12px; color: var(--m-sub); padding: 4px 6px; }
+.mock .m-pill { font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.mock .m-fill { color: #FFFFFF; }
+.mock .m-seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 14px 12px; }
+.mock .m-seg span { text-align: center; font-size: 13px; font-weight: 600; padding: 7px 0; border-radius: 9px; background: var(--m-bg); }
+.mock .m-tog { width: 44px; height: 26px; border-radius: 13px; background: var(--m-sep); position: relative; flex-shrink: 0; }
+.mock .m-tog::after { content: ""; position: absolute; top: 2px; left: 2px; width: 22px; height: 22px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+.mock .m-tog.on { background: var(--m-green); }
+.mock .m-tog.on::after { left: 20px; }
+.mock .m-sheet { background: var(--m-card); border-radius: 14px; text-align: center; overflow: hidden; }
+.mock .m-sheet div { padding: 12px; border-top: 1px solid var(--m-sep); color: var(--m-blue); font-size: 16px; }
+.mock .m-sheet div:first-child { border-top: 0; color: var(--m-sub); font-size: 13px; }
+.mock .m-sheet div:first-child b { display: block; color: var(--m-fg); font-size: 13px; margin-bottom: 2px; }
+.mock .m-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mock .m-tile { background: var(--m-card); border-radius: 12px; padding: 10px 12px; }
+.mock .m-tile b { display: block; font-size: 22px; margin-top: 2px; }
+.mock .m-mic { width: 74px; height: 74px; border-radius: 50%; background: var(--m-indigo); color: #FFFFFF; display: grid; place-items: center; margin: 6px auto 2px;
+  box-shadow: 0 0 0 12px color-mix(in srgb, var(--m-indigo) 18%, transparent); }
+.mock .m-btns { display: flex; gap: 8px; padding: 0 14px 12px; flex-wrap: wrap; }
+.mock .m-nav { display: flex; justify-content: space-between; font-size: 15px; color: var(--m-blue); padding: 0 4px 4px; }
+.mock .m-nav b { color: var(--m-fg); }

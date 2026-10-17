@@ -161,6 +161,107 @@ home = f'''
 '''
 page("index.html", "DiaPetic: Pet Diabetes Log", "Track insulin, meals and glucose for your diabetic dog or cat, get reminders, and share clear reports with your veterinarian.", home)
 
+# ---------------- Screen illustrations (demo pet "Biscuit") ----------------
+def tog(on): return f'<span class="m-tog{" on" if on else ""}"></span>'
+def pill(t, color, fill=False):
+    return (f'<span class="m-pill m-fill" style="background:var({color})">{t}</span>' if fill
+            else f'<span class="m-pill" style="color:var({color});background:color-mix(in srgb, var({color}) 15%, transparent)">{t}</span>')
+def fig(body, cap, alt):
+    return f'<figure class="shotfig"><div class="mock" role="img" aria-label="{alt}">{body}</div><figcaption>{cap}</figcaption></figure>'
+
+MOCKS = {
+"setup": fig('''
+<div class="m-h">Insulin prescribed by your veterinarian</div>
+<div class="m-card"><div class="m-row"><span>Insulin</span><span class="m-v">Vetsulin · U-40 ›</span></div></div>
+<div class="m-h" style="color:var(--m-orange)">Morning shot</div>
+<div class="m-card"><div class="m-row"><span>Units</span><span class="m-v">8</span></div><div class="m-row"><span>Time</span><span class="m-v">7:00 AM</span></div></div>
+<div class="m-h" style="color:var(--m-indigo)">Evening shot</div>
+<div class="m-card"><div class="m-row"><span>Units</span><span class="m-v">8</span></div><div class="m-row"><span>Time</span><span class="m-v">7:00 PM</span></div></div>
+<div class="m-foot">Set units to 0 for a shot your pet doesn't get. DiaPetic records doses; it never recommends one.</div>
+''', "Enter the insulin and times exactly as your vet prescribed.", "Setup screen with the prescribed insulin, morning shot 8 units at 7 AM and evening shot 8 units at 7 PM"),
+
+"day": fig('''
+<div class="m-h" style="color:var(--m-orange)">☀︎ Morning</div>
+<div class="m-card">
+<div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
+<div class="m-seg"><span style="background:var(--m-orange);color:#fff">All</span><span>Most</span><span>Some</span><span>None</span></div>
+<div class="m-row"><span><span class="m-b">Insulin</span><span class="m-sub">8 units of Vetsulin</span></span>''' + pill("Give 8 u", "--m-orange", True) + '''</div>
+</div>
+<div class="m-sheet" style="margin-top:10px">
+<div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
+<div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
+</div>
+''', "Mark the meal, tap Give, then choose when the shot was given.", "Morning card with the meal marked All and a Give 8 units button, and the When was the shot given menu"),
+
+"journal": fig('''
+<div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
+<div class="m-mic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></div>
+<div style="text-align:center;font-weight:600;color:var(--m-indigo);font-size:14px">Tap to talk about the day</div>
+<div class="m-card" style="margin-top:8px"><div class="m-row" style="display:block">Ate all his breakfast but seemed tired after our walk. Drinking a bit more water tonight. Ask Dr. about the new food.</div></div>
+<div class="m-card"><div class="m-row"><span>Time</span><span class="m-v">8:40 PM</span></div></div>
+''', "Tap the microphone and talk; your words become the entry.", "Journal editor with a large microphone button and a dictated entry"),
+
+"reminders": fig('''
+<div class="m-h" style="color:var(--m-indigo)">Insulin</div>
+<div class="m-card"><div class="m-row"><span>Insulin time</span>''' + tog(True) + '''</div><div class="m-row"><span>Nudge if a shot isn't logged</span>''' + tog(True) + '''</div></div>
+<div class="m-h" style="color:var(--m-orange)">Meals and care</div>
+<div class="m-card"><div class="m-row"><span>Meals</span>''' + tog(True) + '''</div><div class="m-row"><span>Glucose checks</span>''' + tog(False) + '''</div></div>
+<div class="m-h" style="color:var(--m-blue)">Supplies</div>
+<div class="m-card"><div class="m-row"><span>Insulin running low</span>''' + tog(True) + '''</div><div class="m-row"><span>Time to open a new bottle</span>''' + tog(True) + '''</div></div>
+''', "Turn on just the reminders you want.", "Reminders screen with switches for insulin time, missed-shot nudge, meals, glucose checks and supplies"),
+
+"supplies": fig('''
+<div class="m-h" style="color:var(--m-blue)">Supplies</div>
+<div class="m-card">
+<div class="m-row" style="display:block"><span class="m-b">Insulin</span>
+<span class="m-sub" style="color:var(--m-fg)">In use · day 12 of 42 · about 210 units left</span>
+<span class="m-sub">Use by Nov 22 · In the fridge: 1 unopened bottle</span>
+<span class="m-sub" style="color:var(--m-blue);font-weight:600">Supply lasts until about Dec 30</span></div>
+<div class="m-btns">''' + pill("Open new bottle", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
+<div class="m-row" style="display:block"><span class="m-b">Syringes</span>
+<span class="m-sub" style="color:var(--m-fg)">In use · about 64 left</span>
+<span class="m-sub">Unopened: 1 box (100 syringes)</span>
+<span class="m-sub" style="color:var(--m-blue);font-weight:600">Supply lasts until about Feb 10</span></div>
+<div class="m-btns">''' + pill("Start new box", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
+</div>
+''', "See what's on hand and when it runs out.", "Supplies section showing the insulin bottle in use, a spare in the fridge, syringes and run-out dates"),
+
+"vet": fig('''
+<div class="m-h" style="color:var(--m-red)">Next appointment</div>
+<div class="m-card">
+<div class="m-row" style="display:block"><span class="m-b">Glucose curve</span><span class="m-sub" style="color:var(--m-fg)">Thu, Oct 22 · 8:00 AM – 4:00 PM</span><span class="m-sub">Bring: the insulin, a morning meal, your questions</span></div>
+<div class="m-btns" style="display:grid;grid-template-columns:repeat(3,1fr)">''' + pill("Call", "--m-red") + pill("Directions", "--m-red") + pill("In Calendar", "--m-red") + '''</div>
+</div>
+''', "Appointments with times, what to bring, and one-tap actions.", "Next appointment card for a glucose curve with Call, Directions and In Calendar buttons"),
+
+"reports": fig('''
+<div class="m-title">Reports</div>
+<div class="m-h">At a glance · 30 days</div>
+<div class="m-tiles">
+<div class="m-tile"><span class="m-sub" style="color:var(--m-green)">Food eaten</span><b>96%</b><span class="m-sub">of planned meals</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-orange)">Calories a day</span><b>712</b><span class="m-sub">97% of target</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-indigo)">Shots given</span><b>100%</b><span class="m-sub">0 not logged</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-blue)">Weight</span><b>48 lb</b><span class="m-sub">steady</span></div>
+</div>
+''', "A quick read on how the last weeks went.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds"),
+
+"emergency": fig('''
+<div class="m-title" style="color:var(--m-red)">Emergency</div>
+<div class="m-card"><div class="m-row" style="justify-content:center">''' + pill("Help me decide what to do", "--m-red", True) + '''</div></div>
+<div class="m-h">Call now</div>
+<div class="m-card"><div class="m-row"><span>Your veterinarian</span><span class="m-v" style="color:var(--m-red)">Call</span></div><div class="m-row"><span>Emergency clinic</span><span class="m-v" style="color:var(--m-red)">Call</span></div><div class="m-row"><span>Pet poison hotline</span><span class="m-v" style="color:var(--m-red)">Call</span></div></div>
+<div class="m-h">Quick guides</div>
+<div class="m-card"><div class="m-row"><span>Low blood sugar</span><span class="m-v">›</span></div><div class="m-row"><span>Unsure if the shot was given</span><span class="m-v">›</span></div></div>
+''', "One tap from any screen: calls, triage and step-by-step guides.", "Emergency screen with a Help me decide button, call buttons and quick guides"),
+
+"backup": fig('''
+<div class="m-title">Backup and restore</div>
+<div class="m-card"><div class="m-row" style="justify-content:center">''' + pill("Back up now", "--m-blue", True) + '''</div><div class="m-row"><span>Last backup</span><span class="m-v">Today, 7:10 AM</span></div><div class="m-row"><span>Weekly automatic copy</span><span class="m-v">Keeps 4</span></div></div>
+<div class="m-card"><div class="m-row"><span style="color:var(--m-blue)">Restore from backup</span><span class="m-v">›</span></div></div>
+<div class="m-foot">Save the file to iCloud Drive or anywhere in Files.</div>
+''', "Back up to iCloud Drive or Files, and restore on a new iPhone.", "Backup and restore screen with Back up now and Restore from backup"),
+}
+
 # ---------------- How to use ----------------
 help_sections = [
 ("setup", "Set up your pet", '''
@@ -251,13 +352,13 @@ help_sections = [
 '''),
 ]
 toc = "".join(f'<li><a href="#{a}">{t}</a></li>' for a, t, _ in help_sections)
-secs = "".join(f'<h2 id="{a}">{i}. {t}</h2>{b}' for i, (a, t, b) in enumerate(help_sections, 1))
+secs = "".join(f'<h2 id="{a}">{i}. {t}</h2>{b}{MOCKS.get(a, "")}' for i, (a, t, b) in enumerate(help_sections, 1))
 help_body = f'''
 <div class="wrap narrow">
 <header class="page-head">
 <p class="eyebrow">How to use</p>
 <h1>Getting started with DiaPetic</h1>
-<p>A short guide from setting up your pet to sharing reports with your veterinarian. New to pet diabetes? Take it one section at a time.</p>
+<p>A short guide from setting up your pet to sharing reports with your veterinarian. New to pet diabetes? Take it one section at a time. The pictures show a sample pet, Biscuit.</p>
 </header>
 <nav class="toc" aria-label="Contents"><strong>Contents</strong><ol>{toc}</ol></nav>
 <article class="article">
