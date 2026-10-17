@@ -65,14 +65,14 @@ home = f'''
 <section class="hero">
 <div class="wrap">
 <div>
-<p class="eyebrow">For diabetic dogs and cats</p>
-<h1>Every shot, meal and vet visit, in one calm place.</h1>
-<p class="lead">DiaPetic helps you give insulin on time, never twice, and hand your veterinarian a clear picture of how it's really going.</p>
+<p class="eyebrow">For dogs and cats with diabetes</p>
+<h1>Diabetes care for your pet, organized in one place.</h1>
+<p class="lead">DiaPetic helps you give insulin on schedule, avoid missed or repeated doses, and share accurate records with your veterinarian.</p>
 <div class="cta">
 <a class="btn btn-primary" href="#get">Coming soon to the App Store</a>
-<a class="btn btn-ghost" href="help.html">See how it works</a>
+<a class="btn btn-ghost" href="help.html">Read the guide</a>
 </div>
-<p class="note" style="margin-top:14px">Free to use · DiaPetic Pro is $9.99 once, no subscription</p>
+<p class="note" style="margin-top:14px">Free to download. DiaPetic Pro is a one-time purchase of $9.99.</p>
 </div>
 <img class="hero-icon" src="img/icon-dog.png" alt="DiaPetic app icon: Obi, a curly-haired dog, with an orange collar and a red blood-drop tag" width="300" height="300">
 </div>
@@ -82,16 +82,16 @@ home = f'''
 <div class="wrap">
 <div class="section-head">
 <p class="eyebrow">What it does</p>
-<h2>Built around a real diabetic dog's real days</h2>
-<p>Twice-a-day insulin, meals that have to line up, and a vet who needs good notes. DiaPetic keeps it all together so nothing gets missed and nothing gets given twice.</p>
+<h2>Designed for a real diabetic dog's needs</h2>
+<p>Managing diabetes means insulin twice a day, carefully timed meals, and regular conversations with your veterinarian. DiaPetic keeps everything together, so nothing is missed and nothing is given twice.</p>
 </div>
 <div class="features">
-{feature("syringe", "Log in a tap", "Record each shot with the time it was actually given, how much of each meal was eaten, and a quick daily check-in that starts at Normal.")}
-{feature("bell", "Reminders that have your back", "Insulin time, a nudge if a shot wasn't logged, meals, medications, glucose checks and vet visits. Snooze when you need a minute.")}
-{feature("doc", "Ready for your vet", "Clear reports for 7 to 180 days: shots, appetite, symptoms, weight, glucose curves and dose history. Share a PDF in seconds.")}
-{feature("cross", "Help when something's wrong", "An emergency button on every screen with step-by-step help for low blood sugar, missed or doubled shots and more, plus one-tap calls.")}
-{feature("box", "Supplies that don't run out", "Tracks the insulin bottle in use, spares in the fridge, syringes and food, and warns you before you run short.")}
-{feature("mic", "A journal you can talk to", "Tap the microphone and describe the day. It's turned into text and kept with your records and reports.")}
+{feature("syringe", "Quick daily logging", "Record each shot with the time it was given, how much of each meal was eaten, and a brief daily check-in that defaults to normal.")}
+{feature("bell", "Dependable reminders", "Reminders for insulin, meals, medications, glucose checks and appointments, with a follow-up if a shot has not been recorded.")}
+{feature("doc", "Reports for your veterinarian", "Clear summaries covering 7 to 180 days, including shots, appetite, symptoms, weight, glucose curves and dose history, ready to share as a PDF.")}
+{feature("cross", "Help in an emergency", "An emergency button on every screen with step-by-step guidance for low blood sugar, missed or repeated doses and other urgent situations.")}
+{feature("box", "Supply tracking", "Keeps track of the insulin bottle in use, spare bottles, syringes and food, and alerts you before anything runs low.")}
+{feature("mic", "A daily journal", "Record observations by typing or speaking. Entries are saved with the day's records and included in your reports.")}
 </div>
 </div>
 </section>
@@ -99,16 +99,16 @@ home = f'''
 <section>
 <div class="wrap">
 <div class="section-head">
-<p class="eyebrow">A look inside</p>
-<h2>Simple screens for stressful days</h2>
+<p class="eyebrow">Inside the app</p>
+<h2>Clear screens for everyday care</h2>
 </div>
 <div class="shots">
-<figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given and weight" width="600" height="1304" loading="lazy"><figcaption>Reports your vet will actually read</figcaption></figure>
+<figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given and weight" width="600" height="1304" loading="lazy"><figcaption>Progress reports for your veterinarian</figcaption></figure>
 <div style="display:flex;flex-direction:column;gap:18px">
-<figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call, directions and calendar buttons" width="600" height="459" loading="lazy"><figcaption>Vet visits, synced to your calendar</figcaption></figure>
-<figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="382" loading="lazy"><figcaption>Nutrition that adds up</figcaption></figure>
+<figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call, directions and calendar buttons" width="600" height="459" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
+<figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="382" loading="lazy"><figcaption>Detailed nutrition tracking</figcaption></figure>
 </div>
-<figure class="shot"><img src="img/icons-grid.png" alt="Twelve app icons: Obi the dog and an orange kitty in regular and seasonal styles" width="596" height="804" loading="lazy"><figcaption>Dog or kitty, all year round (Pro)</figcaption></figure>
+<figure class="shot"><img src="img/icons-grid.png" alt="Twelve app icons: Obi the dog and an orange kitty in regular and seasonal styles" width="596" height="804" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Pro)</figcaption></figure>
 </div>
 </div>
 </section>
@@ -117,10 +117,10 @@ home = f'''
 <div class="wrap">
 <img src="img/icon-dog.png" alt="" width="300" height="300" style="width:min(260px,70%);border-radius:22%;justify-self:center">
 <div>
-<p class="eyebrow">Why it exists</p>
+<p class="eyebrow">Our story</p>
 <h2 style="margin-top:10px">Made for Obi</h2>
-<p style="margin-top:14px">DiaPetic started as a tracker for Obi, a diabetic Sheepadoodle, built by his owner to keep his shots, meals and vet notes straight.</p>
-<p>It turned out other families caring for a diabetic pet needed the same thing: something clear, calm and private that helps on the hard days and makes vet visits easier.</p>
+<p style="margin-top:14px">DiaPetic began as a tracker for Obi, a diabetic Sheepadoodle, created by his owner to keep his insulin, meals and veterinary notes in order.</p>
+<p>It soon became clear that other families caring for a diabetic pet needed the same thing: a clear, private and dependable way to manage daily care and to make veterinary visits more productive.</p>
 </div>
 </div>
 </section>
@@ -129,7 +129,7 @@ home = f'''
 <div class="wrap">
 <div class="section-head">
 <p class="eyebrow">Pricing</p>
-<h2>Free to use. Pro is one price, once.</h2>
+<h2>Free to use, with an optional one-time upgrade</h2>
 </div>
 <div class="pricing">
 <div class="plan">
@@ -137,31 +137,31 @@ home = f'''
 <p class="price">$0</p>
 <ul>
 <li>Daily logging of shots, meals and check-ins</li>
-<li>Insulin reminders and missed-shot nudges</li>
-<li>Emergency help on every screen</li>
-<li>Vet tab, appointments and calendar sync</li>
-<li>Supplies, journal, backups</li>
-<li>The last 30 days of reports</li>
+<li>Insulin reminders and follow-ups for unrecorded shots</li>
+<li>Emergency guidance on every screen</li>
+<li>Appointments with calendar sync</li>
+<li>Supply tracking, journal and backups</li>
+<li>Reports for the last 30 days</li>
 </ul>
 </div>
 <div class="plan pro">
 <h3>DiaPetic Pro</h3>
-<p class="price">$9.99 <span class="note">once</span></p>
+<p class="price">$9.99 <span class="note">one time</span></p>
 <ul>
-<li>PDF and CSV reports for your vet</li>
+<li>PDF and CSV reports for your veterinarian</li>
 <li>90- and 180-day trends</li>
-<li>More than one pet</li>
-<li>Your own reminders (heartworm, refills, vaccines…)</li>
-<li>Dog or kitty app icons with seasonal looks</li>
+<li>Multiple pets</li>
+<li>Custom reminders, such as heartworm prevention, refills and vaccines</li>
+<li>Dog and cat app icons with seasonal designs</li>
 <li>Shared with your Family Sharing group</li>
 </ul>
 </div>
 </div>
-<p class="safety" style="margin-top:24px"><strong>Important:</strong> DiaPetic is a record-keeping tool. It never recommends insulin doses or changes to treatment, and it isn't a substitute for veterinary care. Always follow your veterinarian's instructions.</p>
+<p class="safety" style="margin-top:24px"><strong>Important:</strong> DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care. Always follow your veterinarian's instructions.</p>
 </div>
 </section>
 '''
-page("index.html", "DiaPetic: Pet Diabetes Log", "Track insulin, meals and glucose for your diabetic dog or cat, get reminders, and share clear reports with your veterinarian.", home)
+page("index.html", "DiaPetic: Pet Diabetes Log", "Track insulin, meals and glucose for your diabetic dog or cat, receive reminders, and share clear reports with your veterinarian.", home)
 
 # ---------------- Screen illustrations (demo pet "Biscuit") ----------------
 def tog(on): return f'<span class="m-tog{" on" if on else ""}"></span>'
@@ -180,7 +180,7 @@ MOCKS = {
 <div class="m-h" style="color:var(--m-indigo)">Evening shot</div>
 <div class="m-card"><div class="m-row"><span>Units</span><span class="m-v">8</span></div><div class="m-row"><span>Time</span><span class="m-v">7:00 PM</span></div></div>
 <div class="m-foot">Set units to 0 for a shot your pet doesn't get. DiaPetic records doses; it never recommends one.</div>
-''', "Enter the insulin and times exactly as your vet prescribed.", "Setup screen with the prescribed insulin, morning shot 8 units at 7 AM and evening shot 8 units at 7 PM"),
+''', "Enter the insulin, doses and times exactly as prescribed.", "Setup screen with the prescribed insulin, morning shot 8 units at 7 AM and evening shot 8 units at 7 PM"),
 
 "day": fig('''
 <div class="m-h" style="color:var(--m-orange)">☀︎ Morning</div>
@@ -193,15 +193,15 @@ MOCKS = {
 <div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
 <div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
 </div>
-''', "Mark the meal, tap Give, then choose when the shot was given.", "Morning card with the meal marked All and a Give 8 units button, and the When was the shot given menu"),
+''', "Record the meal, tap Give, and choose when the shot was given.", "Morning card with the meal marked All and a Give 8 units button, and the When was the shot given menu"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
 <div class="m-mic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></div>
 <div style="text-align:center;font-weight:600;color:var(--m-indigo);font-size:14px">Tap to talk about the day</div>
-<div class="m-card" style="margin-top:8px"><div class="m-row" style="display:block">Ate all his breakfast but seemed tired after our walk. Drinking a bit more water tonight. Ask Dr. about the new food.</div></div>
+<div class="m-card" style="margin-top:8px"><div class="m-row" style="display:block">Ate all his breakfast but seemed tired after our walk. Drinking a bit more water tonight. Ask the vet about the new food.</div></div>
 <div class="m-card"><div class="m-row"><span>Time</span><span class="m-v">8:40 PM</span></div></div>
-''', "Tap the microphone and talk; your words become the entry.", "Journal editor with a large microphone button and a dictated entry"),
+''', "Tap the microphone to dictate a journal entry.", "Journal editor with a large microphone button and a dictated entry"),
 
 "reminders": fig('''
 <div class="m-h" style="color:var(--m-indigo)">Insulin</div>
@@ -210,7 +210,7 @@ MOCKS = {
 <div class="m-card"><div class="m-row"><span>Meals</span>''' + tog(True) + '''</div><div class="m-row"><span>Glucose checks</span>''' + tog(False) + '''</div></div>
 <div class="m-h" style="color:var(--m-blue)">Supplies</div>
 <div class="m-card"><div class="m-row"><span>Insulin running low</span>''' + tog(True) + '''</div><div class="m-row"><span>Time to open a new bottle</span>''' + tog(True) + '''</div></div>
-''', "Turn on just the reminders you want.", "Reminders screen with switches for insulin time, missed-shot nudge, meals, glucose checks and supplies"),
+''', "Choose the reminders that suit your routine.", "Reminders screen with switches for insulin time, missed-shot nudge, meals, glucose checks and supplies"),
 
 "supplies": fig('''
 <div class="m-h" style="color:var(--m-blue)">Supplies</div>
@@ -226,7 +226,7 @@ MOCKS = {
 <span class="m-sub" style="color:var(--m-blue);font-weight:600">Supply lasts until about Feb 10</span></div>
 <div class="m-btns">''' + pill("Start new box", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
 </div>
-''', "See what's on hand and when it runs out.", "Supplies section showing the insulin bottle in use, a spare in the fridge, syringes and run-out dates"),
+''', "Supplies on hand and their expected run-out dates.", "Supplies section showing the insulin bottle in use, a spare in the fridge, syringes and run-out dates"),
 
 "vet": fig('''
 <div class="m-h" style="color:var(--m-red)">Next appointment</div>
@@ -234,7 +234,7 @@ MOCKS = {
 <div class="m-row" style="display:block"><span class="m-b">Glucose curve</span><span class="m-sub" style="color:var(--m-fg)">Thu, Oct 22 · 8:00 AM – 4:00 PM</span><span class="m-sub">Bring: the insulin, a morning meal, your questions</span></div>
 <div class="m-btns" style="display:grid;grid-template-columns:repeat(3,1fr)">''' + pill("Call", "--m-red") + pill("Directions", "--m-red") + pill("In Calendar", "--m-red") + '''</div>
 </div>
-''', "Appointments with times, what to bring, and one-tap actions.", "Next appointment card for a glucose curve with Call, Directions and In Calendar buttons"),
+''', "Each appointment shows the time, what to bring, and quick actions.", "Next appointment card for a glucose curve with Call, Directions and In Calendar buttons"),
 
 "reports": fig('''
 <div class="m-title">Reports</div>
@@ -245,7 +245,7 @@ MOCKS = {
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo)">Shots given</span><b>100%</b><span class="m-sub">0 not logged</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-blue)">Weight</span><b>48 lb</b><span class="m-sub">steady</span></div>
 </div>
-''', "A quick read on how the last weeks went.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds"),
+''', "A summary of recent weeks at a glance.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds"),
 
 "emergency": fig('''
 <div class="m-title" style="color:var(--m-red)">Emergency</div>
@@ -254,7 +254,7 @@ MOCKS = {
 <div class="m-card"><div class="m-row"><span>Your veterinarian</span><span class="m-v" style="color:var(--m-red)">Call</span></div><div class="m-row"><span>Emergency clinic</span><span class="m-v" style="color:var(--m-red)">Call</span></div><div class="m-row"><span>Pet poison hotline</span><span class="m-v" style="color:var(--m-red)">Call</span></div></div>
 <div class="m-h">Quick guides</div>
 <div class="m-card"><div class="m-row"><span>Low blood sugar</span><span class="m-v">›</span></div><div class="m-row"><span>Unsure if the shot was given</span><span class="m-v">›</span></div></div>
-''', "One tap from any screen: calls, triage and step-by-step guides.", "Emergency screen with a Help me decide button, call buttons and quick guides"),
+''', "Calls, guided questions and step-by-step guides, available from every screen.", "Emergency screen with a Help me decide button, call buttons and quick guides"),
 
 "backup": fig('''
 <div class="m-title">Backup and restore</div>
@@ -277,11 +277,11 @@ hub = f'''
 <header class="page-head narrow">
 <p class="eyebrow">How to use</p>
 <h1>The DiaPetic guide</h1>
-<p>Everything DiaPetic does, one area at a time. New? Start with <a href="{chapter_file("getting-started")}">Getting started</a>, then read <a href="{chapter_file("tracker")}">The Daily Tracker</a>. You can open this guide from the app anytime: your pet\u2019s tab \u203a App settings \u203a Help &amp; how-to. The pictures show a sample pet, Biscuit.</p>
+<p>This guide explains each part of DiaPetic in detail. If you are new to the app, begin with <a href="{chapter_file("getting-started")}">Getting started</a> and then read <a href="{chapter_file("tracker")}">The Daily Tracker</a>. You can open the guide from within the app at any time under your pet\u2019s tab \u203a App settings \u203a Help &amp; how-to. The illustrations show a sample pet named Biscuit.</p>
 </header>
 <nav class="chapters" aria-label="Guide chapters">{cards}</nav>
-<p class="safety" style="margin-top:32px"><strong>Remember:</strong> DiaPetic keeps records and reminds you. It never recommends insulin doses or changes to treatment. Always follow your veterinarian\u2019s instructions.</p>
-<p style="margin:20px 0 56px">Can\u2019t find something? See the <a href="faq.html">FAQ</a> or email <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
+<p class="safety" style="margin-top:32px"><strong>Please note:</strong> DiaPetic keeps records and sends reminders. It does not recommend insulin doses or changes to treatment. Always follow your veterinarian\u2019s instructions.</p>
+<p style="margin:20px 0 56px">If you cannot find what you need, see the <a href="faq.html">FAQ</a> or email <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
 </div>
 '''
 page("help.html", "How to use DiaPetic", "The complete DiaPetic guide: setup, daily logging, food, medications, glucose, reminders, supplies, vet visits, reports, emergencies and backups.", hub)
@@ -318,25 +318,25 @@ for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
 # ---------------- FAQ ----------------
 faq_groups = [
 ("Using the app", [
-("I forgot to log a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker (swipe back or use the calendar button), tap <strong>Give</strong> on the shot, and choose <strong>A different time</strong> to enter when it was actually given.</p>"),
-("What does \"Not logged\" mean?", "<p>The shot's usual time has passed and nothing has been recorded yet. It doesn't mean the shot was missed, only that DiaPetic doesn't know. If reminders are on, you'll get a nudge.</p><p>If you're not sure whether it was given, don't give another. Call your veterinarian.</p>"),
-("Does DiaPetic tell me how much insulin to give?", "<p>No, and it never will. Insulin doses must come from your veterinarian. DiaPetic records the dose your vet prescribed and what was actually given, so your vet has accurate information to make those decisions.</p>"),
-("Can I track a cat? More than one pet?", "<p>Yes to both. DiaPetic works for dogs and cats. Your first pet is free; adding more pets is part of DiaPetic Pro.</p>"),
-("Can two people use it for the same pet?", "<p>Not yet. Today each iPhone keeps its own records. Sharing between family members is planned for a future update.</p>"),
-("Why didn't my reminder go off?", "<p>Check iPhone <strong>Settings › Notifications › DiaPetic</strong> and make sure notifications are allowed, then check that a Focus mode (like Sleep or Do Not Disturb) isn't silencing them. In DiaPetic, open your pet's tab › Reminders to confirm the reminder is on.</p>"),
-("Can I talk instead of typing?", "<p>Yes. In the journal and the suggestion box, tap the large microphone and speak. The first time, iPhone asks permission to use the microphone and speech recognition.</p>"),
+("I forgot to record a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker by swiping back or using the calendar button, tap <strong>Give</strong> on the shot, and choose <strong>A different time…</strong> to enter when it was given.</p>"),
+("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your veterinarian.</p>"),
+("Does DiaPetic recommend insulin doses?", "<p>No. Insulin doses must always come from your veterinarian. DiaPetic records the prescribed dose and what was actually given, so your veterinarian has accurate information for making those decisions.</p>"),
+("Can I use DiaPetic for a cat, or for more than one pet?", "<p>Yes. DiaPetic works for both dogs and cats. Your first pet is free, and additional pets are included with DiaPetic Pro.</p>"),
+("Can two people use DiaPetic for the same pet?", "<p>Not yet. Each iPhone currently keeps its own records. Sharing between family members is planned for a future update.</p>"),
+("Why are reminders not appearing?", "<p>First, go to iPhone <strong>Settings › Notifications › DiaPetic</strong> and make sure notifications are allowed. Then check that a Focus mode, such as Sleep or Do Not Disturb, is not silencing them. In DiaPetic, open your pet's tab › Reminders to confirm that the reminder is turned on.</p>"),
+("Can I speak instead of typing?", "<p>Yes. In the journal and the suggestion box, tap the microphone and speak. The first time, your iPhone will ask for permission to use the microphone and speech recognition.</p>"),
 ]),
 ("Your data and privacy", [
-("Where is my information stored?", "<p>Only on your iPhone. DiaPetic has no account, no ads, no analytics and no servers. Nothing leaves your phone unless you choose to share it, such as sending a report or saving a backup.</p>"),
-("Can my veterinarian see my data?", "<p>Only what you send them, like a PDF report or an email from the Vet tab. There's no portal or automatic sharing.</p>"),
-("How do I move to a new iPhone or restore a backup?", "<p>On your old iPhone, go to your pet's tab › Backup and restore › <strong>Back up now</strong> and save the file to iCloud Drive. On the new iPhone, install DiaPetic, open Backup and restore, choose <strong>Restore from backup</strong> and pick that file.</p>"),
-("If I delete the app, is my data gone?", "<p>Yes, unless you have a backup. Deleting an app removes its data from the iPhone. Make a backup first.</p>"),
+("Where is my information stored?", "<p>Your information is stored only on your iPhone. DiaPetic has no accounts, advertising, analytics or servers. Information leaves your phone only when you choose to share it, for example by sending a report or saving a backup.</p>"),
+("Can my veterinarian see my records?", "<p>Your veterinarian sees only what you send, such as a PDF report or an email from the Vet tab. There is no online portal or automatic sharing.</p>"),
+("How do I move to a new iPhone?", "<p>On your current iPhone, go to your pet's tab › Backup and restore, tap <strong>Back up now</strong> and save the file to iCloud Drive. On the new iPhone, install DiaPetic, open Backup and restore, tap <strong>Restore from backup…</strong> and select the file.</p>"),
+("What happens to my records if I delete the app?", "<p>Deleting the app removes its data from your iPhone. Your records can be recovered only from a backup, so be sure to make one first.</p>"),
 ]),
-("Pro and purchases", [
-("What does DiaPetic Pro include? Is it a subscription?", "<p>Pro is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, more than one pet, your own reminders, and dog or kitty app icons with seasonal looks. It's shared with your Family Sharing group.</p>"),
-("I bought Pro on another iPhone. How do I get it back?", "<p>Open the Pro screen in your pet's tab and tap <strong>Restore purchases</strong>, signed in with the same Apple Account.</p>"),
-("What are tips?", "<p>Optional thank-yous in <em>Support DiaPetic</em> that help cover the cost of keeping the app on the App Store. Tips don't unlock anything. Everything that keeps your pet safe is always free.</p>"),
-("How do I change the app icon?", "<p>With Pro, go to your pet's tab › App settings › App icon. Pick Obi the dog or the kitty, and a style: automatic seasons, always regular, or one theme all year.</p>"),
+("DiaPetic Pro and purchases", [
+("What does DiaPetic Pro include? Is it a subscription?", "<p>DiaPetic Pro is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, multiple pets, custom reminders, and dog and cat app icons with seasonal designs. It is shared with your Family Sharing group.</p>"),
+("How do I restore DiaPetic Pro on another iPhone?", "<p>Open the Pro screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
+("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not unlock any features. Everything related to your pet's safety is always free.</p>"),
+("How do I change the app icon?", "<p>With DiaPetic Pro, go to your pet's tab › App settings › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, or keeps one seasonal theme.</p>"),
 ]),
 ]
 groups = ""
@@ -346,21 +346,21 @@ faq_body = f'''
 <div class="wrap narrow">
 <header class="page-head">
 <p class="eyebrow">FAQ &amp; support</p>
-<h1>Questions and answers</h1>
-<p>Quick answers to the most common questions. For step-by-step help, see <a href="help.html">How to use</a>.</p>
+<h1>Frequently asked questions</h1>
+<p>Answers to common questions about DiaPetic. For step-by-step instructions, see the <a href="help.html">guide</a>.</p>
 </header>
 <div class="faq article">
 {groups}
 <div class="contact">
 <h2 style="color:#FFFFFF">Still need help?</h2>
-<p>Email us and include your iPhone model and what you were doing. Suggestions are very welcome too. You can also send one from the app: your pet's tab › App settings › Suggestion box.</p>
+<p>Please email us with your iPhone model and a description of what happened. We also welcome suggestions, which you can send from within the app under your pet's tab › App settings › Suggestion box.</p>
 <a href="mailto:support@diapetic.com">support@diapetic.com</a>
 </div>
-<p class="safety" style="margin-top:28px"><strong>In an emergency</strong>, call your veterinarian or nearest emergency clinic. For possible poisoning, the ASPCA Animal Poison Control Center is (888) 426-4435 (a fee may apply).</p>
+<p class="safety" style="margin-top:28px"><strong>In an emergency</strong>, call your veterinarian or the nearest emergency clinic. For possible poisoning, contact the ASPCA Animal Poison Control Center at (888) 426-4435. A consultation fee may apply.</p>
 </div>
 </div>
 '''
-page("faq.html", "DiaPetic FAQ and support", "Answers to common questions about DiaPetic, plus how to contact support.", faq_body)
+page("faq.html", "DiaPetic FAQ and support", "Answers to common questions about DiaPetic and how to contact support.", faq_body)
 
 # ---------------- Privacy ----------------
 privacy_body = '''
@@ -371,56 +371,56 @@ privacy_body = '''
 <p>Effective October 17, 2026</p>
 </header>
 <article class="article">
-<p><strong>The short version:</strong> DiaPetic doesn't collect your data. What you enter stays on your iPhone. There's no account, no advertising, no analytics and no tracking, and the developer has no server that receives your information.</p>
+<p><strong>Summary:</strong> DiaPetic does not collect your data. The information you enter remains on your iPhone. The app has no accounts, advertising, analytics or tracking, and the developer operates no server that receives your information.</p>
 
 <h2>Who we are</h2>
-<p>DiaPetic is an iPhone app made by Bryan Flynn ("we", "us"). Contact: <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
+<p>DiaPetic is an iPhone app developed by Bryan Flynn ("we," "us"). You can contact us at <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
 
 <h2>Information you enter</h2>
-<p>Your pet's details, shots, meals, check-ins, glucose readings, journal entries, supplies, appointments and settings are stored only on your iPhone, in the app's own storage. We can't see them.</p>
+<p>Your pet's details, shots, meals, check-ins, glucose readings, journal entries, supplies, appointments and settings are stored only on your iPhone, in the app's private storage. We have no access to them.</p>
 
 <h2>When information leaves your iPhone</h2>
-<p>Only when you choose:</p>
+<p>Information leaves your iPhone only when you choose to share it:</p>
 <ul>
-<li><strong>Sharing:</strong> reports, the pet info sheet and CSV files go wherever you send them (email, Messages, AirDrop, Files, a printer).</li>
-<li><strong>Email:</strong> emails to your veterinarian and messages from the suggestion box are sent from your own email app, and you see them before they're sent. Messages you send to us are used only to reply and improve the app.</li>
-<li><strong>Backups:</strong> backup files are saved where you choose, such as iCloud Drive or Files. If they're in iCloud, they're stored in your own iCloud account under Apple's terms.</li>
+<li><strong>Sharing:</strong> reports, the pet information sheet and CSV files are sent only to the destinations you choose, such as email, Messages, AirDrop, Files or a printer.</li>
+<li><strong>Email:</strong> emails to your veterinarian and messages from the suggestion box are sent from your own email app, and you can review them before sending. Messages sent to us are used only to respond and to improve the app.</li>
+<li><strong>Backups:</strong> backup files are saved to the location you choose, such as iCloud Drive or Files. Backups stored in iCloud are kept in your own iCloud account under Apple's terms.</li>
 </ul>
 
 <h2>Permissions the app may ask for</h2>
 <ul>
-<li><strong>Notifications:</strong> to show the reminders you turn on.</li>
-<li><strong>Calendar:</strong> to add your pet's appointments to your calendar and update or remove them when you change them in the app. DiaPetic doesn't read or share your other events.</li>
-<li><strong>Camera:</strong> only to read calorie information from pet food labels. Nothing is photographed or saved.</li>
-<li><strong>Location:</strong> only to find veterinarians and emergency clinics near you, using Apple Maps. It isn't stored.</li>
-<li><strong>Microphone and speech recognition:</strong> only while you dictate a journal entry or suggestion. Recordings aren't saved; only the text is kept. Speech is recognized on your iPhone when it supports that; otherwise Apple processes it under Apple's privacy policy.</li>
+<li><strong>Notifications:</strong> to deliver the reminders you turn on.</li>
+<li><strong>Calendar:</strong> to add your pet's appointments to your calendar and update or remove them when you change them in the app. DiaPetic does not read or share your other events.</li>
+<li><strong>Camera:</strong> only to read calorie information from pet food labels. No photos are taken or saved.</li>
+<li><strong>Location:</strong> only to find veterinarians and emergency clinics near you, using Apple Maps. Your location is not stored.</li>
+<li><strong>Microphone and speech recognition:</strong> only while you dictate a journal entry or suggestion. Recordings are not saved; only the resulting text is kept. Speech is processed on your iPhone when supported; otherwise it is processed by Apple under Apple's privacy policy.</li>
 </ul>
-<p>You can turn any of these off in iPhone Settings › DiaPetic.</p>
+<p>You can change any of these permissions in iPhone Settings › DiaPetic.</p>
 
 <h2>Purchases and ratings</h2>
-<p>DiaPetic Pro and tips are handled by Apple through the App Store. We don't receive your payment details. Apple may share anonymous sales information with us, such as the number of purchases. Rating prompts are shown by Apple.</p>
+<p>Purchases of DiaPetic Pro and tips are processed by Apple through the App Store. We do not receive your payment information. Apple may provide us with anonymous sales information, such as the number of purchases. Rating requests are displayed by Apple.</p>
 
 <h2>Children</h2>
-<p>DiaPetic is meant for adults caring for a pet and isn't directed at children. We don't knowingly collect information from anyone.</p>
+<p>DiaPetic is intended for adults caring for a pet and is not directed at children. We do not knowingly collect information from anyone.</p>
 
 <h2>This website</h2>
-<p>diapetic.com doesn't use cookies, analytics or tracking. It's hosted by GitHub Pages, which may keep standard server logs (such as IP addresses) for security, under GitHub's privacy statement.</p>
+<p>diapetic.com does not use cookies, analytics or tracking. The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
 
 <h2>Not veterinary advice</h2>
-<p>DiaPetic is a record-keeping tool. It never recommends insulin doses or changes to treatment and isn't a substitute for veterinary care.</p>
+<p>DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care.</p>
 
 <h2>Changes to this policy</h2>
-<p>If this policy changes, we'll update it here and change the effective date. If a change affects how your information is handled, we'll also note it in the app's update notes.</p>
+<p>If this policy changes, we will update this page and its effective date. If a change affects how your information is handled, we will also describe it in the app's release notes.</p>
 
 <h2>Contact</h2>
-<p>Questions about privacy: <a href="mailto:support@diapetic.com">support@diapetic.com</a></p>
+<p>For questions about this policy, email <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
 </article>
 </div>
 '''
-page("privacy.html", "DiaPetic privacy policy", "DiaPetic doesn't collect your data. Everything you enter stays on your iPhone.", privacy_body)
+page("privacy.html", "DiaPetic privacy policy", "DiaPetic does not collect your data. Everything you enter remains on your iPhone.", privacy_body)
 
 # 404 and custom domain
-page("404.html", "Page not found · DiaPetic", "That page doesn't exist.", '<div class="wrap narrow"><header class="page-head"><h1>That page isn\'t here</h1><p>Try the <a href="index.html">home page</a>, <a href="help.html">How to use</a> or the <a href="faq.html">FAQ</a>.</p></header></div>')
+page("404.html", "Page not found · DiaPetic", "The page you requested does not exist.", '<div class="wrap narrow"><header class="page-head"><h1>Page not found</h1><p>The page you requested does not exist. Please visit the <a href="index.html">home page</a>, the <a href="help.html">guide</a> or the <a href="faq.html">FAQ</a>.</p></header></div>')
 open(os.path.join(OUT, "CNAME"), "w").write("diapetic.com\n")
 open(os.path.join(OUT, "README.md"), "w").write("# diapetic.com\n\nThe DiaPetic website: home, how to use, FAQ & support, privacy policy. Plain HTML and CSS, hosted on GitHub Pages.\n\nThe pages are generated from `build.py` in the app project; edit there or edit the HTML directly.\n")
 print("built")

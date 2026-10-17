@@ -189,3 +189,6 @@ section { padding-block: 44px; }
 .checklist li { position: relative; padding-left: 30px; }
 .checklist li::before { content: ""; position: absolute; left: 2px; top: 4px; width: 16px; height: 16px; border: 2px solid var(--indigo); border-radius: 5px; }
 @media (max-width: 760px) { .chapters { grid-template-columns: minmax(0, 1fr); } }
+.article ul.columns { columns: 2; column-gap: 28px; }
+.article ul.columns li { break-inside: avoid; }
+@media (max-width: 760px) { .article ul.columns { columns: 1; } }
