@@ -342,6 +342,9 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 ("pet-tab", "Your pet's tab and settings", "Pet details, multiple pets, app settings and the app icon.",
 """<p>The last tab is named after your pet. It contains everything you entered during setup, along with the app's settings.</p>""",
 [
+("help", "Help and support", """
+<p>Near the top of the tab, <strong>Help and support</strong> opens this guide (<strong>How to use DiaPetic</strong>), the <strong>FAQ &amp; support</strong> page and the <strong>Suggestion box</strong>. For your first two weeks, the Tracker also shows a short card with a link to the guide; tap <strong>Not now</strong> to hide it.</p>
+"""),
 ("details", "Pet details", """
 <p>Here you can update your pet's name, species, breed, color, sex and microchip number. The <strong>Weight</strong> section shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
 """),
@@ -354,15 +357,15 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <li><strong>Glucose units</strong> can be mg/dL or mmol/L, and <strong>weight units</strong> can be lb or kg.</li>
 <li><strong>App icon</strong> (Pro) lets you choose Obi the dog or Kitty. The icon can change with the seasons (fall, Halloween, Thanksgiving, the holiday season and Christmas), stay the same all year, or keep one seasonal theme.</li>
 <li><strong>Backup and restore</strong> is described in <a href="guide-backups.html">Backups and a new iPhone</a>.</li>
-<li><strong>Help &amp; how-to</strong> opens this guide. The same section includes the <strong>Suggestion box</strong>, <strong>Rate DiaPetic</strong> and <strong>Support DiaPetic</strong>, where you can leave an optional tip.</li>
-<li><strong>About DiaPetic</strong> includes privacy information and links to this website, the FAQ and the privacy policy.</li>
+<li><strong>Rate DiaPetic</strong> and <strong>Support DiaPetic</strong>, where you can leave an optional tip.</li>
+<li><strong>About DiaPetic</strong> includes privacy information and links to this website and the privacy policy.</li>
 </ul>
 """),
 ("delete", "Deleting a pet", """
 <p>The option at the bottom of the tab permanently deletes the pet and all of its records. If you may want the records later, make a backup first.</p>
 """),
 ("feedback", "Suggestions and support", """
-<p>The <strong>Suggestion box</strong> sends a message from your own email account. Choose whether you are sending a suggestion, reporting a problem, asking a question or sharing something you like, then speak or type your message. You can include details about the app and your iPhone to help diagnose problems; your pet's health records are never included. You can also email <a href="mailto:support@diapetic.com">support@diapetic.com</a> directly.</p>
+<p>The <strong>Suggestion box</strong>, in Help and support, sends a message from your own email account. Choose whether you are sending a suggestion, reporting a problem, asking a question or sharing something you like, then speak or type your message. You can include details about the app and your iPhone to help diagnose problems; your pet's health records are never included. You can also email <a href="mailto:support@diapetic.com">support@diapetic.com</a> directly.</p>
 """),
 ], []),
 

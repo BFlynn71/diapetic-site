@@ -319,7 +319,7 @@ hub = f'''
 <header class="page-head narrow">
 <p class="eyebrow">How to use</p>
 <h1>The DiaPetic guide</h1>
-<p>This guide explains each part of DiaPetic in detail. If you are new to the app, begin with <a href="{chapter_file("getting-started")}">Getting started</a> and then read <a href="{chapter_file("tracker")}">The Daily Tracker</a>. You can open the guide from within the app at any time under your pet\u2019s tab \u203a App settings \u203a Help &amp; how-to. The illustrations show a sample pet named Biscuit.</p>
+<p>This guide explains each part of DiaPetic in detail. If you are new to the app, begin with <a href="{chapter_file("getting-started")}">Getting started</a> and then read <a href="{chapter_file("tracker")}">The Daily Tracker</a>. You can open the guide from within the app at any time under your pet\u2019s tab \u203a Help and support. The illustrations show a sample pet named Biscuit.</p>
 </header>
 <nav class="chapters" aria-label="Guide chapters">{cards}</nav>
 <p class="safety" style="margin-top:32px"><strong>Please note:</strong> DiaPetic keeps records and sends reminders. It does not recommend insulin doses or changes to treatment. Always follow your veterinarian\u2019s instructions.</p>
@@ -395,7 +395,7 @@ faq_body = f'''
 {groups}
 <div class="contact">
 <h2 style="color:#FFFFFF">Still need help?</h2>
-<p>Please email us with your iPhone model and a description of what happened. We also welcome suggestions, which you can send from within the app under your pet's tab › App settings › Suggestion box.</p>
+<p>Please email us with your iPhone model and a description of what happened. We also welcome suggestions, which you can send from within the app under your pet's tab › Help and support › Suggestion box.</p>
 <a href="mailto:support@diapetic.com">support@diapetic.com</a>
 </div>
 <p class="safety" style="margin-top:28px"><strong>In an emergency</strong>, call your veterinarian or the nearest emergency clinic. For possible poisoning, contact the ASPCA Animal Poison Control Center at (888) 426-4435. A consultation fee may apply.</p>
