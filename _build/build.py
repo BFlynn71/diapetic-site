@@ -5,7 +5,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 # (App Store Connect › App Information › Apple ID, e.g. "6741234567") and rebuild:
 # every page switches from "Coming soon" to the official badge, the Safari app banner
 # and a QR code. Also set AppContact.appStoreID in the app (Feedback.swift).
-APP_STORE_ID = ""
+APP_STORE_ID = ""  # Launch day: set to "6824567991" (DiaPetic's App Store ID), rebuild and push.
 
 STORE_URL = f"https://apps.apple.com/app/id{APP_STORE_ID}" if APP_STORE_ID else ""
 # Apple's official badge artwork, served by Apple Marketing Tools (must not be altered).
