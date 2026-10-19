@@ -340,7 +340,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 
 # ------------------------------------------------------------------
 ("pet-tab", "Your pet's tab and settings", "Pet details, multiple pets, app settings and the app icon.",
-"""<p>The last tab is named after your pet. It contains everything you entered during setup, along with the app's settings.</p>""",
+"""<p>The last tab is named after your pet. It contains everything you entered during setup, along with the app's settings. If you have DiaPetic Gold, a small gold tag appears beside your pet's name; tap it to see what Gold includes.</p>""",
 [
 ("help", "Help and support", """
 <p>Near the top of the tab, <strong>Help and support</strong> opens this guide (<strong>How to use DiaPetic</strong>), the <strong>FAQ &amp; support</strong> page and the <strong>Suggestion box</strong>. For your first two weeks, the Tracker also shows a short card with a link to the guide; tap <strong>Not now</strong> to hide it.</p>
