@@ -106,7 +106,7 @@ home = f'''
 {store_badge(54) if STORE_URL else '<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>'}
 <a class="btn btn-ghost" href="help.html">Read the guide</a>
 </div>
-<p class="note" style="margin-top:14px">Free to download. DiaPetic Pro is a one-time purchase of $9.99.</p>
+<p class="note" style="margin-top:14px">Free to download. DiaPetic Gold is a one-time purchase of $9.99.</p>
 </div>
 <img class="hero-icon" src="img/icon-dog.png" alt="DiaPetic app icon: Obi, a curly-haired dog, with an orange collar and a red blood-drop tag" width="300" height="300">
 </div>
@@ -142,7 +142,7 @@ home = f'''
 <figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call, directions and calendar buttons" width="600" height="459" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
 <figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="382" loading="lazy"><figcaption>Detailed nutrition tracking</figcaption></figure>
 </div>
-<figure class="shot"><img src="img/icons-grid.png" alt="Twelve app icons: Obi the dog and an orange kitty in regular and seasonal styles" width="596" height="804" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Pro)</figcaption></figure>
+<figure class="shot"><img src="img/icons-grid.png" alt="Twelve app icons: Obi the dog and an orange kitty in regular and seasonal styles" width="596" height="804" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
 </div>
 </div>
 </section>
@@ -179,14 +179,14 @@ home = f'''
 </ul>
 </div>
 <div class="plan pro">
-<h3>DiaPetic Pro</h3>
+<h3>DiaPetic Gold</h3>
 <p class="price">$9.99 <span class="note">one time</span></p>
 <ul>
 <li>PDF and CSV reports for your veterinarian</li>
 <li>90- and 180-day trends</li>
 <li>Multiple pets</li>
 <li>Custom reminders, such as heartworm prevention, refills and vaccines</li>
-<li>Dog and cat app icons with seasonal designs</li>
+<li>Dog and cat app icons with seasonal designs, or a gold collar tag</li>
 <li>Shared with your Family Sharing group</li>
 </ul>
 </div>
@@ -363,7 +363,7 @@ faq_groups = [
 ("I forgot to record a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker by swiping back or using the calendar button, tap <strong>Give</strong> on the shot, and choose <strong>A different time…</strong> to enter when it was given.</p>"),
 ("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your veterinarian.</p>"),
 ("Does DiaPetic recommend insulin doses?", "<p>No. Insulin doses must always come from your veterinarian. DiaPetic records the prescribed dose and what was actually given, so your veterinarian has accurate information for making those decisions.</p>"),
-("Can I use DiaPetic for a cat, or for more than one pet?", "<p>Yes. DiaPetic works for both dogs and cats. Your first pet is free, and additional pets are included with DiaPetic Pro.</p>"),
+("Can I use DiaPetic for a cat, or for more than one pet?", "<p>Yes. DiaPetic works for both dogs and cats. Your first pet is free, and additional pets are included with DiaPetic Gold.</p>"),
 ("Can two people use DiaPetic for the same pet?", "<p>Not yet. Each iPhone currently keeps its own records. Sharing between family members is planned for a future update.</p>"),
 ("Why are reminders not appearing?", "<p>First, go to iPhone <strong>Settings › Notifications › DiaPetic</strong> and make sure notifications are allowed. Then check that a Focus mode, such as Sleep or Do Not Disturb, is not silencing them. In DiaPetic, open your pet's tab › Reminders to confirm that the reminder is turned on.</p>"),
 ("Can I speak instead of typing?", "<p>Yes. In the journal and the suggestion box, tap the microphone and speak. The first time, your iPhone will ask for permission to use the microphone and speech recognition.</p>"),
@@ -374,11 +374,11 @@ faq_groups = [
 ("How do I move to a new iPhone?", "<p>On your current iPhone, go to your pet's tab › Backup and restore, tap <strong>Back up now</strong> and save the file to iCloud Drive. On the new iPhone, install DiaPetic, open Backup and restore, tap <strong>Restore from backup…</strong> and select the file.</p>"),
 ("What happens to my records if I delete the app?", "<p>Deleting the app removes its data from your iPhone. Your records can be recovered only from a backup, so be sure to make one first.</p>"),
 ]),
-("DiaPetic Pro and purchases", [
-("What does DiaPetic Pro include? Is it a subscription?", "<p>DiaPetic Pro is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, multiple pets, custom reminders, and dog and cat app icons with seasonal designs. It is shared with your Family Sharing group.</p>"),
-("How do I restore DiaPetic Pro on another iPhone?", "<p>Open the Pro screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
+("DiaPetic Gold and purchases", [
+("What does DiaPetic Gold include? Is it a subscription?", "<p>DiaPetic Gold is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, multiple pets, custom reminders, and dog and cat app icons with seasonal designs or a gold collar tag. It is shared with your Family Sharing group.</p>"),
+("How do I restore DiaPetic Gold on another iPhone?", "<p>Open the Gold screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
 ("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not unlock any features. Everything related to your pet's safety is always free.</p>"),
-("How do I change the app icon?", "<p>With DiaPetic Pro, go to your pet's tab › App settings › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, or keeps one seasonal theme.</p>"),
+("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App settings › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),
 ]),
 ]
 groups = ""
@@ -440,7 +440,7 @@ privacy_body = f'''
 <p>You can change any of these permissions in iPhone Settings › DiaPetic.</p>
 
 <h2>Purchases and ratings</h2>
-<p>Purchases of DiaPetic Pro and tips are processed by Apple through the App Store. We do not receive your payment information. Apple may provide us with anonymous sales information, such as the number of purchases. Rating requests are displayed by Apple.</p>
+<p>Purchases of DiaPetic Gold and tips are processed by Apple through the App Store. We do not receive your payment information. Apple may provide us with anonymous sales information, such as the number of purchases. Rating requests are displayed by Apple.</p>
 
 <h2>Children</h2>
 <p>DiaPetic is intended for adults caring for a pet and is not directed at children. We do not knowingly collect information from anyone.</p>

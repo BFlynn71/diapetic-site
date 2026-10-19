@@ -214,7 +214,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 ("checkups", "Checkups", """
 <p><strong>Remind me to book a checkup</strong> prompts you every 3, 6 or 12 months, counting from your last completed visit, and only when no appointment is already scheduled. Reminders for scheduled appointments are set on each appointment in the Vet tab.</p>
 """),
-("custom", "Custom reminders (Pro)", """
+("custom", "Custom reminders (Gold)", """
 <p>Tap <strong>Add a reminder</strong> to create your own. Ready-made options include heartworm prevention, flea and tick prevention, insulin prescription refills, a fructosamine test or glucose curve, vaccines, nail trims, grooming, tooth brushing and cleaning the water bowl. You can also choose <strong>Something else…</strong>. Set the date of the first reminder and how often it repeats, from once to yearly.</p>
 """),
 ("snooze", "Snoozing and troubleshooting", """
@@ -271,13 +271,13 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>Add questions under <strong>Questions for your veterinarian</strong> as they come up. Open questions are printed at the top of the PDF report and can be included when you email your veterinarian. Tap the circle beside a question once it has been answered, and add the answer if you wish.</p>
 """),
 ("email", "Emailing your veterinarian", """
-<p>Tap <strong>Ask your vet</strong> to compose an email. Choose which questions to include, add a message and, if you like, a summary of the last 7 days, 2 weeks or 30 days. With DiaPetic Pro, you can also attach the PDF report. Tap <strong>Preview</strong> to review the email, then send it from your own email account, or choose <strong>Share another way</strong> to use another app, such as Gmail or Messages.</p>
+<p>Tap <strong>Ask your vet</strong> to compose an email. Choose which questions to include, add a message and, if you like, a summary of the last 7 days, 2 weeks or 30 days. With DiaPetic Gold, you can also attach the PDF report. Tap <strong>Preview</strong> to review the email, then send it from your own email account, or choose <strong>Share another way</strong> to use another app, such as Gmail or Messages.</p>
 """),
 ], ["vet"]),
 
 # ------------------------------------------------------------------
 ("reports", "Reports and sharing", "Progress and glucose reports, PDF and CSV files, and the pet information sheet.",
-"""<p>The Reports tab shows how your pet is doing over time. Choose a period at the top of the screen: 7 days, 2 weeks or 30 days, or 90 or 180 days with DiaPetic Pro. Use the switch to move between <strong>Progress</strong> and <strong>Glucose</strong>.</p>""",
+"""<p>The Reports tab shows how your pet is doing over time. Choose a period at the top of the screen: 7 days, 2 weeks or 30 days, or 90 or 180 days with DiaPetic Gold. Use the switch to move between <strong>Progress</strong> and <strong>Glucose</strong>.</p>""",
 [
 ("progress", "Progress", """
 <p>The Progress view begins with a summary of food eaten, calories, shots given and weight, each compared with the previous period. It then shows:</p>
@@ -290,7 +290,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <li>Medications, weight and lab results.</li>
 </ul>
 """),
-("pdf", "PDF report for your veterinarian (Pro)", """
+("pdf", "PDF report for your veterinarian (Gold)", """
 <p>Tap <strong>Share a PDF report with your veterinarian</strong>, choose a period and tap <strong>Create PDF report</strong>. You can then send the report by email, Messages or AirDrop, save it to Files or print it.</p>
 <p>The report opens with your open questions and a summary of the routine, followed by progress, glucose and curves, symptoms and shot consistency, nutrition and diet details, notable events (such as low readings, small meals, missed shots and medications), a day-by-day log, and your journal entries in full.</p>
 <p>A <strong>CSV file</strong> containing every entry is also available for use in Numbers or Excel.</p>
@@ -349,13 +349,13 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>Here you can update your pet's name, species, breed, color, sex and microchip number. The <strong>Weight</strong> section shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
 """),
 ("pets", "Multiple pets", """
-<p>Use the <strong>pet menu</strong> at the top left of any tab to switch between pets or to <strong>Add a pet</strong>. Your first pet is free; additional pets require DiaPetic Pro. Each pet has its own records, reminders, reports and supplies.</p>
+<p>Use the <strong>pet menu</strong> at the top left of any tab to switch between pets or to <strong>Add a pet</strong>. Your first pet is free; additional pets require DiaPetic Gold. Each pet has its own records, reminders, reports and supplies.</p>
 """),
 ("settings", "App settings", """
 <ul>
 <li><strong>Appearance</strong> follows your iPhone's setting by default, or can be set to light or dark.</li>
 <li><strong>Glucose units</strong> can be mg/dL or mmol/L, and <strong>weight units</strong> can be lb or kg.</li>
-<li><strong>App icon</strong> (Pro) lets you choose Obi the dog or Kitty. The icon can change with the seasons (fall, Halloween, Thanksgiving, the holiday season and Christmas), stay the same all year, or keep one seasonal theme.</li>
+<li><strong>App icon</strong> (Gold) lets you choose Obi the dog or Kitty. The icon can change with the seasons (fall, Halloween, Thanksgiving, the holiday season and Christmas), stay the same all year, or keep one seasonal theme. You can also choose the <strong>Gold tag</strong> look, with a gold collar tag and a star.</li>
 <li><strong>Backup and restore</strong> is described in <a href="guide-backups.html">Backups and a new iPhone</a>.</li>
 <li><strong>Rate DiaPetic</strong> and <strong>Support DiaPetic</strong>, where you can leave an optional tip.</li>
 <li><strong>About DiaPetic</strong> includes privacy information and links to this website and the privacy policy.</li>
@@ -385,7 +385,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <li>Tap <strong>Restore from backup…</strong> and select your backup file.</li>
 <li>Review the contents of the backup, including the pets and number of days recorded, and tap <strong>Restore</strong>.</li>
 </ol>
-<p>Restoring replaces the data currently in DiaPetic, and a copy of that data is saved first as a precaution. If you purchased DiaPetic Pro, open the Pro screen and tap <strong>Restore purchase</strong>.</p>
+<p>Restoring replaces the data currently in DiaPetic, and a copy of that data is saved first as a precaution. If you purchased DiaPetic Gold, open the Gold screen and tap <strong>Restore purchase</strong>.</p>
 """),
 ], ["backup"]),
 ]
