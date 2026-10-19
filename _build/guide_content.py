@@ -111,13 +111,13 @@ CHAPTERS = [
 <li>Tap the microphone and speak. Your words are transcribed as you talk, with punctuation; tap again to stop. You can also type, or correct the text afterward.</li>
 <li>Confirm the time and tap <strong>Save</strong>.</li>
 </ol>
-<p>A day can have several entries. Tap an entry to edit it, or swipe left to delete it. Journal entries appear in History, in Reports, in the PDF report and in the clinic summary on the emergency screen.</p>
+<p>A day can have several entries. Tap an entry to edit it, or swipe left to delete it. Journal entries appear in History, in Reports, in the PDF report and in the clinic summary on the emergency screen. In Reports, the journal is collapsed to keep the page short. Tap it to see the latest entries, or tap <strong>All entries</strong> to see every entry in the period.</p>
 """),
 ("glucose", "Glucose readings", """
 <p>If you check your pet's glucose at home, record readings in the Blood glucose section. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
 """),
 ("supplies", "Supplies", """
-<p>The Supplies section at the bottom of today's page shows which item will run out next, along with the insulin bottle in use, syringes and food on hand. See <a href="guide-supplies.html">Insulin, syringes and food</a>.</p>
+<p>The Insulin Supplies section at the bottom of today's page shows which item will run out next, along with the insulin bottle in use, syringes and food on hand. See <a href="guide-supplies.html">Insulin, syringes and food</a>.</p>
 """),
 ("history", "Correcting an earlier day", """
 <p>To review or correct a previous day, move back with the calendar or a swipe, or open the <strong>History</strong> tab. History lists each logged day with its shots (a filled icon for given, an X for skipped and an empty circle for not logged), the glucose range and the first journal entry. Tap a day to open it and make changes, just as you would for today.</p>
@@ -228,7 +228,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """<p>DiaPetic tracks your supplies based on the shots and meals you record, and alerts you before anything runs out.</p>""",
 [
 ("bottles", "Insulin bottles", f"""
-<p>Open {P("your pet's tab › Insulin bottles")}, or tap <strong>Manage</strong> in the Supplies section of the Tracker.</p>
+<p>Open {P("your pet's tab › Insulin bottles")}, or tap <strong>Manage</strong> in the Insulin Supplies section of the Tracker.</p>
 <p><strong>Bottle in use.</strong> Turn on <strong>Bottle opened</strong> and enter the date it was opened, the number of units in the bottle and the expiration date on the label. Then set how many days an opened bottle remains usable, as stated on the insulin's label or by your veterinarian. For reference, a 10 mL bottle contains 400 units of U-40 insulin or 1,000 units of U-100 insulin.</p>
 <p><strong>Spare bottles.</strong> Tap <strong>Got a new bottle</strong> to record unopened bottles with their expiration dates and lot numbers. DiaPetic suggests opening them in order of expiration and warns you if a bottle is likely to expire before it is needed.</p>
 <p><strong>Starting a new bottle.</strong> Tap <strong>Open new bottle</strong>. The current bottle moves to the history and the next spare becomes the bottle in use. If you tap it by mistake, <strong>Undo</strong> is available for the rest of the day.</p>
@@ -241,7 +241,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>When you open a new box, tap <strong>Start new box</strong>. If syringes remain in the previous box, indicate whether you are keeping them, in which case they are added to the new count, or have discarded them. This keeps the count accurate when boxes overlap.</p>
 """),
 ("food", "Food on hand", """
-<p>Food supplies are tracked in each food's settings, as described in <a href="guide-food.html#onhand">Food on hand</a>. The Supplies section shows when each food is expected to run out.</p>
+<p>Food supplies are tracked in each food's settings, as described in <a href="guide-food.html#onhand">Food on hand</a>. The Insulin Supplies section on the Tracker also shows when each food is expected to run out.</p>
 """),
 ], ["supplies"]),
 

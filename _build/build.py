@@ -255,7 +255,7 @@ MOCKS = {
 ''', "Choose the reminders that suit your routine.", "Reminders screen with switches for insulin time, missed-shot nudge, meals, glucose checks and supplies"),
 
 "supplies": fig('''
-<div class="m-h" style="color:var(--m-blue)">Supplies</div>
+<div class="m-h" style="color:var(--m-blue)">Insulin Supplies</div>
 <div class="m-card">
 <div class="m-row" style="display:block"><span class="m-b">Insulin</span>
 <span class="m-sub" style="color:var(--m-fg)">In use · day 12 of 42 · about 210 units left</span>
