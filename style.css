@@ -43,10 +43,9 @@ p { margin: 0; }
 /* Header */
 .site-head { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
 .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand img { width: 36px; height: 36px; border-radius: 9px; }
-.wordmark { font-family: var(--display); font-weight: 900; font-size: 1.45rem; color: var(--indigo); letter-spacing: -0.01em; }
-.wordmark b { color: var(--orange); font-weight: 900; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand .brand-icon { width: 36px; height: 36px; border-radius: 9px; }
+.brand .logo { display: block; height: 33px; width: auto; }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.95rem; padding: 6px 12px; border-radius: 999px; }
 .nav a:hover { color: var(--fg); background: var(--soft); }

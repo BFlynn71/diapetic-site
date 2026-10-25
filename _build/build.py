@@ -65,6 +65,7 @@ def page(fname, title, desc, body, nav_key=None):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="https://diapetic.com/img/icon-dog.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css?v={CSSV}">{f'\n<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">' if APP_STORE_ID else ""}
@@ -72,7 +73,7 @@ def page(fname, title, desc, body, nav_key=None):
 <body>
 <header class="site-head">
 <div class="wrap">
-<a class="brand" href="index.html" aria-label="DiaPetic home"><img src="img/icon-dog.png" alt=""><span class="wordmark">Dia<b>PET</b>ic</span></a>
+<a class="brand" href="index.html" aria-label="DiaPetic home"><img class="brand-icon" src="img/icon-dog.png" alt=""><picture><source srcset="img/logo-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="img/logo.svg" alt="DiaPetic" width="146" height="33"></picture></a>
 <nav class="nav" aria-label="Main">{nav}</nav>
 </div>
 </header>
