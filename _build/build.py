@@ -84,6 +84,7 @@ def page(fname, title, desc, body, nav_key=None):
 <div class="wrap">
 <div class="foot-get">{store_badge(40)}</div>
 <p>© 2026 Bryan Flynn · <a href="mailto:support@diapetic.com">support@diapetic.com</a></p>
+<p class="foot-social">Follow DiaPetic: <a href="https://www.instagram.com/diapeticapp/" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/share/1FDAjA8MnR/" rel="noopener">Facebook</a></p>
 <nav aria-label="Footer">{foot}</nav>
 </div>
 </footer>
