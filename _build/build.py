@@ -8,9 +8,10 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 APP_STORE_ID = "6824567991"  # Live since Nov 2, 2026
 
 STORE_URL = f"https://apps.apple.com/app/id{APP_STORE_ID}" if APP_STORE_ID else ""
-# Apple's official badge artwork, served by Apple Marketing Tools (must not be altered).
-BADGE_BLACK = "https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-BADGE_WHITE = "https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/white/en-us?size=250x83"
+# Apple's official badge artwork (unaltered SVGs from Apple's marketing resources), hosted here.
+# The Apple Marketing Tools URL did not load on the live site (Nov 2, 2026).
+BADGE_BLACK = "img/app-store-badge-black.svg"
+BADGE_WHITE = "img/app-store-badge-white.svg"
 
 def store_badge(height=54):
     """The official Download on the App Store badge, or a Coming soon label before launch."""
