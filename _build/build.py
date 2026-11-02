@@ -102,14 +102,14 @@ home = f'''
 <section class="hero">
 <div class="wrap">
 <div>
-<p class="eyebrow">For dogs and cats with diabetes</p>
-<h1>Diabetes care for your pet, organized in one place.</h1>
-<p class="lead">DiaPetic helps you give insulin on schedule, avoid missed or repeated doses, and share accurate records with your veterinarian.</p>
+<p class="eyebrow">Diabetes care for dogs and cats</p>
+<h1>Your pet's care, in one place.</h1>
+<p class="lead">DiaPetic reminds you when each shot is due, shows what was given and when, and helps you share clear records with your vet.</p>
 <div class="cta">
 {store_badge(54) if STORE_URL else '<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>'}
 <a class="btn btn-ghost" href="help.html">Read the guide</a>
 </div>
-<p class="note" style="margin-top:14px">Free to download. DiaPetic Gold is a one-time purchase of $9.99.</p>
+<p class="note" style="margin-top:14px">Free to download. DiaPetic Gold is $9.99, one time, no subscription.</p>
 </div>
 <img class="hero-icon" src="img/icon-dog.png" alt="DiaPetic app icon: Obi, a curly-haired dog, with an orange collar and a red blood-drop tag" width="300" height="300">
 </div>
@@ -120,11 +120,11 @@ home = f'''
 <div class="section-head">
 <p class="eyebrow">What it does</p>
 <h2>Designed for a real diabetic dog's needs</h2>
-<p>Managing diabetes means insulin twice a day, carefully timed meals, and regular conversations with your veterinarian. DiaPetic keeps everything together, so nothing is missed and nothing is given twice.</p>
+<p>Diabetes care means insulin twice a day, carefully timed meals, and regular conversations with your vet. DiaPetic keeps it all in one place, so you can see what has been given and what is still due.</p>
 </div>
 <div class="features">
 {feature("syringe", "Quick daily logging", "Record each shot with the time it was given, how much of each meal was eaten, and a brief daily check-in that defaults to normal.")}
-{feature("bell", "Dependable reminders", "Reminders for insulin, meals, medications, glucose checks and appointments, with a follow-up if a shot has not been recorded.")}
+{feature("bell", "Reminders for each day", "Reminders for insulin, meals, medications, glucose checks and appointments, with a follow-up if a shot has not been recorded.")}
 {feature("doc", "Reports for your veterinarian", "Clear summaries covering 7 to 180 days, including shots, appetite, symptoms, weight, glucose curves and dose history, ready to share as a PDF.")}
 {feature("cross", "Help in an emergency", "An emergency button on every screen with step-by-step guidance for low blood sugar, missed or repeated doses and other urgent situations.")}
 {feature("box", "Supply tracking", "Keeps track of the insulin bottle in use, spare bottles, syringes and food, and alerts you before anything runs low.")}
@@ -140,7 +140,7 @@ home = f'''
 <h2>Clear screens for everyday care</h2>
 </div>
 <div class="shots">
-<figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given and weight" width="600" height="1304" loading="lazy"><figcaption>Progress reports for your veterinarian</figcaption></figure>
+<figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given and weight" width="600" height="1304" loading="lazy"><figcaption>Progress reports for your vet</figcaption></figure>
 <div style="display:flex;flex-direction:column;gap:18px">
 <figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call, directions and calendar buttons" width="600" height="459" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
 <figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="382" loading="lazy"><figcaption>Detailed nutrition tracking</figcaption></figure>
@@ -157,7 +157,7 @@ home = f'''
 <p class="eyebrow">Our story</p>
 <h2 style="margin-top:10px">Made for Obi</h2>
 <p style="margin-top:14px">DiaPetic began as a tracker for Obi, a diabetic Sheepadoodle, created by his owner to keep his insulin, meals and veterinary notes in order.</p>
-<p>It soon became clear that other families caring for a diabetic pet needed the same thing: a clear, private and dependable way to manage daily care and to make veterinary visits more productive.</p>
+<p>Other families caring for a diabetic pet need the same thing, so DiaPetic is now on the App Store. Everything stays on your iPhone. No account, no tracking.</p>
 </div>
 </div>
 </section>
@@ -183,9 +183,9 @@ home = f'''
 </div>
 <div class="plan pro">
 <h3>DiaPetic Gold</h3>
-<p class="price">$9.99 <span class="note">one time</span></p>
+<p class="price">$9.99 <span class="note">one time, no subscription</span></p>
 <ul>
-<li>PDF and CSV reports for your veterinarian</li>
+<li>PDF and CSV reports for your vet</li>
 <li>90- and 180-day trends</li>
 <li>Multiple pets</li>
 <li>Custom reminders, such as heartworm prevention, refills and vaccines</li>
@@ -197,7 +197,7 @@ home = f'''
 <div class="get-app">
 <div>
 <h3>{"Download DiaPetic" if STORE_URL else "Coming soon to the App Store"}</h3>
-<p>{"Available for iPhone. Free to download, with an optional one-time upgrade." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
+<p>{"Available for iPhone. Free to download. DiaPetic Gold is one time, no subscription." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
 {store_badge(54) if STORE_URL else NOTIFY}
 </div>
 {store_qr()}
@@ -211,8 +211,8 @@ page("index.html", "DiaPetic: Pet Diabetes Log", "Track insulin, meals and gluco
 # ---------------- Screen illustrations (demo pet "Biscuit") ----------------
 def tog(on): return f'<span class="m-tog{" on" if on else ""}"></span>'
 def pill(t, color, fill=False):
-    return (f'<span class="m-pill m-fill" style="background:var({color})">{t}</span>' if fill
-            else f'<span class="m-pill" style="color:var({color});background:color-mix(in srgb, var({color}) 15%, transparent)">{t}</span>')
+    return (f'<span class="m-pill m-fill" style="background:var({color}-f);color:var({color}-o)">{t}</span>' if fill
+            else f'<span class="m-pill" style="color:var({color}-t);background:color-mix(in srgb, var({color}) 15%, transparent)">{t}</span>')
 def fig(body, cap, alt):
     return f'<figure class="shotfig"><div class="mock" role="img" aria-label="{alt}">{body}</div><figcaption>{cap}</figcaption></figure>'
 
@@ -220,18 +220,18 @@ MOCKS = {
 "setup": fig('''
 <div class="m-h">Insulin prescribed by your veterinarian</div>
 <div class="m-card"><div class="m-row"><span>Insulin</span><span class="m-v">Vetsulin · U-40 ›</span></div></div>
-<div class="m-h" style="color:var(--m-orange)">Morning shot</div>
+<div class="m-h" style="color:var(--m-orange-t)">Morning shot</div>
 <div class="m-card"><div class="m-row"><span>Units</span><span class="m-v">8</span></div><div class="m-row"><span>Time</span><span class="m-v">7:00 AM</span></div></div>
-<div class="m-h" style="color:var(--m-indigo)">Evening shot</div>
+<div class="m-h" style="color:var(--m-indigo-t)">Evening shot</div>
 <div class="m-card"><div class="m-row"><span>Units</span><span class="m-v">8</span></div><div class="m-row"><span>Time</span><span class="m-v">7:00 PM</span></div></div>
 <div class="m-foot">Set units to 0 for a shot your pet doesn't get. DiaPetic records doses; it never recommends one.</div>
 ''', "Enter the insulin, doses and times exactly as prescribed.", "Setup screen with the prescribed insulin, morning shot 8 units at 7 AM and evening shot 8 units at 7 PM"),
 
 "day": fig('''
-<div class="m-h" style="color:var(--m-orange)">☀︎ Morning</div>
+<div class="m-h" style="color:var(--m-orange-t)">☀︎ Morning</div>
 <div class="m-card">
 <div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
-<div class="m-seg"><span style="background:var(--m-orange);color:#fff">All</span><span>Most</span><span>Some</span><span>None</span></div>
+<div class="m-seg"><span style="background:var(--m-orange-f);color:var(--m-orange-o)">All</span><span>Most</span><span>Some</span><span>None</span></div>
 <div class="m-row"><span><span class="m-b">Insulin</span><span class="m-sub">8 units of Vetsulin</span></span>''' + pill("Give 8 u", "--m-orange", True) + '''</div>
 </div>
 <div class="m-sheet" style="margin-top:10px">
@@ -243,38 +243,38 @@ MOCKS = {
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
 <div class="m-mic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></div>
-<div style="text-align:center;font-weight:600;color:var(--m-indigo);font-size:14px">Tap to talk about the day</div>
+<div style="text-align:center;font-weight:600;color:var(--m-indigo-t);font-size:14px">Tap to talk about the day</div>
 <div class="m-card" style="margin-top:8px"><div class="m-row" style="display:block">Ate all his breakfast but seemed tired after our walk. Drinking a bit more water tonight. Ask the vet about the new food.</div></div>
 <div class="m-card"><div class="m-row"><span>Time</span><span class="m-v">8:40 PM</span></div></div>
 ''', "Tap the microphone to dictate a journal entry.", "Journal editor with a large microphone button and a dictated entry"),
 
 "reminders": fig('''
-<div class="m-h" style="color:var(--m-indigo)">Insulin</div>
+<div class="m-h" style="color:var(--m-indigo-t)">Insulin</div>
 <div class="m-card"><div class="m-row"><span>Insulin time</span>''' + tog(True) + '''</div><div class="m-row"><span>Nudge if a shot isn't logged</span>''' + tog(True) + '''</div></div>
-<div class="m-h" style="color:var(--m-orange)">Meals and care</div>
+<div class="m-h" style="color:var(--m-orange-t)">Meals and care</div>
 <div class="m-card"><div class="m-row"><span>Meals</span>''' + tog(True) + '''</div><div class="m-row"><span>Glucose checks</span>''' + tog(False) + '''</div></div>
-<div class="m-h" style="color:var(--m-blue)">Supplies</div>
+<div class="m-h" style="color:var(--m-blue-t)">Supplies</div>
 <div class="m-card"><div class="m-row"><span>Insulin running low</span>''' + tog(True) + '''</div><div class="m-row"><span>Time to open a new bottle</span>''' + tog(True) + '''</div></div>
 ''', "Choose the reminders that suit your routine.", "Reminders screen with switches for insulin time, missed-shot nudge, meals, glucose checks and supplies"),
 
 "supplies": fig('''
-<div class="m-h" style="color:var(--m-blue)">Insulin Supplies</div>
+<div class="m-h" style="color:var(--m-blue-t)">Insulin Supplies</div>
 <div class="m-card">
 <div class="m-row" style="display:block"><span class="m-b">Insulin</span>
 <span class="m-sub" style="color:var(--m-fg)">In use · day 12 of 42 · about 210 units left</span>
 <span class="m-sub">Use by Nov 22 · In the fridge: 1 unopened bottle</span>
-<span class="m-sub" style="color:var(--m-blue);font-weight:600">Supply lasts until about Dec 30</span></div>
+<span class="m-sub" style="color:var(--m-blue-t);font-weight:600">Supply lasts until about Dec 30</span></div>
 <div class="m-btns">''' + pill("Open new bottle", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
 <div class="m-row" style="display:block"><span class="m-b">Syringes</span>
 <span class="m-sub" style="color:var(--m-fg)">In use · about 64 left</span>
 <span class="m-sub">Unopened: 1 box (100 syringes)</span>
-<span class="m-sub" style="color:var(--m-blue);font-weight:600">Supply lasts until about Feb 10</span></div>
+<span class="m-sub" style="color:var(--m-blue-t);font-weight:600">Supply lasts until about Feb 10</span></div>
 <div class="m-btns">''' + pill("Start new box", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
 </div>
 ''', "Supplies on hand and their expected run-out dates.", "Supplies section showing the insulin bottle in use, a spare in the fridge, syringes and run-out dates"),
 
 "vet": fig('''
-<div class="m-h" style="color:var(--m-red)">Next appointment</div>
+<div class="m-h" style="color:var(--m-red-t)">Next appointment</div>
 <div class="m-card">
 <div class="m-row" style="display:block"><span class="m-b">Glucose curve</span><span class="m-sub" style="color:var(--m-fg)">Thu, Oct 22 · 8:00 AM – 4:00 PM</span><span class="m-sub">Bring: the insulin, a morning meal, your questions</span></div>
 <div class="m-btns" style="display:grid;grid-template-columns:repeat(3,1fr)">''' + pill("Call", "--m-red") + pill("Directions", "--m-red") + pill("In Calendar", "--m-red") + '''</div>
@@ -285,18 +285,18 @@ MOCKS = {
 <div class="m-title">Reports</div>
 <div class="m-h">At a glance · 30 days</div>
 <div class="m-tiles">
-<div class="m-tile"><span class="m-sub" style="color:var(--m-green)">Food eaten</span><b>96%</b><span class="m-sub">of planned meals</span></div>
-<div class="m-tile"><span class="m-sub" style="color:var(--m-orange)">Calories a day</span><b>712</b><span class="m-sub">97% of target</span></div>
-<div class="m-tile"><span class="m-sub" style="color:var(--m-indigo)">Shots given</span><b>100%</b><span class="m-sub">0 not logged</span></div>
-<div class="m-tile"><span class="m-sub" style="color:var(--m-blue)">Weight</span><b>48 lb</b><span class="m-sub">steady</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Food eaten</span><b>96%</b><span class="m-sub">of planned meals</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-orange-t)">Calories a day</span><b>712</b><span class="m-sub">97% of target</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Shots given</span><b>100%</b><span class="m-sub">0 not logged</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-blue-t)">Weight</span><b>48 lb</b><span class="m-sub">steady</span></div>
 </div>
 ''', "A summary of recent weeks at a glance.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds"),
 
 "emergency": fig('''
-<div class="m-title" style="color:var(--m-red)">Emergency</div>
+<div class="m-title" style="color:var(--m-red-t)">Emergency</div>
 <div class="m-card"><div class="m-row" style="justify-content:center">''' + pill("Help me decide what to do", "--m-red", True) + '''</div></div>
 <div class="m-h">Call now</div>
-<div class="m-card"><div class="m-row"><span>Your veterinarian</span><span class="m-v" style="color:var(--m-red)">Call</span></div><div class="m-row"><span>Emergency clinic</span><span class="m-v" style="color:var(--m-red)">Call</span></div><div class="m-row"><span>Pet poison hotline</span><span class="m-v" style="color:var(--m-red)">Call</span></div></div>
+<div class="m-card"><div class="m-row"><span>Your veterinarian</span><span class="m-v" style="color:var(--m-red-t)">Call</span></div><div class="m-row"><span>Emergency clinic</span><span class="m-v" style="color:var(--m-red-t)">Call</span></div><div class="m-row"><span>Pet poison hotline</span><span class="m-v" style="color:var(--m-red-t)">Call</span></div></div>
 <div class="m-h">Quick guides</div>
 <div class="m-card"><div class="m-row"><span>Low blood sugar</span><span class="m-v">›</span></div><div class="m-row"><span>Unsure if the shot was given</span><span class="m-v">›</span></div></div>
 ''', "Calls, guided questions and step-by-step guides, available from every screen.", "Emergency screen with a Help me decide button, call buttons and quick guides"),
@@ -304,7 +304,7 @@ MOCKS = {
 "backup": fig('''
 <div class="m-title">Backup and restore</div>
 <div class="m-card"><div class="m-row" style="justify-content:center">''' + pill("Back up now", "--m-blue", True) + '''</div><div class="m-row"><span>Last backup</span><span class="m-v">Today, 7:10 AM</span></div><div class="m-row"><span>Weekly automatic copy</span><span class="m-v">Keeps 4</span></div></div>
-<div class="m-card"><div class="m-row"><span style="color:var(--m-blue)">Restore from backup</span><span class="m-v">›</span></div></div>
+<div class="m-card"><div class="m-row"><span style="color:var(--m-blue-t)">Restore from backup</span><span class="m-v">›</span></div></div>
 <div class="m-foot">Save the file to iCloud Drive or anywhere in Files.</div>
 ''', "Back up to iCloud Drive or Files, and restore on a new iPhone.", "Backup and restore screen with Back up now and Restore from backup"),
 }
@@ -364,7 +364,7 @@ for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
 faq_groups = [
 ("Using the app", [
 ("I forgot to record a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker by swiping back or using the calendar button, tap <strong>Give</strong> on the shot, and choose <strong>A different time…</strong> to enter when it was given.</p>"),
-("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your veterinarian.</p>"),
+("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your vet.</p>"),
 ("Does DiaPetic recommend insulin doses?", "<p>No. Insulin doses must always come from your veterinarian. DiaPetic records the prescribed dose and what was actually given, so your veterinarian has accurate information for making those decisions.</p>"),
 ("Can I use DiaPetic for a cat, or for more than one pet?", "<p>Yes. DiaPetic works for both dogs and cats. Your first pet is free, and additional pets are included with DiaPetic Gold.</p>"),
 ("Can two people use DiaPetic for the same pet?", "<p>Not yet. Each iPhone currently keeps its own records. Sharing between family members is planned for a future update.</p>"),
@@ -373,14 +373,14 @@ faq_groups = [
 ]),
 ("Your data and privacy", [
 ("Where is my information stored?", "<p>Your information is stored only on your iPhone. DiaPetic has no accounts, advertising, analytics or servers. Information leaves your phone only when you choose to share it, for example by sending a report or saving a backup.</p>"),
-("Can my veterinarian see my records?", "<p>Your veterinarian sees only what you send, such as a PDF report or an email from the Vet tab. There is no online portal or automatic sharing.</p>"),
+("Can my vet see my records?", "<p>Your vet sees only what you send, such as a PDF report or an email from the Vet tab. There is no online portal or automatic sharing.</p>"),
 ("How do I move to a new iPhone?", "<p>On your current iPhone, go to your pet's tab › Backup and restore, tap <strong>Back up now</strong> and save the file to iCloud Drive. On the new iPhone, install DiaPetic, open Backup and restore, tap <strong>Restore from backup…</strong> and select the file.</p>"),
 ("What happens to my records if I delete the app?", "<p>Deleting the app removes its data from your iPhone. Your records can be recovered only from a backup, so be sure to make one first.</p>"),
 ]),
 ("DiaPetic Gold and purchases", [
 ("What does DiaPetic Gold include? Is it a subscription?", "<p>DiaPetic Gold is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, multiple pets, custom reminders, and dog and cat app icons with seasonal designs or a gold collar tag. It is shared with your Family Sharing group.</p>"),
 ("How do I restore DiaPetic Gold on another iPhone?", "<p>Open the Gold screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
-("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not unlock any features. Everything related to your pet's safety is always free.</p>"),
+("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not add any features. Everything related to your pet's safety is always free.</p>"),
 ("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App settings › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),
 ]),
 ]
@@ -397,7 +397,7 @@ faq_body = f'''
 <div class="faq article">
 {groups}
 <div class="contact">
-<h2 style="color:#FFFFFF">Still need help?</h2>
+<h2>Still need help?</h2>
 <p>Please email us with your iPhone model and a description of what happened. We also welcome suggestions, which you can send from within the app under your pet's tab › Help and support › Suggestion box.</p>
 <a href="mailto:support@diapetic.com">support@diapetic.com</a>
 </div>
@@ -428,7 +428,7 @@ privacy_body = f'''
 <p>Information leaves your iPhone only when you choose to share it:</p>
 <ul>
 <li><strong>Sharing:</strong> reports, the pet information sheet and CSV files are sent only to the destinations you choose, such as email, Messages, AirDrop, Files or a printer.</li>
-<li><strong>Email:</strong> emails to your veterinarian and messages from the suggestion box are sent from your own email app, and you can review them before sending. Messages sent to us are used only to respond and to improve the app.</li>
+<li><strong>Email:</strong> emails to your vet and messages from the suggestion box are sent from your own email app, and you can review them before sending. Messages sent to us are used only to respond and to improve the app.</li>
 <li><strong>Backups:</strong> backup files are saved to the location you choose, such as iCloud Drive or Files. Backups stored in iCloud are kept in your own iCloud account under Apple's terms.</li>
 </ul>
 
@@ -449,7 +449,7 @@ privacy_body = f'''
 <p>DiaPetic is intended for adults caring for a pet and is not directed at children. We do not knowingly collect information from anyone.</p>
 
 <h2>This website</h2>
-<p>diapetic.com does not use cookies, analytics or tracking.{" The App Store badge image is loaded from Apple." if STORE_URL else ""} The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
+<p>diapetic.com does not use cookies, analytics or tracking. The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
 
 <h2>Not veterinary advice</h2>
 <p>DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care.</p>

@@ -14,8 +14,8 @@ CHAPTERS = [
 <p>DiaPetic is organized into five tabs:</p>
 <ul>
 <li><strong>Tracker</strong> is the daily log, where you record shots, meals, the daily check-in and journal entries.</li>
-<li><strong>Reports</strong> summarizes the last 7 days to 6 months, including glucose charts and PDF reports for your veterinarian.</li>
-<li><strong>Vet</strong> holds appointments, questions for your veterinarian, clinic contacts and email.</li>
+<li><strong>Reports</strong> summarizes the last 7 days to 6 months, including glucose charts and PDF reports for your vet.</li>
+<li><strong>Vet</strong> holds appointments, questions for your vet, clinic contacts and email.</li>
 <li><strong>History</strong> lists every day you have logged, with the most recent first.</li>
 <li>The last tab is named after your pet. It contains your pet's details, insulin, meal plan, medications, reminders, supplies and the app's settings.</li>
 </ul>
@@ -42,7 +42,7 @@ CHAPTERS = [
 <li>Choose a <strong>feeding style</strong>. Most pets on insulin eat set meals; free feeding is also available.</li>
 <li>Tap <strong>Add meal food</strong> for each food your pet eats, and enter the type, brand, amount and the meal it is served with. Calories can be added now or later; the <a href="guide-food.html">Food and nutrition</a> chapter explains the options.</li>
 <li>Add your pet's usual treats with <strong>Add treat</strong> so they are quick to log.</li>
-<li>If your veterinarian has given you a <strong>daily calorie target</strong>, enter it.</li>
+<li>If your vet has given you a <strong>daily calorie target</strong>, enter it.</li>
 </ol>
 """),
 ("vet", "Your veterinarian and an emergency clinic", f"""
@@ -58,7 +58,7 @@ CHAPTERS = [
 <li>Confirm that reminders arrive at the right times, and adjust them in {P("your pet's tab › Reminders")} if needed.</li>
 <li>Add any other medications or supplements in {P("your pet's tab › Other medications and supplements")}.</li>
 <li>Record the insulin bottle in use and any spare bottles in {P("your pet's tab › Insulin bottles")}.</li>
-<li>Add your next veterinary appointment in the {P("Vet tab")}.</li>
+<li>Add your next vet appointment in the {P("Vet tab")}.</li>
 <li>Make your first backup in {P("your pet's tab › Backup and restore")}.</li>
 </ul>
 """),
@@ -70,7 +70,7 @@ CHAPTERS = [
 [
 ("days", "Moving between days", """
 <p>Swipe left or right, or use the <strong>‹ ›</strong> arrows beside the date, to move one day at a time. To go further back, tap the <strong>calendar</strong> button beside "Daily Tracker" and choose a date, or use one of the shortcuts for one week, two weeks or one month ago. Tap the date at any time to return to today.</p>
-<p>When you change days, the page keeps your place, which makes it easy to compare the same section from one day to the next.</p>
+<p>When you change days, the page keeps your place, so you can compare the same section from one day to the next.</p>
 """),
 ("glance", "Summary and alerts", """
 <p>The top of the page summarizes the day: calories eaten compared with the target, the most recent glucose reading, and the number of meals logged. Alerts appear above the summary when something needs attention:</p>
@@ -96,16 +96,16 @@ CHAPTERS = [
 """),
 ("meds", "Medications, supplements and treats", """
 <p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications given as needed have their own section with a <strong>Give</strong> button, and supplements appear as a daily checkbox.</p>
-<p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your veterinarian.</p>
+<p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your vet.</p>
 """),
 ("weight", "Weight", """
-<p>Tap the Weight section to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your veterinarian gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
+<p>Tap the Weight section to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your vet gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
 """),
 ("checkin", "The daily check-in", """
 <p>Water intake, urination, stool, energy and sleep are set to <strong>Normal</strong> by default and are saved that way, so you only need to change what was different. Turn on <strong>Vomited</strong> if your pet vomited that day, and enter a <strong>Water amount</strong> if you measure it. Drinking and urinating more than usual can indicate that blood sugar is running high.</p>
 """),
 ("journal", "The journal", """
-<p>The journal, below the check-in, is for anything else worth noting: how the day went, a change in behavior, or a question for your veterinarian.</p>
+<p>The journal, below the check-in, is for anything else worth noting: how the day went, a change in behavior, or a question for your vet.</p>
 <ol>
 <li>Tap <strong>Write about today</strong>, or <strong>Add another entry</strong> if the day already has one.</li>
 <li>Tap the microphone and speak. Your words are transcribed as you talk, with punctuation; tap again to stop. You can also type, or correct the text afterward.</li>
@@ -138,17 +138,17 @@ f"""<p>Consistent meals help keep blood sugar stable. You can set up and adjust 
 <div class="tip">Weighing food in grams on a kitchen scale is the most accurate method. Measuring cups can vary by 20 percent or more.</div>
 """),
 ("facts", "Nutrition facts", """
-<p>If you enter the guaranteed analysis from the label (protein, fat, fiber, moisture and ash), DiaPetic converts the values to a <strong>dry-matter basis</strong> and estimates the carbohydrate content. This allows your veterinarian to compare foods with different moisture levels, such as dry and canned food. Carbohydrate and fiber are particularly relevant for diabetic pets. This section is optional.</p>
+<p>If you enter the guaranteed analysis from the label (protein, fat, fiber, moisture and ash), DiaPetic converts the values to a <strong>dry-matter basis</strong> and estimates the carbohydrate content. This allows your vet to compare foods with different moisture levels, such as dry and canned food. Carbohydrate and fiber are particularly relevant for diabetic pets. This section is optional.</p>
 """),
 ("onhand", "Food on hand", """
 <p>To track how much food remains, turn on <strong>Track how much is left</strong> and enter how the food is sold, the size of each package and the number you have. DiaPetic deducts each logged meal, estimates when the food will run out and can remind you before it does.</p>
 """),
 ("target", "Calorie target and portions", """
-<p>Enter the <strong>daily calorie target</strong> provided by your veterinarian. If you do not have one, DiaPetic shows the total for the meal plan, which you can adopt by tapping <strong>Use as target</strong>.</p>
+<p>Enter the <strong>daily calorie target</strong> provided by your vet. If you do not have one, DiaPetic shows the total for the meal plan, which you can adopt by tapping <strong>Use as target</strong>.</p>
 <p><strong>Portion estimates</strong> determine how much "Most" and "Some" represent when you record a meal on the Tracker. Treats and other food count toward the day's total when calories are entered for them.</p>
 """),
 ("changes", "Diet changes", """
-<p>DiaPetic records each change to the meal plan automatically. Reports mark diet changes on the charts and compare average glucose, calories and weight before and after, so your veterinarian can see how a new food has affected your pet.</p>
+<p>DiaPetic records each change to the meal plan automatically. Reports mark diet changes on the charts and compare average glucose, calories and weight before and after, so your vet can see how a new food has affected your pet.</p>
 """),
 ], []),
 
@@ -191,7 +191,7 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 <p>Tap <strong>Compare curves</strong> to overlay up to three days. Veterinarians look closely at the lowest point of a curve and when it occurs to assess how well the insulin is working.</p>
 """),
 ("labs", "Lab results", f"""
-<p>Record blood work, such as a fructosamine test, in {P("Reports › Lab results › Add lab result")} or when adding notes after a vet visit. Enter the test, the result, the unit and the date, along with any comments from your veterinarian. Lab results are included in your reports.</p>
+<p>Record blood work, such as a fructosamine test, in {P("Reports › Lab results › Add lab result")} or when adding notes after a vet visit. Enter the test, the result, the unit and the date, along with any comments from your vet. Lab results are included in your reports.</p>
 """),
 ], []),
 
@@ -200,7 +200,7 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <strong>Coming up</strong> list at the top of the screen shows what is scheduled, so you can confirm that reminders are set correctly.</p>""",
 [
 ("insulin", "Insulin", """
-<p><strong>At each shot time</strong> sends a reminder at the morning and evening shot times. <strong>Nudge if a shot isn't logged</strong> sends a follow-up if no shot has been recorded within a period you choose, from 15 minutes to 2 hours. This helps prevent both missed doses and double doses.</p>
+<p><strong>At each shot time</strong> sends a reminder at the morning and evening shot times. <strong>Nudge if a shot isn't logged</strong> sends a follow-up if no shot has been recorded within a period you choose, from 15 minutes to 2 hours. This helps you check whether a shot was given before anyone gives another.</p>
 """),
 ("meals", "Meals", """
 <p>A meal reminder can arrive with the shot reminder or 15, 30 or 45 minutes before it. The <strong>Fill the bowl</strong> option lists the planned portions in the reminder, which is helpful when someone else is feeding your pet.</p>
@@ -246,11 +246,11 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 ], ["supplies"]),
 
 # ------------------------------------------------------------------
-("vet", "Your veterinarian", "Clinic contacts, appointments, visit notes, questions and email.",
+("vet", "Your vet", "Clinic contacts, appointments, visit notes, questions and email.",
 """<p>The Vet tab brings together everything related to your pet's veterinary care.</p>""",
 [
 ("contacts", "Contacts and finding a clinic", f"""
-<p>In {P("Vet tab › Contacts › Edit or find clinics")}, enter your veterinarian's clinic, the doctor's name, phone number, email address and clinic address. Add an emergency clinic as well, for after-hours problems such as very low blood sugar.</p>
+<p>In {P("Vet tab › Contacts › Edit or find clinics")}, enter your vet's clinic, the doctor's name, phone number, email address and clinic address. Add an emergency clinic as well, for after-hours problems such as very low blood sugar.</p>
 <p>To search for a clinic, tap <strong>Find veterinarians near me</strong> or <strong>Find emergency clinics near me</strong> and search by your current location or by city or ZIP code. Then choose <strong>Use as my veterinarian</strong> or <strong>Use as my emergency clinic</strong>. Your location is used only for the search and is not stored.</p>
 """),
 ("appointments", "Scheduling an appointment", """
@@ -268,9 +268,9 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>If the insulin dose was changed, update it in your pet's tab so that the change appears in your reports.</p>
 """),
 ("questions", "Questions for your veterinarian", """
-<p>Add questions under <strong>Questions for your veterinarian</strong> as they come up. Open questions are printed at the top of the PDF report and can be included when you email your veterinarian. Tap the circle beside a question once it has been answered, and add the answer if you wish.</p>
+<p>Add questions under <strong>Questions for your veterinarian</strong> as they come up. Open questions are printed at the top of the PDF report and can be included when you email your vet. Tap the circle beside a question once it has been answered, and add the answer if you wish.</p>
 """),
-("email", "Emailing your veterinarian", """
+("email", "Emailing your vet", """
 <p>Tap <strong>Ask your vet</strong> to compose an email. Choose which questions to include, add a message and, if you like, a summary of the last 7 days, 2 weeks or 30 days. With DiaPetic Gold, you can also attach the PDF report. Tap <strong>Preview</strong> to review the email, then send it from your own email account, or choose <strong>Share another way</strong> to use another app, such as Gmail or Messages.</p>
 """),
 ], ["vet"]),
@@ -290,7 +290,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <li>Medications, weight and lab results.</li>
 </ul>
 """),
-("pdf", "PDF report for your veterinarian (Gold)", """
+("pdf", "PDF report for your vet (Gold)", """
 <p>Tap <strong>Share a PDF report with your veterinarian</strong>, choose a period and tap <strong>Create PDF report</strong>. You can then send the report by email, Messages or AirDrop, save it to Files or print it.</p>
 <p>The report opens with your open questions and a summary of the routine, followed by progress, glucose and curves, symptoms and shot consistency, nutrition and diet details, notable events (such as low readings, small meals, missed shots and medications), a day-by-day log, and your journal entries in full.</p>
 <p>A <strong>CSV file</strong> containing every entry is also available for use in Numbers or Excel.</p>
