@@ -35,7 +35,7 @@ CHAPTERS = [
 <li>Enter the <strong>units</strong> and <strong>time</strong> for the morning and evening shots exactly as your veterinarian prescribed. If your pet receives only one shot a day, leave the other blank.</li>
 <li>Leave <strong>Remind me at each shot time</strong> turned on unless you prefer not to receive reminders.</li>
 </ol>
-<div class="tip">DiaPetic records the dose your veterinarian prescribed; it never suggests or changes a dose. When your veterinarian adjusts the dose, update it in {P("your pet's tab")}. The change is recorded in your reports automatically.</div>
+<div class="tip">DiaPetic records the dose your veterinarian prescribed; it never suggests or changes a dose. When your veterinarian adjusts the dose, update it in {P("your pet's tab › Insulin and shot times")}. The change is recorded in your reports automatically.</div>
 """),
 ("meals", "Meals and treats", """
 <ol>
@@ -56,10 +56,10 @@ CHAPTERS = [
 <ul class="checklist">
 <li>Log every shot and meal on the <a href="guide-tracker.html">Tracker</a> for the first few days to establish the routine.</li>
 <li>Confirm that reminders arrive at the right times, and adjust them in {P("your pet's tab › Reminders")} if needed.</li>
-<li>Add any other medications or supplements in {P("your pet's tab › Other medications and supplements")}.</li>
-<li>Record the insulin bottle in use and any spare bottles in {P("your pet's tab › Insulin bottles")}.</li>
+<li>Add any other medications or supplements in {P("your pet's tab › Medications")}.</li>
+<li>Record the insulin bottle in use and any spare bottles in {P("your pet's tab › Insulin Supplies › Insulin bottles")}.</li>
 <li>Add your next vet appointment in the {P("Vet tab")}.</li>
-<li>Make your first backup in {P("your pet's tab › Backup and restore")}.</li>
+<li>Make your first backup in {P("your pet's tab › Backup")}.</li>
 </ul>
 """),
 ], ["setup"]),
@@ -73,7 +73,7 @@ CHAPTERS = [
 <p>When you change days, the page keeps your place, so you can compare the same section from one day to the next.</p>
 """),
 ("glance", "Summary and alerts", """
-<p>The top of the page summarizes the day: calories eaten compared with the target, the most recent glucose reading, and the number of meals logged. Alerts appear above the summary when something needs attention:</p>
+<p>The routine that needs attention appears at the top, labeled <strong>Due now</strong> or <strong>Next</strong>. A finished routine shrinks to one line; tap the line to open it and make changes. Below the routines, <strong>Today's log</strong> shows tiles for the check-in, glucose, weight, medications, walks, journal and treats. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
 <ul>
 <li><strong>Eating less than usual</strong> appears when recent meals have been smaller than normal.</li>
 <li><strong>Low reading</strong> appears when a glucose reading falls below your low threshold, with buttons to call your veterinarian or emergency clinic.</li>
@@ -96,17 +96,17 @@ CHAPTERS = [
 <div class="tip">If you are unsure whether a shot was given, <strong>do not give another one.</strong> Check the Tracker first. If the shot is not recorded and no one remembers giving it, call your veterinarian. The emergency screen includes a guide for this situation.</div>
 """),
 ("meds", "Medications, supplements and treats", """
-<p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications given as needed have their own section with a <strong>Give</strong> button, and supplements appear as a daily checkbox.</p>
+<p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications on their own schedule, medications given as needed and supplements are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
 <p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your vet.</p>
 """),
 ("weight", "Weight", """
-<p>Tap the Weight section to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your vet gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
+<p>Tap the <strong>Weight</strong> tile to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your vet gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
 """),
 ("checkin", "The daily check-in", """
 <p>Water intake, urination, stool, energy and sleep are set to <strong>Normal</strong> by default and are saved that way, so you only need to change what was different. Turn on <strong>Vomited</strong> if your pet vomited that day, and enter a <strong>Water amount</strong> if you measure it. Drinking and urinating more than usual can indicate that blood sugar is running high.</p>
 """),
 ("journal", "The journal", """
-<p>The journal, below the check-in, is for anything else worth noting: how the day went, a change in behavior, or a question for your vet.</p>
+<p>The <strong>Journal</strong> tile is for anything else worth noting: how the day went, a change in behavior, or a question for your vet.</p>
 <ol>
 <li>Tap <strong>Write about today</strong>, or <strong>Add another entry</strong> if the day already has one.</li>
 <li>Tap the microphone and speak. Your words are transcribed as you talk, with punctuation; tap again to stop. You can also type, or correct the text afterward.</li>
@@ -115,10 +115,10 @@ CHAPTERS = [
 <p>A day can have several entries. Tap an entry to edit it, or swipe left to delete it. Journal entries appear in History, in Reports, in the PDF report and in the clinic summary on the emergency screen. In Reports, the journal is collapsed to keep the page short. Tap it to see the latest entries, or tap <strong>All entries</strong> to see every entry in the period.</p>
 """),
 ("glucose", "Glucose readings", """
-<p>If you check your pet's glucose at home, record readings in the Blood glucose section. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
+<p>If you check your pet's glucose at home, record readings from the <strong>Glucose</strong> tile. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
 """),
 ("walks", "Walks", """
-<p>Record a walk in the Walks section with the time it started and how long it lasted. Exercise can lower blood glucose, so the walk appears as a shaded band on that day's glucose curve.</p>
+<p>Record a walk from the <strong>Walks</strong> tile with the time it started and how long it lasted. Exercise can lower blood glucose, so the walk appears as a shaded band on that day's glucose curve.</p>
 """),
 ("supplies", "Supplies", """
 <p>The Insulin Supplies section at the bottom of today's page shows which item will run out next, along with the insulin bottle in use, syringes and food on hand. See <a href="guide-supplies.html">Insulin, syringes and food</a>.</p>
@@ -158,7 +158,7 @@ f"""<p>Consistent meals help keep blood sugar stable. You can set up and adjust 
 
 # ------------------------------------------------------------------
 ("medications", "Medications and supplements", "Adding medications and supplements, schedules and doses.",
-f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's tab › Other medications and supplements")}.</p>""",
+f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's tab › Medications")}.</p>""",
 [
 ("add", "Adding a medication or supplement", """
 <ol>
@@ -192,7 +192,7 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 
 # ------------------------------------------------------------------
 ("glucose", "Glucose and lab results", "Home glucose readings, curves, time in range and laboratory results.",
-f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To turn on home monitoring, go to {P("your pet's tab › Home glucose monitoring")} and turn on <strong>I check glucose at home</strong>.</p>""",
+f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To turn on home monitoring, go to {P("your pet's tab › Home glucose")} and turn on <strong>I check glucose at home</strong>.</p>""",
 [
 ("numbers", "Setting your thresholds", """
 <p>Set <strong>Highlight readings below</strong> and <strong>Highlight readings above</strong> to the values your veterinarian recommends. These thresholds determine how readings are colored, when the low-reading alert appears and how time in range is calculated. You can choose mg/dL or mmol/L in the app settings.</p>
@@ -246,7 +246,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """<p>DiaPetic tracks your supplies based on the shots and meals you record, and alerts you before anything runs out.</p>""",
 [
 ("bottles", "Insulin bottles", f"""
-<p>Open {P("your pet's tab › Insulin bottles")}, or tap <strong>Manage</strong> in the Insulin Supplies section of the Tracker.</p>
+<p>Open {P("your pet's tab › Insulin Supplies › Insulin bottles")}, or tap <strong>Manage</strong> in the Insulin Supplies section of the Tracker.</p>
 <p><strong>Bottle in use.</strong> Turn on <strong>Bottle opened</strong> and enter the date it was opened, the number of units in the bottle and the expiration date on the label. Then set how many days an opened bottle remains usable, as stated on the insulin's label or by your veterinarian. For reference, a 10 mL bottle contains 400 units of U-40 insulin or 1,000 units of U-100 insulin.</p>
 <p><strong>Spare bottles.</strong> Tap <strong>Got a new bottle</strong> to record unopened bottles with their expiration dates and lot numbers. DiaPetic suggests opening them in order of expiration and warns you if a bottle is likely to expire before it is needed.</p>
 <p><strong>Starting a new bottle.</strong> Tap <strong>Open new bottle</strong>. The current bottle moves to the history and the next spare becomes the bottle in use. If you tap it by mistake, <strong>Undo</strong> is available for the rest of the day.</p>
@@ -255,7 +255,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>On the same screen, you can record the date the prescription was filled, the number of <strong>refills left</strong>, the prescription number and the pharmacy. The prescription number can be copied when you call to reorder. When no refills remain, DiaPetic reminds you to request a new prescription from your veterinarian before the insulin runs out.</p>
 """),
 ("syringes", "Syringes", f"""
-<p>Open {P("your pet's tab › Syringes")} and enter the date you started the current box and how many syringes it contains. DiaPetic counts one syringe for each shot. Record unopened boxes with <strong>Got new syringes</strong>.</p>
+<p>Open {P("your pet's tab › Insulin Supplies › Syringes")} and enter the date you started the current box and how many syringes it contains. DiaPetic counts one syringe for each shot. Record unopened boxes with <strong>Got new syringes</strong>.</p>
 <p>Check the box for <strong>U-40</strong> or <strong>U-100</strong> and set it under <strong>Marked on the box</strong>. If the syringes do not match your pet's insulin, DiaPetic shows a warning on the Tracker and in your pet's tab. A syringe of the wrong strength gives the wrong dose: U-100 syringes with U-40 insulin give about 40% of the prescribed dose, and U-40 syringes with U-100 insulin give about 2.5 times the prescribed dose. Do not try to convert the dose yourself. Call your veterinarian before the next shot.</p>
 <p>When you open a new box, tap <strong>Start new box</strong>. If syringes remain in the previous box, indicate whether you are keeping them, in which case they are added to the new count, or have discarded them. This keeps the count accurate when boxes overlap.</p>
 """),
@@ -299,7 +299,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """<p>The Reports tab shows how your pet is doing over time. Choose a period at the top of the screen: 7 days, 2 weeks or 30 days, or 90 or 180 days with DiaPetic Gold. Use the switch to move between <strong>Progress</strong> and <strong>Glucose</strong>.</p>""",
 [
 ("progress", "Progress", """
-<p>The Progress view begins with a summary of food eaten, calories, shots given and weight, each compared with the previous period. It then shows:</p>
+<p>The Progress view begins with a summary of food eaten, calories, shots given and weight, each compared with the previous period, followed by the PDF report. The <strong>Details</strong> list opens a page for each topic, using the period you chose:</p>
 <ul>
 <li>The routine at a glance, with typical meal and shot times calculated from your records and a measure of how complete the log is.</li>
 <li>The insulin dose history, with each change recorded automatically.</li>
@@ -310,7 +310,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 </ul>
 """),
 ("pdf", "PDF report for your vet (Gold)", """
-<p>Tap <strong>Share a PDF report with your veterinarian</strong>, choose a period and tap <strong>Create PDF report</strong>. You can then send the report by email, Messages or AirDrop, save it to Files or print it.</p>
+<p>Tap <strong>Share a PDF report</strong>, choose a period and tap <strong>Create PDF report</strong>. You can then send the report by email, Messages or AirDrop, save it to Files or print it.</p>
 <p>The report opens with your open questions and a summary of the routine, followed by progress, glucose and curves, symptoms and shot consistency, nutrition and diet details, notable events (such as low readings, small meals, missed shots and medications), a day-by-day log, and your journal entries in full.</p>
 <p>A <strong>CSV file</strong> containing every entry is also available for use in Numbers or Excel.</p>
 """),
@@ -363,12 +363,12 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """<p>The last tab is named after your pet. It contains everything you entered during setup, along with the app's settings. If you have DiaPetic Gold, a small gold tag appears beside your pet's name; tap it to see what Gold includes.</p>""",
 [
 ("help", "Help and support", """
-<p>Near the top of the tab, <strong>Help and support</strong> opens this guide (<strong>How to use DiaPetic</strong>), the <strong>FAQ &amp; support</strong> page and the <strong>Suggestion box</strong>. For your first two weeks, the Tracker also shows a short card with a link to the guide; tap <strong>Not now</strong> to hide it.</p>
+<p>In the App group, <strong>Help and support</strong> opens this guide (<strong>How to use DiaPetic</strong>), the <strong>FAQ &amp; support</strong> page and the <strong>Suggestion box</strong>. For your first two weeks, the Tracker also shows a short card with a link to the guide; tap <strong>Not now</strong> to hide it.</p>
 """),
 ("details", "Pet details", """
 <p>With DiaPetic Gold, you can add a photo of your pet. Tap the circle beside your pet's name at the top of the tab and choose <strong>Choose from Library</strong> or <strong>Take Photo</strong>, then drag and pinch to position your pet in the circle and tap <strong>Use Photo</strong>. <strong>Remove Photo</strong> returns to the first letter of your pet's name. The photo stays on your iPhone and appears on the information sheet and the emergency screen, which can help if your pet is ever lost.</p>
 <p><strong>Birthday</strong> is optional. Choose an exact date, or an approximate age if you do not know the date, such as for a rescue. The age appears on the information sheet, the PDF report and the clinic summary.</p>
-<p>Here you can update your pet's name, species, breed, color, sex and microchip number. The <strong>Weight</strong> section shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
+<p><strong>Pet details</strong> holds your pet's name, species, breed, color, sex and microchip number. The other rows open their own pages: <strong>Insulin and shot times</strong>, <strong>Meals and treats</strong>, <strong>Medications</strong>, <strong>Home glucose</strong> and <strong>Weight</strong>, which shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
 """),
 ("pets", "Multiple pets", """
 <p>Use the <strong>pet menu</strong> at the top left of any tab to switch between pets or to <strong>Add a pet</strong>. Your first pet is free; additional pets require DiaPetic Gold. Each pet has its own records, reminders, reports and supplies.</p>
@@ -377,14 +377,14 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <ul>
 <li><strong>Appearance</strong> follows your iPhone's setting by default, or can be set to light or dark.</li>
 <li><strong>Glucose units</strong> can be mg/dL or mmol/L, and <strong>weight units</strong> can be lb or kg.</li>
-<li><strong>App icon</strong> (Gold) lets you choose Obi the dog or Kitty. The icon can change with the calendar, including the seasons, Halloween, Diabetes awareness in November, the December holidays, New Year's, Valentine's Day and your pet's birthday (with an exact birth date). United States holidays appear when the iPhone's region is set to the United States, and the seasons follow the hemisphere. You can also keep one look all year or choose the <strong>Gold tag</strong> look, with a gold collar tag and a star.</li>
-<li><strong>Backup and restore</strong> is described in <a href="guide-backups.html">Backups and a new iPhone</a>.</li>
-<li><strong>Rate DiaPetic</strong> and <strong>Support DiaPetic</strong>, where you can leave an optional tip.</li>
+<li><strong>App icon</strong> (Gold), in its own row in the App group, lets you choose Obi the dog or Kitty. The icon can change with the calendar, including the seasons, Halloween, Diabetes awareness in November, the December holidays, New Year's, Valentine's Day and your pet's birthday (with an exact birth date). United States holidays appear when the iPhone's region is set to the United States, and the seasons follow the hemisphere. You can also keep one look all year or choose the <strong>Gold tag</strong> look, with a gold collar tag and a star.</li>
+<li><strong>Backup</strong>, also in the App group, is described in <a href="guide-backups.html">Backups and a new iPhone</a>.</li>
+<li><strong>Rate DiaPetic</strong> is in App settings. <strong>Support DiaPetic</strong>, where you can leave an optional tip, is the last card on the tab.</li>
 <li><strong>About DiaPetic</strong> includes privacy information and links to this website and the privacy policy.</li>
 </ul>
 """),
 ("delete", "Deleting a pet", """
-<p>The option at the bottom of the tab permanently deletes the pet and all of its records. If you may want the records later, make a backup first.</p>
+<p>The option at the bottom of <strong>Pet details</strong> permanently deletes the pet and all of its records. If you may want the records later, make a backup first.</p>
 """),
 ("feedback", "Suggestions and support", """
 <p>The <strong>Suggestion box</strong>, in Help and support, sends a message from your own email account. Choose whether you are sending a suggestion, reporting a problem, asking a question or sharing something you like, then speak or type your message. You can include details about the app and your iPhone to help diagnose problems; your pet's health records are never included. You can also email <a href="mailto:support@diapetic.com">support@diapetic.com</a> directly.</p>
@@ -396,7 +396,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """<p>Everything you enter in DiaPetic is stored only on your iPhone. A backup is the only way to recover your records if your phone is lost or the app is deleted.</p>""",
 [
 ("now", "Making a backup", f"""
-<p>Go to {P("your pet's tab › Backup and restore")} and tap <strong>Back up now</strong>. Save the file to <strong>iCloud Drive</strong> so it remains safe even if something happens to your iPhone. A backup includes every pet and all records, visits, insulin bottles, syringe boxes, journal entries, reminders and settings.</p>
+<p>Go to {P("your pet's tab › Backup")} and tap <strong>Back up now</strong>. Save the file to <strong>iCloud Drive</strong> so it remains safe even if something happens to your iPhone. A backup includes every pet and all records, visits, insulin bottles, syringe boxes, journal entries, reminders and settings.</p>
 """),
 ("auto", "Automatic weekly copies", """
 <p>DiaPetic also saves a copy automatically once a week and keeps the four most recent. Because these copies may be stored only on the iPhone, it is a good idea to use Back up now regularly as well.</p>
