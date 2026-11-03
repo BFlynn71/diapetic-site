@@ -384,7 +384,7 @@ faq_groups = [
 ("What happens to my records if I delete the app?", "<p>Deleting the app removes its data from your iPhone. Your records can be recovered only from a backup, so be sure to make one first.</p>"),
 ]),
 ("DiaPetic Gold and purchases", [
-("What does DiaPetic Gold include? Is it a subscription?", "<p>DiaPetic Gold is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, multiple pets, your pet's photo, custom reminders, and dog and cat app icons with seasonal designs or a gold collar tag. It is shared with your Family Sharing group.</p>"),
+("What does DiaPetic Gold include? Is it a subscription?", "<p>DiaPetic Gold is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, medication schedules with your own times, multiple pets, your pet's photo, custom reminders, and dog and cat app icons with seasonal designs or a gold collar tag. It is shared with your Family Sharing group.</p>"),
 ("How do I restore DiaPetic Gold on another iPhone?", "<p>Open the Gold screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
 ("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not add any features. Everything related to your pet's safety is always free.</p>"),
 ("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App settings › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),

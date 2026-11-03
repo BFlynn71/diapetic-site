@@ -169,11 +169,21 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 ("tracker", "On the Tracker", """
 <p>Scheduled medications appear in the morning or evening card, ready to check off. Once-a-day supplements appear as a daily checkbox, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
 """),
+("own", "Giving a medication at its own times", """
+<p>When a medication does not fit the morning and evening routine, such as an ointment or ear drops, choose <strong>My own schedule</strong> under <strong>When</strong>. This is part of DiaPetic Gold, a one-time purchase with no subscription.</p>
+<ul>
+<li>Set one to four times a day, or use <strong>Space evenly from the first time</strong> to fill them in every 12, 8 or 6 hours.</li>
+<li>Choose whether it repeats every day, every other day or once a week. Repeats count from the start date.</li>
+<li>Record how it is given and, if useful, where, such as the left ear.</li>
+<li>Turn on <strong>Remind me at each time</strong> for a reminder at every dose. Press and hold the reminder and tap <strong>Done</strong> to check it off without opening the app.</li>
+</ul>
+<p>Each time appears as its own row in the <strong>Medications</strong> section of Tracker, and your reports show doses logged against doses scheduled.</p>
+"""),
 ("stop", "Stopping a medication", """
 <p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the date rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
 """),
 ("reminders", "Medication reminders", f"""
-<p>Morning and evening medications are listed in the shot reminder. Once-a-day medications can have a separate reminder, and DiaPetic can also remind you before a course of medication ends. These options are in {P("your pet's tab › Reminders › Medications and supplements")}.</p>
+<p>Medications on their own schedule can have their own reminders. Morning and evening medications are listed in the shot reminder. Once-a-day medications can have a separate reminder, and DiaPetic can also remind you before a course of medication ends. These options are in {P("your pet's tab › Reminders › Medications and supplements")}.</p>
 """),
 ], []),
 
@@ -207,7 +217,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>A meal reminder can arrive with the shot reminder or 15, 30 or 45 minutes before it. The <strong>Fill the bowl</strong> option lists the planned portions in the reminder, which is helpful when someone else is feeding your pet.</p>
 """),
 ("care", "Medications, glucose and logging", """
-<p>DiaPetic can remind you about morning, evening and once-a-day medications and supplements, and before a course of medication ends. It can also remind you to check glucose before each shot and to check on your pet after a low reading. A daily logging reminder and a weekly weigh-in reminder are also available.</p>
+<p>DiaPetic can remind you about morning, evening and once-a-day medications and supplements, medications on their own schedule, and before a course of medication ends. It can also remind you to check glucose before each shot and to check on your pet after a low reading. A daily logging reminder and a weekly weigh-in reminder are also available.</p>
 """),
 ("supplies", "Supplies", """
 <p>Supply reminders warn you before insulin, syringes or food run low; you choose how many days in advance. <strong>Time to open a new bottle</strong> reminds you when the insulin bottle in use reaches the end of its usable life. Unopened bottles and boxes you have recorded are taken into account, so you will not be prompted to reorder when spares are on hand.</p>
