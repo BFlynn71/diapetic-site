@@ -34,6 +34,9 @@ def store_qr():
 NOTIFY = ('<p class="note">To be notified when DiaPetic is available, email '
           '<a href="mailto:support@diapetic.com?subject=Notify%20me%20when%20DiaPetic%20is%20available">support@diapetic.com</a>.</p>')
 
+# Cloudflare Web Analytics: page views and visitors, no cookies. Described on the privacy page.
+CF_BEACON = """<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "420821ef366d4f3c9e3bdb2dcd1cd6da"}'></script><!-- End Cloudflare Web Analytics -->"""
+
 NAV = [("index.html", "Home"), ("help.html", "How to use"), ("faq.html", "FAQ & support"), ("privacy.html", "Privacy")]
 
 def icon(path):
@@ -89,6 +92,7 @@ def page(fname, title, desc, body, nav_key=None):
 <nav aria-label="Footer">{foot}</nav>
 </div>
 </footer>
+{CF_BEACON}
 </body>
 </html>
 '''
@@ -413,7 +417,7 @@ privacy_body = f'''
 <header class="page-head">
 <p class="eyebrow">Privacy</p>
 <h1>Privacy policy</h1>
-<p>Effective October 17, 2026</p>
+<p>Effective November 2, 2026</p>
 </header>
 <article class="article">
 <p><strong>Summary:</strong> DiaPetic does not collect your data. The information you enter remains on your iPhone. The app has no accounts, advertising, analytics or tracking, and the developer operates no server that receives your information.</p>
@@ -449,7 +453,7 @@ privacy_body = f'''
 <p>DiaPetic is intended for adults caring for a pet and is not directed at children. We do not knowingly collect information from anyone.</p>
 
 <h2>This website</h2>
-<p>diapetic.com does not use cookies, analytics or tracking. The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
+<p>diapetic.com does not use cookies. It uses Cloudflare Web Analytics to count page views and see which pages are visited. Cloudflare provides this service and does not track individual visitors for these counts. None of this involves the app or anything you enter in it. The site is hosted by GitHub Pages, which may keep standard server logs, such as IP addresses, for security purposes under GitHub's privacy statement.</p>
 
 <h2>Not veterinary advice</h2>
 <p>DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care.</p>
