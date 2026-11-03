@@ -201,6 +201,7 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 <p>On the Tracker, tap <strong>Add reading</strong> in the Blood glucose section. Enter the value and time, and choose the source: <strong>glucose meter</strong>, <strong>CGM sensor</strong> or <strong>at the vet</strong>. You can add a note if anything was unusual. If a reading falls below your low threshold, DiaPetic displays a warning with buttons to call for help, and it can remind you to check on your pet again later.</p>
 """),
 ("curves", "Glucose curves", """
+<p>To send a curve to your veterinarian, open the day in Reports, Glucose and tap <strong>Share this curve</strong>. DiaPetic creates a picture with the curve, the readings, the shots and any walks that you can send by text message or email.</p>
 <p>Walks logged on the Tracker appear as shaded bands on a single day's curve and when you compare curves, which can help explain a dip.</p>
 <p>A glucose curve is a series of readings taken over the course of a day. In <strong>Reports</strong>, switch to <strong>Glucose</strong> to view your readings as curves, along with weekly glucose, time in range, the relationship between eating and glucose, and any low readings.</p>
 <p>Tap <strong>Compare curves</strong> to overlay up to three days. Veterinarians look closely at the lowest point of a curve and when it occurs to assess how well the insulin is working.</p>
