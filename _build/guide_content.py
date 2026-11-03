@@ -389,7 +389,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 ("feedback", "Suggestions and support", """
 <p>The <strong>Suggestion box</strong>, in Help and support, sends a message from your own email account. Choose whether you are sending a suggestion, reporting a problem, asking a question or sharing something you like, then speak or type your message. You can include details about the app and your iPhone to help diagnose problems; your pet's health records are never included. You can also email <a href="mailto:support@diapetic.com">support@diapetic.com</a> directly.</p>
 """),
-], []),
+], ["pettab"]),
 
 # ------------------------------------------------------------------
 ("backups", "Backups and a new iPhone", "Backing up, automatic copies, restoring and moving to a new iPhone.",

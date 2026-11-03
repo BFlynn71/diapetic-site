@@ -232,7 +232,7 @@ MOCKS = {
 ''', "Enter the insulin, doses and times exactly as prescribed.", "Setup screen with the prescribed insulin, morning shot 8 units at 7 AM and evening shot 8 units at 7 PM"),
 
 "day": fig('''
-<div class="m-h" style="color:var(--m-orange-t)">☀︎ Morning</div>
+<div class="m-h" style="color:var(--m-orange-t)">☀︎ Due now: Morning · 7:00 AM</div>
 <div class="m-card">
 <div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
 <div class="m-seg"><span style="background:var(--m-orange-f);color:var(--m-orange-o)">All</span><span>Most</span><span>Some</span><span>None</span></div>
@@ -242,7 +242,14 @@ MOCKS = {
 <div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
 <div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
 </div>
-''', "Record the meal, tap Give, and choose when the shot was given.", "Morning card with the meal marked All and a Give 8 units button, and the When was the shot given menu"),
+<div class="m-h" style="margin-top:12px">Today's log</div>
+<div class="m-tiles">
+<div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-in</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-red-t)">Glucose</span><b>142</b><span class="m-sub">at 6:50 AM</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
+</div>
+''', "The routine that is due comes first, and tiles open the rest of the day.", "Tracker with the morning routine due, the meal marked All, a Give 8 units button, the When was the shot given menu, and tiles for check-in, glucose, weight and walks"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
@@ -294,7 +301,19 @@ MOCKS = {
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Shots given</span><b>100%</b><span class="m-sub">0 not logged</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-blue-t)">Weight</span><b>48 lb</b><span class="m-sub">steady</span></div>
 </div>
-''', "A summary of recent weeks at a glance.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds"),
+<div class="m-card" style="margin-top:10px"><div class="m-row"><span>Share a PDF report</span><span class="m-v">›</span></div></div>
+<div class="m-h" style="margin-top:10px">Details</div>
+<div class="m-card"><div class="m-row"><span>Shot consistency</span><span class="m-v">›</span></div><div class="m-row"><span>Symptoms</span><span class="m-v">›</span></div><div class="m-row"><span>Food and diet</span><span class="m-v">›</span></div></div>
+''', "A summary of recent weeks, with a page for each topic.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds, with Share a PDF report and Details rows"),
+
+"pettab": fig('''
+<div class="m-title">Biscuit</div>
+<div class="m-h">Biscuit</div>
+<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div></div>
+<div class="m-h">App</div>
+<div class="m-card"><div class="m-row"><span>App icon</span><span class="m-v">›</span></div><div class="m-row"><span>Backup</span><span class="m-v">›</span></div><div class="m-row"><span>App settings</span><span class="m-v">›</span></div></div>
+<div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
+''', "A short list of rows, each opening its own page.", "Pet tab with rows for pet details, insulin and shot times, meals and treats, medications, app icon, backup, app settings and Support DiaPetic"),
 
 "emergency": fig('''
 <div class="m-title" style="color:var(--m-red-t)">Emergency</div>
