@@ -91,6 +91,7 @@ CHAPTERS = [
 <li>Choose when the shot was given: <strong>Just now</strong>, <strong>At the scheduled time</strong>, or <strong>A different time…</strong> to enter the exact time.</li>
 <li>The row then confirms the dose and time, for example "8 units given at 7:04 AM," so anyone checking later can see that it was given.</li>
 </ol>
+<p>If another shot is already logged within about 10 hours of the time you chose, DiaPetic asks whether you are sure before saving. This check helps when two people care for the same pet. Tap <strong>Log this shot</strong> to save it, or <strong>Cancel</strong> to save nothing. The check only compares the times in your records. It never suggests a dose.</p>
 <p>To change the time or units, add a note, or record a <strong>skipped</strong> shot (for example, when your veterinarian has advised skipping a dose because your pet did not eat), tap the details button beside the shot. You can also delete an entry made by mistake.</p>
 <div class="tip">If you are unsure whether a shot was given, <strong>do not give another one.</strong> Check the Tracker first. If the shot is not recorded and no one remembers giving it, call your veterinarian. The emergency screen includes a guide for this situation.</div>
 """),
