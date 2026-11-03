@@ -117,6 +117,9 @@ CHAPTERS = [
 ("glucose", "Glucose readings", """
 <p>If you check your pet's glucose at home, record readings in the Blood glucose section. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
 """),
+("walks", "Walks", """
+<p>Record a walk in the Walks section with the time it started and how long it lasted. Exercise can lower blood glucose, so the walk appears as a shaded band on that day's glucose curve.</p>
+"""),
 ("supplies", "Supplies", """
 <p>The Insulin Supplies section at the bottom of today's page shows which item will run out next, along with the insulin bottle in use, syringes and food on hand. See <a href="guide-supplies.html">Insulin, syringes and food</a>.</p>
 """),
@@ -198,6 +201,7 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 <p>On the Tracker, tap <strong>Add reading</strong> in the Blood glucose section. Enter the value and time, and choose the source: <strong>glucose meter</strong>, <strong>CGM sensor</strong> or <strong>at the vet</strong>. You can add a note if anything was unusual. If a reading falls below your low threshold, DiaPetic displays a warning with buttons to call for help, and it can remind you to check on your pet again later.</p>
 """),
 ("curves", "Glucose curves", """
+<p>Walks logged on the Tracker appear as shaded bands on a single day's curve and when you compare curves, which can help explain a dip.</p>
 <p>A glucose curve is a series of readings taken over the course of a day. In <strong>Reports</strong>, switch to <strong>Glucose</strong> to view your readings as curves, along with weekly glucose, time in range, the relationship between eating and glucose, and any low readings.</p>
 <p>Tap <strong>Compare curves</strong> to overlay up to three days. Veterinarians look closely at the lowest point of a curve and when it occurs to assess how well the insulin is working.</p>
 """),
