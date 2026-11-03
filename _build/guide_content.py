@@ -220,6 +220,8 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """),
 ("snooze", "Snoozing and troubleshooting", """
 <p>Each reminder can be snoozed for 15 minutes or an hour. Tapping a reminder opens the relevant pet and screen.</p>
+<p>Shot reminders and missed-shot nudges also have a <strong>Given just now</strong> button. Press and hold the reminder, or swipe it on some screens, to see the buttons. They also appear on an Apple Watch. <strong>Given just now</strong> records the prescribed units at the current time without opening the app.</p>
+<p>The button records nothing if the shot needs a second look: the shot is already recorded, another shot is logged within about 10 hours, the shot is marked as skipped, your pet ate less than half of the meal, or the reminder is from an earlier day. DiaPetic then sends a message explaining why, and you can open the app to check.</p>
 <div class="tip">If reminders do not appear, go to iPhone <strong>Settings › Notifications › DiaPetic</strong> and make sure notifications are allowed, and check that a Focus mode such as Sleep is not silencing them. If notifications are turned off, the Reminders screen displays an <strong>Open Settings</strong> button.</div>
 """),
 ], ["reminders"]),
