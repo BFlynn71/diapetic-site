@@ -403,8 +403,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """),
 ("restore", "Restoring or moving to a new iPhone", """
 <ol>
-<li>Install DiaPetic on the new iPhone and open <strong>Backup and restore</strong>.</li>
-<li>Tap <strong>Restore from backup…</strong> and select your backup file.</li>
+<li>Install DiaPetic on the new iPhone. After the welcome screen, tap <strong>Restore from a backup</strong> and select your backup file. If you already have a pet in the app, go to <strong>Backup</strong> in your pet's tab and tap <strong>Restore from backup…</strong> instead.</li>
 <li>Review the contents of the backup, including the pets and number of days recorded, and tap <strong>Restore</strong>.</li>
 </ol>
 <p>Restoring replaces the data currently in DiaPetic, and a copy of that data is saved first as a precaution. If you purchased DiaPetic Gold, open the Gold screen and tap <strong>Restore purchase</strong>.</p>
