@@ -241,6 +241,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 """),
 ("syringes", "Syringes", f"""
 <p>Open {P("your pet's tab › Syringes")} and enter the date you started the current box and how many syringes it contains. DiaPetic counts one syringe for each shot. Record unopened boxes with <strong>Got new syringes</strong>.</p>
+<p>Check the box for <strong>U-40</strong> or <strong>U-100</strong> and set it under <strong>Marked on the box</strong>. If the syringes do not match your pet's insulin, DiaPetic shows a warning on the Tracker and in your pet's tab. A syringe of the wrong strength gives the wrong dose: U-100 syringes with U-40 insulin give about 40% of the prescribed dose, and U-40 syringes with U-100 insulin give about 2.5 times the prescribed dose. Do not try to convert the dose yourself. Call your veterinarian before the next shot.</p>
 <p>When you open a new box, tap <strong>Start new box</strong>. If syringes remain in the previous box, indicate whether you are keeping them, in which case they are added to the new count, or have discarded them. This keeps the count accurate when boxes overlap.</p>
 """),
 ("food", "Food on hand", """
