@@ -16,7 +16,7 @@ CHAPTERS = [
 <li><strong>Tracker</strong> is the daily log, where you record shots, meals, the daily check-in and journal entries.</li>
 <li><strong>Reports</strong> summarizes the last 7 days to 6 months, including glucose charts and PDF reports for your vet.</li>
 <li><strong>Vet</strong> holds appointments, questions for your vet, clinic contacts and email.</li>
-<li><strong>History</strong> lists every day you have logged, with the most recent first.</li>
+<li><strong>History</strong> lists every day you have logged, grouped by month with the most recent first.</li>
 <li>The last tab is named after your pet. It contains your pet's details, insulin, meal plan, medications, reminders, supplies and the app's settings.</li>
 </ul>
 <p>The <strong>pet menu</strong> at the top left of every screen switches between pets, and the red <strong>emergency button</strong> at the top right opens emergency help.</p>
@@ -56,7 +56,7 @@ CHAPTERS = [
 <ul class="checklist">
 <li>Log every shot and meal on the <a href="guide-tracker.html">Tracker</a> for the first few days to establish the routine.</li>
 <li>Confirm that reminders arrive at the right times, and adjust them in {P("your pet's tab › Reminders")} if needed.</li>
-<li>Add any other medications or supplements in {P("your pet's tab › Medications")}.</li>
+<li>Add any supplements in {P("your pet's tab › Supplements")}, and any other medications in {P("your pet's tab › Medications")}.</li>
 <li>Record the insulin bottle in use and any spare bottles in {P("your pet's tab › Insulin Supplies › Insulin bottles")}.</li>
 <li>Add your next vet appointment in the {P("Vet tab")}.</li>
 <li>Make your first backup in {P("your pet's tab › Backup")}.</li>
@@ -73,7 +73,7 @@ CHAPTERS = [
 <p>When you change days, the page keeps your place, so you can compare the same section from one day to the next.</p>
 """),
 ("glance", "Summary and alerts", """
-<p>The routine that needs attention appears at the top, labeled <strong>Due now</strong> or <strong>Next</strong>. A finished routine shrinks to one line; tap the line to open it and make changes. Below the routines, <strong>Today's log</strong> shows tiles for the check-in, glucose, weight, medications, walks, journal and treats. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
+<p>Morning stays above evening all day. The routine that needs attention opens in full, labeled <strong>Due now</strong> or <strong>Next</strong>. A finished routine shrinks to one line; tap the line to open it and make changes. Below the routines, <strong>Today's log</strong> shows tiles for check-ins, glucose, medications, treats, walks, the journal and weight. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
 <ul>
 <li><strong>Eating less than usual</strong> appears when recent meals have been smaller than normal.</li>
 <li><strong>Low reading</strong> appears when a glucose reading falls below your low threshold, with buttons to call your veterinarian or emergency clinic.</li>
@@ -96,11 +96,12 @@ CHAPTERS = [
 <div class="tip">If you are unsure whether a shot was given, <strong>do not give another one.</strong> Check the Tracker first. If the shot is not recorded and no one remembers giving it, call your veterinarian. The emergency screen includes a guide for this situation.</div>
 """),
 ("meds", "Medications, supplements and treats", """
-<p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications on their own schedule, medications given as needed and supplements are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
+<p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications on their own schedule and medications given as needed are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
+<p>A supplement given with a meal appears right under that meal, with its own check-off. Other supplements are in the <strong>Supplements</strong> tile, which appears when your pet has any. If a routine closes with a supplement unchecked, its one line says so.</p>
 <p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your vet.</p>
 """),
 ("weight", "Weight", """
-<p>Tap the <strong>Weight</strong> tile to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your vet gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
+<p>Tap the <strong>Log weight</strong> tile to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your vet gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
 """),
 ("checkin", "The daily check-in", """
 <p>Water intake, urination, stool, energy and sleep are set to <strong>Normal</strong> by default and are saved that way, so you only need to change what was different. Turn on <strong>Vomited</strong> if your pet vomited that day, and enter a <strong>Water amount</strong> if you measure it. Drinking and urinating more than usual can indicate that blood sugar is running high.</p>
@@ -124,7 +125,7 @@ CHAPTERS = [
 <p>The Insulin Supplies section at the bottom of today's page shows which item will run out next, along with the insulin bottle in use, syringes and food on hand. See <a href="guide-supplies.html">Insulin, syringes and food</a>.</p>
 """),
 ("history", "Correcting an earlier day", """
-<p>To review or correct a previous day, move back with the calendar or a swipe, or open the <strong>History</strong> tab. History lists each logged day with its shots (a filled icon for given, an X for skipped and an empty circle for not logged), the glucose range and the first journal entry. Tap a day to open it and make changes, just as you would for today.</p>
+<p>To review or correct a previous day, move back with the calendar or a swipe, or open the <strong>History</strong> tab. History groups logged days by month, with the newest month open. Tap any month to open or close it. Each day shows its shots (a filled icon for given, an X for skipped and an empty circle for not logged), the glucose range and the first journal entry. Tap a day to open it and make changes, just as you would for today.</p>
 """),
 ], ["day", "journal"]),
 
@@ -158,19 +159,19 @@ f"""<p>Consistent meals help keep blood sugar stable. You can set up and adjust 
 
 # ------------------------------------------------------------------
 ("medications", "Medications and supplements", "Adding medications and supplements, schedules and doses.",
-f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's tab › Medications")}.</p>""",
+f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's tab › Supplements")} and {P("your pet's tab › Medications")}.</p>""",
 [
 ("add", "Adding a medication or supplement", """
 <ol>
-<li>Tap <strong>Add medication or supplement</strong> and choose which one you are adding.</li>
+<li>Open <strong>Supplements</strong> or <strong>Medications</strong> and tap <strong>Add supplement</strong> or <strong>Add medication</strong>.</li>
 <li>Enter the name, the <strong>dose as prescribed</strong> (for example, "60 mg capsule") and, if you wish, its purpose.</li>
-<li>Choose a schedule: with the morning routine, with the evening routine, morning and evening, once a day, or as needed.</li>
+<li>For a medication, choose a schedule: with the morning routine, with the evening routine, morning and evening, once a day, or as needed. For a supplement, choose when it is given: with the morning meal, with the evening meal, with both meals, or once a day and not with a meal.</li>
 <li>If a dose contains calories, as fish oil and chews often do, enter them so they are included in the day's total.</li>
 <li>Enter the start date and any notes, such as "give with food."</li>
 </ol>
 """),
 ("tracker", "On the Tracker", """
-<p>Scheduled medications appear in the morning or evening card, ready to check off. Once-a-day supplements appear as a daily checkbox, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
+<p>Scheduled medications appear in the morning or evening card, ready to check off. Supplements given with a meal appear under that meal. Other supplements are a daily check-off in the <strong>Supplements</strong> tile, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
 """),
 ("own", "Giving a medication at its own times", """
 <p>When a medication does not fit the morning and evening routine, such as an ointment or ear drops, choose <strong>My own schedule</strong> under <strong>When</strong>. This is part of DiaPetic Gold, a one-time purchase with no subscription.</p>
@@ -186,7 +187,7 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 <p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the date rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
 """),
 ("reminders", "Medication reminders", f"""
-<p>Medications on their own schedule can have their own reminders. Morning and evening medications are listed in the shot reminder. Once-a-day medications can have a separate reminder, and DiaPetic can also remind you before a course of medication ends. These options are in {P("your pet's tab › Reminders › Medications and supplements")}.</p>
+<p>Medications on their own schedule can have their own reminders. Morning and evening medications, and supplements given with a meal, are listed in the shot reminder. Once-a-day medications and supplements can have a separate reminder, and DiaPetic can also remind you before a course of medication ends. These options are in {P("your pet's tab › Reminders › Medications and supplements")}.</p>
 """),
 ], []),
 

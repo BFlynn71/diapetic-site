@@ -244,12 +244,12 @@ MOCKS = {
 </div>
 <div class="m-h" style="margin-top:12px">Today's log</div>
 <div class="m-tiles">
-<div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-in</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-ins</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-red-t)">Glucose</span><b>142</b><span class="m-sub">at 6:50 AM</span></div>
-<div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Log weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 </div>
-''', "The routine that is due comes first, and tiles open the rest of the day.", "Tracker with the morning routine due, the meal marked All, a Give 8 units button, the When was the shot given menu, and tiles for check-in, glucose, weight and walks"),
+''', "The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with the morning routine due, the meal marked All, a Give 8 units button, the When was the shot given menu, and tiles for check-in, glucose, weight and walks"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
@@ -309,7 +309,7 @@ MOCKS = {
 "pettab": fig('''
 <div class="m-title">Biscuit</div>
 <div class="m-h">Biscuit</div>
-<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div></div>
+<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div></div>
 <div class="m-h">App</div>
 <div class="m-card"><div class="m-row"><span>App icon</span><span class="m-v">›</span></div><div class="m-row"><span>Backup</span><span class="m-v">›</span></div><div class="m-row"><span>App settings</span><span class="m-v">›</span></div></div>
 <div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
