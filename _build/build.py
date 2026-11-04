@@ -144,12 +144,12 @@ home = f'''
 <h2>Clear screens for everyday care</h2>
 </div>
 <div class="shots">
-<figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given and weight" width="600" height="1304" loading="lazy"><figcaption>Progress reports for your vet</figcaption></figure>
+<figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given, weight and a Share a PDF report button" width="600" height="1304" loading="lazy"><figcaption>Progress reports for your vet</figcaption></figure>
 <div style="display:flex;flex-direction:column;gap:18px">
-<figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call, directions and calendar buttons" width="600" height="459" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
+<figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call and calendar buttons" width="600" height="560" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
 <figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="382" loading="lazy"><figcaption>Detailed nutrition tracking</figcaption></figure>
 </div>
-<figure class="shot"><img src="img/icons-grid.png" alt="Twelve app icons: Obi the dog and an orange kitty in regular and seasonal styles" width="596" height="804" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
+<figure class="shot"><img src="img/icons-grid.png" alt="Thirty-two app icons: Obi the dog and an orange kitty in regular, gold tag, seasonal and holiday styles" width="784" height="1584" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
 </div>
 </div>
 </section>
