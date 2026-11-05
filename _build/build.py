@@ -233,15 +233,17 @@ MOCKS = {
 
 "day": fig('''
 <div class="m-h" style="color:var(--m-orange-t)">☀︎ Due now: Morning · 7:00 AM</div>
-<div class="m-card">
+<div class="m-card m-morning">
 <div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
 <div class="m-seg"><span style="background:var(--m-orange-f);color:var(--m-orange-o)">All</span><span>Most</span><span>Some</span><span>None</span></div>
+<div class="m-row"><span><span class="m-b">Fish oil</span><span class="m-sub">1 capsule · Supplement</span></span><span class="m-check" aria-hidden="true"></span></div>
 <div class="m-row"><span><span class="m-b">Insulin</span><span class="m-sub">8 units of Vetsulin</span></span>''' + pill("Give 8 u", "--m-orange", True) + '''</div>
 </div>
 <div class="m-sheet" style="margin-top:10px">
 <div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
 <div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
 </div>
+<div class="m-card m-evening" style="margin-top:10px"><div class="m-row"><span><span class="m-b">☾ Evening · 7:00 PM</span><span class="m-sub">Meal, Fish oil, 8 units</span></span><span class="m-v">›</span></div></div>
 <div class="m-h" style="margin-top:12px">Today's log</div>
 <div class="m-tiles">
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-ins</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
@@ -249,7 +251,7 @@ MOCKS = {
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Log weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 </div>
-''', "The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with the morning routine due, the meal marked All, a Give 8 units button, the When was the shot given menu, and tiles for check-in, glucose, weight and walks"),
+''', "The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with the morning routine due on a soft orange card, the meal marked All, Fish oil listed under the meal, a Give 8 units button, the When was the shot given menu, the evening routine on a soft indigo line, and tiles for check-ins, glucose, walks and weight"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
@@ -307,13 +309,13 @@ MOCKS = {
 ''', "A summary of recent weeks, with a page for each topic.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds, with Share a PDF report and Details rows"),
 
 "pettab": fig('''
-<div class="m-title">Biscuit</div>
+<div class="m-pethead"><span class="m-title">Biscuit</span><img class="m-petphoto" src="img/icon-dog.png" alt="" width="72" height="72"></div>
 <div class="m-h">Biscuit</div>
 <div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div></div>
 <div class="m-h">App</div>
 <div class="m-card"><div class="m-row"><span>App icon</span><span class="m-v">›</span></div><div class="m-row"><span>Backup</span><span class="m-v">›</span></div><div class="m-row"><span>App settings</span><span class="m-v">›</span></div></div>
 <div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
-''', "A short list of rows, each opening its own page.", "Pet tab with rows for pet details, insulin and shot times, meals and treats, medications, app icon, backup, app settings and Support DiaPetic"),
+''', "A short list of rows, each opening its own page.", "Pet tab with a large round pet photo overlapping the header, and rows for pet details, insulin and shot times, meals and treats, supplements, medications, app icon, backup, app settings and Support DiaPetic"),
 
 "emergency": fig('''
 <div class="m-title" style="color:var(--m-red-t)">Emergency</div>
@@ -358,7 +360,7 @@ for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
     toc = "".join(f'<li><a href="#{a}">{h}</a></li>' for a, h, _ in secs)
     # place each illustration after the section it belongs to
     placed = {"setup": "insulin", "day": "shots", "journal": "journal", "reminders": "insulin",
-              "supplies": "syringes", "vet": "appointments", "reports": "progress", "emergency": "summary", "backup": "restore"}
+              "supplies": "syringes", "vet": "appointments", "reports": "progress", "emergency": "summary", "backup": "restore", "pettab": "help"}
     body_secs = ""
     for a, h, html in secs:
         body_secs += f'<h2 id="{a}">{h}</h2>{html}'

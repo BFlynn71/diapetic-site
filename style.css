@@ -154,6 +154,12 @@ section { padding-block: 44px; }
 .mock .m-h { font-size: 12px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: var(--m-sub); padding: 8px 6px 2px; display: flex; align-items: center; gap: 6px; }
 .mock .m-title { font-size: 22px; font-weight: 800; padding: 2px 4px 6px; }
 .mock .m-card { background: var(--m-card); border-radius: 12px; overflow: hidden; }
+.mock .m-card.m-morning { background: color-mix(in srgb, var(--m-orange) 17%, var(--m-card)); }
+.mock .m-card.m-evening { background: color-mix(in srgb, var(--m-indigo) 17%, var(--m-card)); }
+.mock .m-check { width: 22px; height: 22px; box-sizing: border-box; border-radius: 50%; border: 2px solid var(--m-sub); flex-shrink: 0; }
+.mock .m-pethead { position: relative; background: var(--m-card); margin: -16px -14px 30px; padding: 26px 14px 10px 100px; border-radius: 27px 27px 0 0; border-bottom: 1px solid var(--m-sep); }
+.mock .m-pethead .m-title { display: block; padding: 0; }
+.mock .m-petphoto { position: absolute; left: 16px; bottom: -22px; width: 72px; height: 72px; box-sizing: border-box; border-radius: 50%; border: 3px solid var(--m-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.16); }
 .mock .m-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-top: 1px solid var(--m-sep); min-width: 0; }
 .mock .m-row:first-child { border-top: 0; }
 .mock .m-row > span:first-child { min-width: 0; }
