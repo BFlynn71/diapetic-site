@@ -73,6 +73,7 @@ CHAPTERS = [
 <p>When you change days, the page keeps your place, so you can compare the same section from one day to the next.</p>
 """),
 ("glance", "Summary and alerts", """
+<p><strong>At a glance</strong> sits under the date and shows up to five rings for the day on screen. Choose them with <strong>Edit</strong>: meals, shots, calories, medications, supplements, the check-in, glucose and insulin left. Each ring fills as the day goes on and shows a count or a check mark in the middle. Calories needs a daily calorie target, and glucose needs home glucose checks turned on; if either is missing, DiaPetic offers to set it up. Insulin left always shows the bottle in use today. Each pet keeps its own choice.</p>
 <p>Morning stays above evening all day. The routine that needs attention opens in full, labeled <strong>Due now</strong> or <strong>Next</strong>. A finished routine shrinks to one line; tap the line to open it and make changes. Below the routines, <strong>Today's log</strong> shows tiles for check-ins, glucose, medications, treats, walks, the journal and weight. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
 <ul>
 <li><strong>Eating less than usual</strong> appears when recent meals have been smaller than normal.</li>
@@ -183,6 +184,10 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 </ul>
 <p>Each time appears as its own row in the <strong>Medications</strong> section of Tracker, and your reports show doses logged against doses scheduled.</p>
 """),
+("supply", "Supply and refills", """
+<p>Turn on <strong>Track supply</strong> in a medication's Supply section and enter the number of doses on hand. Each dose you check off counts down. DiaPetic shows about how many doses are left and when the medication will run out at its schedule, with the same timeline as insulin: <strong>Order a refill by</strong>, <strong>Refill due by</strong> when <strong>Auto refill</strong> is on, or <strong>Ask your vet by</strong> when no refills remain. A reminder arrives on that date. Medications given as needed show the count only, because they have no set schedule. To correct the count, enter the number on hand again.</p>
+<p>Supply and refills for medications and supplements is part of DiaPetic Gold, a one-time purchase with no subscription. Insulin supply tracking is always free.</p>
+"""),
 ("stop", "Stopping a medication", """
 <p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the date rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
 """),
@@ -246,14 +251,23 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 ("supplies", "Insulin, syringes and food", "Insulin bottles, prescriptions, syringes and food supplies.",
 """<p>DiaPetic tracks your supplies based on the shots and meals you record, and alerts you before anything runs out.</p>""",
 [
+("timeline", "Insulin on hand", f"""
+<p>The top of {P("your pet's tab › Insulin Supplies › Insulin bottles")} shows how many days are left in the bottle in use and a timeline of the dates that matter: today, when to open the next bottle, the date to act on and when the insulin on hand runs out. The date to act on is highlighted in orange:</p>
+<ul>
+<li><strong>Order a refill by</strong> when refills remain on the prescription.</li>
+<li><strong>Refill due by</strong> when <strong>Auto refill</strong> is on, so you can check that the pharmacy's refill has arrived.</li>
+<li><strong>Ask your vet by</strong> when no refills remain. This date comes a week earlier, to allow time for a new prescription.</li>
+</ul>
+<p>The dates use the dose currently entered under <strong>Insulin and shot times</strong>. When your veterinarian changes the dose and you enter it, the dates update right away. They match the supply reminders.</p>
+"""),
 ("bottles", "Insulin bottles", f"""
-<p>Open {P("your pet's tab › Insulin Supplies › Insulin bottles")}, or tap <strong>Manage</strong> in the Insulin Supplies section of the Tracker.</p>
+<p>Open {P("your pet's tab › Insulin Supplies › Insulin bottles")}, or tap <strong>Manage</strong> in the Insulin Supplies section of the Tracker. Below the timeline, <strong>Bottle in use</strong>, <strong>Unopened bottles</strong> and <strong>Prescription</strong> each open their own page.</p>
 <p><strong>Bottle in use.</strong> Turn on <strong>Bottle opened</strong> and enter the date it was opened, the number of units in the bottle and the expiration date on the label. Then set how many days an opened bottle remains usable, as stated on the insulin's label or by your veterinarian. For reference, a 10 mL bottle contains 400 units of U-40 insulin or 1,000 units of U-100 insulin.</p>
 <p><strong>Spare bottles.</strong> Tap <strong>Got a new bottle</strong> to record unopened bottles with their expiration dates and lot numbers. DiaPetic suggests opening them in order of expiration and warns you if a bottle is likely to expire before it is needed.</p>
 <p><strong>Starting a new bottle.</strong> Tap <strong>Open new bottle</strong>. The current bottle moves to the history and the next spare becomes the bottle in use. If you tap it by mistake, <strong>Undo</strong> is available for the rest of the day.</p>
 """),
 ("rx", "Prescription details", """
-<p>On the same screen, you can record the date the prescription was filled, the number of <strong>refills left</strong>, the prescription number and the pharmacy. The prescription number can be copied when you call to reorder. When no refills remain, DiaPetic reminds you to request a new prescription from your veterinarian before the insulin runs out.</p>
+<p>On the same screen, you can record the date the prescription was filled, the number of <strong>refills left</strong>, the prescription number and the pharmacy. The prescription number can be copied when you call to reorder. Turn on <strong>Auto refill</strong> if the pharmacy sends refills on its own; the supply reminder then asks you to check that the refill has arrived instead of asking you to order. When no refills remain, DiaPetic reminds you to request a new prescription from your veterinarian before the insulin runs out.</p>
 """),
 ("syringes", "Syringes", f"""
 <p>Open {P("your pet's tab › Insulin Supplies › Syringes")} and enter the date you started the current box and how many syringes it contains. DiaPetic counts one syringe for each shot. Record unopened boxes with <strong>Got new syringes</strong>.</p>
@@ -380,7 +394,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <li><strong>Glucose units</strong> can be mg/dL or mmol/L, and <strong>weight units</strong> can be lb or kg.</li>
 <li><strong>App icon</strong> (Gold), in its own row in the App group, lets you choose Obi the dog or Kitty. The icon can change with the calendar, including the seasons, Halloween, Diabetes awareness in November, the December holidays, New Year's, Valentine's Day and your pet's birthday (with an exact birth date). United States holidays appear when the iPhone's region is set to the United States, and the seasons follow the hemisphere. You can also keep one look all year or choose the <strong>Gold tag</strong> look, with a gold collar tag and a star.</li>
 <li><strong>Backup</strong>, also in the App group, is described in <a href="guide-backups.html">Backups and a new iPhone</a>.</li>
-<li><strong>Rate DiaPetic</strong> is in App settings. <strong>Support DiaPetic</strong>, where you can leave an optional tip, is the last card on the tab.</li>
+<li><strong>Rate DiaPetic</strong> is in App settings. <strong>Support DiaPetic</strong>, where you can leave an optional tip, is also in App settings.</li>
 <li><strong>About DiaPetic</strong> includes privacy information and links to this website and the privacy policy.</li>
 </ul>
 """),
