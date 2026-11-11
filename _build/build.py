@@ -220,6 +220,18 @@ def pill(t, color, fill=False):
 def fig(body, cap, alt):
     return f'<figure class="shotfig"><div class="mock" role="img" aria-label="{alt}">{body}</div><figcaption>{cap}</figcaption></figure>'
 
+def ring(label, center, frac, color):
+    # At a glance ring: grey track, colored arc from the top, label under it.
+    r = 15; c = 2 * 3.14159 * r
+    arc = f'<circle cx="20" cy="20" r="{r}" fill="none" stroke="{color}" stroke-width="5" stroke-linecap="round" stroke-dasharray="{c*frac:.1f} {c:.1f}" transform="rotate(-90 20 20)"/>' if frac > 0 else ''
+    return (f'<div style="text-align:center;flex:1"><svg viewBox="0 0 40 40" width="52" height="52" aria-hidden="true">'
+            f'<circle cx="20" cy="20" r="{r}" fill="none" stroke="var(--m-sep)" stroke-width="5"/>{arc}'
+            f'<text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="var(--m-fg)">{center}</text></svg>'
+            f'<span class="m-sub" style="font-weight:700;color:var(--m-fg)">{label}</span></div>')
+def glance(rings):
+    return ('<div class="m-row" style="border:0;padding:0 2px"><span class="m-b">At a glance</span><span class="m-v" style="color:var(--m-indigo-t)">Edit</span></div>'
+            '<div style="display:flex;gap:4px;margin:4px 0 12px">' + ''.join(rings) + '</div>')
+
 MOCKS = {
 "setup": fig('''
 <div class="m-h">Insulin prescribed by your veterinarian</div>
@@ -232,6 +244,7 @@ MOCKS = {
 ''', "Enter the insulin, doses and times exactly as prescribed.", "Setup screen with the prescribed insulin, morning shot 8 units at 7 AM and evening shot 8 units at 7 PM"),
 
 "day": fig('''
+''' + glance([ring("Meals","1/2",0.5,"var(--m-orange)"), ring("Shots","0/2",0,"var(--m-indigo)"), ring("Calories","48%",0.48,"#A65BE8")]) + '''
 <div class="m-h" style="color:var(--m-orange-t)">☀︎ Due now: Morning · 7:00 AM</div>
 <div class="m-card m-morning">
 <div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
@@ -251,7 +264,7 @@ MOCKS = {
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Log weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 </div>
-''', "The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with the morning routine due on a soft orange card, the meal marked All, Fish oil listed under the meal, a Give 8 units button, the When was the shot given menu, the evening routine on a soft indigo line, and tiles for check-ins, glucose, walks and weight"),
+''', "At a glance rings sit under the date. The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with At a glance rings for meals, shots and calories, the morning routine due on a soft orange card, the meal marked All, Fish oil listed under the meal, a Give 8 units button, the When was the shot given menu, the evening routine on a soft indigo line, and tiles for check-ins, glucose, walks and weight"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
@@ -271,20 +284,29 @@ MOCKS = {
 ''', "Choose the reminders that suit your routine.", "Reminders screen with switches for insulin time, missed-shot nudge, meals, glucose checks and supplies"),
 
 "supplies": fig('''
-<div class="m-h" style="color:var(--m-blue-t)">Insulin Supplies</div>
-<div class="m-card">
-<div class="m-row" style="display:block"><span class="m-b">Insulin</span>
-<span class="m-sub" style="color:var(--m-fg)">In use · day 12 of 42 · about 210 units left</span>
-<span class="m-sub">Use by Nov 22 · In the fridge: 1 unopened bottle</span>
-<span class="m-sub" style="color:var(--m-blue-t);font-weight:600">Supply lasts until about Dec 30</span></div>
-<div class="m-btns">''' + pill("Open new bottle", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
-<div class="m-row" style="display:block"><span class="m-b">Syringes</span>
-<span class="m-sub" style="color:var(--m-fg)">In use · about 64 left</span>
-<span class="m-sub">Unopened: 1 box (100 syringes)</span>
-<span class="m-sub" style="color:var(--m-blue-t);font-weight:600">Supply lasts until about Feb 10</span></div>
-<div class="m-btns">''' + pill("Start new box", "--m-blue", True) + pill("Manage", "--m-blue") + '''</div>
+<div class="m-h" style="color:var(--m-blue-t)">Insulin bottles</div>
+<div class="m-card" style="padding:12px">
+<div style="display:flex;align-items:center;gap:10px"><svg viewBox="0 0 40 40" width="48" height="48" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-sep)" stroke-width="5"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-blue)" stroke-width="5" stroke-linecap="round" stroke-dasharray="66 94.2" transform="rotate(-90 20 20)"/><text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="var(--m-fg)">30d</text></svg>
+<span><span class="m-b">Insulin on hand</span><span class="m-sub">Lasts until about Dec 30</span></span></div>
+<div style="position:relative;height:46px;margin:14px 6px 4px">
+<div style="position:absolute;left:0;right:0;top:20px;height:4px;border-radius:2px;background:color-mix(in srgb, var(--m-blue) 35%, transparent)"></div>
+<div style="position:absolute;left:0;width:38%;top:20px;height:4px;border-radius:2px;background:var(--m-blue)"></div>
+<span style="position:absolute;left:-5px;top:15px;width:14px;height:14px;border-radius:50%;background:var(--m-blue)"></span>
+<span style="position:absolute;left:38%;top:15px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--m-card);border:3px solid var(--m-blue);box-sizing:border-box"></span>
+<span style="position:absolute;left:82%;top:14px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--m-orange)"></span>
+<span style="position:absolute;right:-5px;top:15px;width:14px;height:14px;border-radius:50%;background:var(--m-card);border:3px solid var(--m-blue);box-sizing:border-box"></span>
+<span class="m-sub" style="position:absolute;left:0;top:34px">Today</span><span class="m-sub" style="position:absolute;left:38%;top:-4px;transform:translateX(-50%)">Open next</span><span class="m-sub" style="position:absolute;right:0;top:-4px">Runs out</span>
 </div>
-''', "Supplies on hand and their expected run-out dates.", "Supplies section showing the insulin bottle in use, a spare in the fridge, syringes and run-out dates"),
+<div class="m-tiles" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:6px">
+<div class="m-tile"><span class="m-sub">Open next</span><b style="font-size:16px">Nov 22</b></div>
+<div class="m-tile" style="background:color-mix(in srgb, var(--m-orange) 18%, var(--m-card))"><span class="m-sub">Order by</span><b style="font-size:16px">Dec 23</b></div>
+<div class="m-tile"><span class="m-sub">Runs out</span><b style="font-size:16px">Dec 30</b></div>
+</div>
+<span class="m-sub" style="margin-top:6px">Dates use the current dose: 8 units, twice a day.</span>
+</div>
+<div class="m-card" style="margin-top:10px"><div class="m-row"><span>Bottle in use</span><span class="m-v">210 units ›</span></div><div class="m-row"><span>Unopened bottles</span><span class="m-v">1 ›</span></div><div class="m-row"><span>Prescription</span><span class="m-v">2 refills left ›</span></div></div>
+<div class="m-btns">''' + pill("Open new bottle", "--m-blue", True) + pill("Got a new bottle", "--m-blue") + '''</div>
+''', "The timeline shows when to open the next bottle, when to order a refill and when the insulin runs out.", "Insulin bottles page with a ring showing 30 days of insulin on hand, a timeline with Today, Open next, an orange Order by pin and Runs out, date tiles for Nov 22, Dec 23 and Dec 30, and rows for the bottle in use, unopened bottles and the prescription"),
 
 "vet": fig('''
 <div class="m-h" style="color:var(--m-red-t)">Next appointment</div>
@@ -311,11 +333,13 @@ MOCKS = {
 "pettab": fig('''
 <div class="m-pethead"><span class="m-title">Biscuit</span><img class="m-petphoto" src="img/icon-dog.png" alt="" width="72" height="72"></div>
 <div class="m-h">Biscuit</div>
-<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div></div>
-<div class="m-h">App</div>
-<div class="m-card"><div class="m-row"><span>App icon</span><span class="m-v">›</span></div><div class="m-row"><span>Backup</span><span class="m-v">›</span></div><div class="m-row"><span>App settings</span><span class="m-v">›</span></div></div>
+<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home glucose</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
+<div class="m-h">Staying on top of it</div>
+<div class="m-card"><div class="m-row"><span>Reminders</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin Supplies</span><span class="m-v">›</span></div></div>
 <div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
-''', "A short list of rows, each opening its own page.", "Pet tab with a large round pet photo overlapping the header, and rows for pet details, insulin and shot times, meals and treats, supplements, medications, app icon, backup, app settings and Support DiaPetic"),
+<div class="m-h">App</div>
+<div class="m-card"><div class="m-row"><span>App icon</span><span class="m-v">›</span></div><div class="m-row"><span>Help and support</span><span class="m-v">›</span></div><div class="m-row"><span>Backup</span><span class="m-v">›</span></div><div class="m-row"><span>App settings</span><span class="m-v">›</span></div></div>
+''', "A short list of rows, each opening its own page.", "Pet tab with a large round pet photo overlapping the header, and rows for pet details, insulin and shot times, meals and treats, supplements, medications, home glucose and weight, then Reminders and Insulin Supplies, Support DiaPetic, and the app rows"),
 
 "emergency": fig('''
 <div class="m-title" style="color:var(--m-red-t)">Emergency</div>

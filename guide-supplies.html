@@ -51,21 +51,30 @@
 <p>Open <span class="path">your pet's tab › Insulin Supplies › Syringes</span> and enter the date you started the current box and how many syringes it contains. DiaPetic counts one syringe for each shot. Record unopened boxes with <strong>Got new syringes</strong>.</p>
 <p>Check the box for <strong>U-40</strong> or <strong>U-100</strong> and set it under <strong>Marked on the box</strong>. If the syringes do not match your pet's insulin, DiaPetic shows a warning on the Tracker and in your pet's tab. A syringe of the wrong strength gives the wrong dose: U-100 syringes with U-40 insulin give about 40% of the prescribed dose, and U-40 syringes with U-100 insulin give about 2.5 times the prescribed dose. Do not try to convert the dose yourself. Call your veterinarian before the next shot.</p>
 <p>When you open a new box, tap <strong>Start new box</strong>. If syringes remain in the previous box, indicate whether you are keeping them, in which case they are added to the new count, or have discarded them. This keeps the count accurate when boxes overlap.</p>
-<figure class="shotfig"><div class="mock" role="img" aria-label="Supplies section showing the insulin bottle in use, a spare in the fridge, syringes and run-out dates">
-<div class="m-h" style="color:var(--m-blue-t)">Insulin Supplies</div>
-<div class="m-card">
-<div class="m-row" style="display:block"><span class="m-b">Insulin</span>
-<span class="m-sub" style="color:var(--m-fg)">In use · day 12 of 42 · about 210 units left</span>
-<span class="m-sub">Use by Nov 22 · In the fridge: 1 unopened bottle</span>
-<span class="m-sub" style="color:var(--m-blue-t);font-weight:600">Supply lasts until about Dec 30</span></div>
-<div class="m-btns"><span class="m-pill m-fill" style="background:var(--m-blue-f);color:var(--m-blue-o)">Open new bottle</span><span class="m-pill" style="color:var(--m-blue-t);background:color-mix(in srgb, var(--m-blue) 15%, transparent)">Manage</span></div>
-<div class="m-row" style="display:block"><span class="m-b">Syringes</span>
-<span class="m-sub" style="color:var(--m-fg)">In use · about 64 left</span>
-<span class="m-sub">Unopened: 1 box (100 syringes)</span>
-<span class="m-sub" style="color:var(--m-blue-t);font-weight:600">Supply lasts until about Feb 10</span></div>
-<div class="m-btns"><span class="m-pill m-fill" style="background:var(--m-blue-f);color:var(--m-blue-o)">Start new box</span><span class="m-pill" style="color:var(--m-blue-t);background:color-mix(in srgb, var(--m-blue) 15%, transparent)">Manage</span></div>
+<figure class="shotfig"><div class="mock" role="img" aria-label="Insulin bottles page with a ring showing 30 days of insulin on hand, a timeline with Today, Open next, an orange Order by pin and Runs out, date tiles for Nov 22, Dec 23 and Dec 30, and rows for the bottle in use, unopened bottles and the prescription">
+<div class="m-h" style="color:var(--m-blue-t)">Insulin bottles</div>
+<div class="m-card" style="padding:12px">
+<div style="display:flex;align-items:center;gap:10px"><svg viewBox="0 0 40 40" width="48" height="48" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-sep)" stroke-width="5"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-blue)" stroke-width="5" stroke-linecap="round" stroke-dasharray="66 94.2" transform="rotate(-90 20 20)"/><text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="var(--m-fg)">30d</text></svg>
+<span><span class="m-b">Insulin on hand</span><span class="m-sub">Lasts until about Dec 30</span></span></div>
+<div style="position:relative;height:46px;margin:14px 6px 4px">
+<div style="position:absolute;left:0;right:0;top:20px;height:4px;border-radius:2px;background:color-mix(in srgb, var(--m-blue) 35%, transparent)"></div>
+<div style="position:absolute;left:0;width:38%;top:20px;height:4px;border-radius:2px;background:var(--m-blue)"></div>
+<span style="position:absolute;left:-5px;top:15px;width:14px;height:14px;border-radius:50%;background:var(--m-blue)"></span>
+<span style="position:absolute;left:38%;top:15px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--m-card);border:3px solid var(--m-blue);box-sizing:border-box"></span>
+<span style="position:absolute;left:82%;top:14px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--m-orange)"></span>
+<span style="position:absolute;right:-5px;top:15px;width:14px;height:14px;border-radius:50%;background:var(--m-card);border:3px solid var(--m-blue);box-sizing:border-box"></span>
+<span class="m-sub" style="position:absolute;left:0;top:34px">Today</span><span class="m-sub" style="position:absolute;left:38%;top:-4px;transform:translateX(-50%)">Open next</span><span class="m-sub" style="position:absolute;right:0;top:-4px">Runs out</span>
 </div>
-</div><figcaption>Supplies on hand and their expected run-out dates.</figcaption></figure><h2 id="food">Food on hand</h2>
+<div class="m-tiles" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:6px">
+<div class="m-tile"><span class="m-sub">Open next</span><b style="font-size:16px">Nov 22</b></div>
+<div class="m-tile" style="background:color-mix(in srgb, var(--m-orange) 18%, var(--m-card))"><span class="m-sub">Order by</span><b style="font-size:16px">Dec 23</b></div>
+<div class="m-tile"><span class="m-sub">Runs out</span><b style="font-size:16px">Dec 30</b></div>
+</div>
+<span class="m-sub" style="margin-top:6px">Dates use the current dose: 8 units, twice a day.</span>
+</div>
+<div class="m-card" style="margin-top:10px"><div class="m-row"><span>Bottle in use</span><span class="m-v">210 units ›</span></div><div class="m-row"><span>Unopened bottles</span><span class="m-v">1 ›</span></div><div class="m-row"><span>Prescription</span><span class="m-v">2 refills left ›</span></div></div>
+<div class="m-btns"><span class="m-pill m-fill" style="background:var(--m-blue-f);color:var(--m-blue-o)">Open new bottle</span><span class="m-pill" style="color:var(--m-blue-t);background:color-mix(in srgb, var(--m-blue) 15%, transparent)">Got a new bottle</span></div>
+</div><figcaption>The timeline shows when to open the next bottle, when to order a refill and when the insulin runs out.</figcaption></figure><h2 id="food">Food on hand</h2>
 <p>Food supplies are tracked in each food's settings, as described in <a href="guide-food.html#onhand">Food on hand</a>. The Insulin Supplies section on the Tracker also shows when each food is expected to run out.</p>
 
 <nav class="pager" aria-label="Chapters"><a href="guide-reminders.html">‹ Reminders</a><a href="guide-vet.html">Your vet ›</a></nav>
