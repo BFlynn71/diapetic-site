@@ -331,7 +331,7 @@ MOCKS = {
 ''', "A summary of recent weeks, with a page for each topic.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds, with Share a PDF report and Details rows"),
 
 "pettab": fig('''
-<div class="m-pethead"><span class="m-title">Biscuit</span><img class="m-petphoto" src="img/icon-dog.png" alt="" width="72" height="72"></div>
+<div class="m-pethead"><span class="m-title">Biscuit</span><img class="m-petphoto" src="img/biscuit.jpg" alt="" width="72" height="72"></div>
 <div class="m-h">Biscuit</div>
 <div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home glucose</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
 <div class="m-h">Staying on top of it</div>
