@@ -331,15 +331,21 @@ MOCKS = {
 ''', "A summary of recent weeks, with a page for each topic.", "Reports at a glance: food eaten 96 percent, 712 calories a day, shots given 100 percent, weight 48 pounds, with Share a PDF report and Details rows"),
 
 "pettab": fig('''
-<div class="m-pethead"><span class="m-title">Biscuit</span><img class="m-petphoto" src="img/biscuit.jpg" alt="" width="72" height="72"></div>
-<div class="m-h">Biscuit</div>
+<div class="m-petcard"><span class="m-gold-label">DIAPETIC GOLD</span><span class="m-share" aria-hidden="true">&#x2191;</span>
+<img class="m-petcard-photo" src="img/biscuit.jpg" alt="" width="64" height="64">
+<div class="m-petcard-name">Biscuit</div>
+<div class="m-petcard-sub">Labrador Retriever<br>7 yrs, 2 mos · Neutered male · 66 lbs</div>
+<div class="m-petcard-tags"><span>Type 1 diabetes</span><span>Vetsulin U-40</span><span>Twice a day</span></div>
+<div class="m-petcard-grid"><div><i>Color</i>Yellow</div><div><i>Birthday</i>Sep 12, 2019</div><div><i>Microchip</i>985112006543210</div><div><i>Vet clinic</i>Maple Street Animal Clinic<br><u>(555) 010-2468</u></div></div>
+</div>
+<div class="m-h">Biscuit's details</div>
 <div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home glucose</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
 <div class="m-h">Staying on top of it</div>
 <div class="m-card"><div class="m-row"><span>Reminders</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin Supplies</span><span class="m-v">›</span></div></div>
 <div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
 <div class="m-h">App</div>
 <div class="m-card"><div class="m-row"><span>App icon</span><span class="m-v">›</span></div><div class="m-row"><span>Help and support</span><span class="m-v">›</span></div><div class="m-row"><span>Backup</span><span class="m-v">›</span></div><div class="m-row"><span>App settings</span><span class="m-v">›</span></div></div>
-''', "A short list of rows, each opening its own page.", "Pet tab with a large round pet photo overlapping the header, and rows for pet details, insulin and shot times, meals and treats, supplements, medications, home glucose and weight, then Reminders and Insulin Supplies, Support DiaPetic, and the app rows"),
+''', "Your pet's card, then a short list of rows, each opening its own page.", "Pet tab opening with Biscuit's indigo card with a gold border: photo, name, breed, age, sex and weight, tags, color, birthday, microchip and vet clinic, then rows for pet details, insulin and shot times, meals and treats, supplements, medications, home glucose and weight, then Reminders and Insulin Supplies, Support DiaPetic, and the app rows"),
 
 "emergency": fig('''
 <div class="m-title" style="color:var(--m-red-t)">Emergency</div>

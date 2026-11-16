@@ -71,6 +71,7 @@ CHAPTERS = [
 ("days", "Moving between days", """
 <p>Swipe left or right, or use the <strong>‹ ›</strong> arrows beside the date, to move one day at a time. To go further back, tap the <strong>calendar</strong> button beside "Daily Tracker" and choose a date, or use one of the shortcuts for one week, two weeks or one month ago. Tap the date at any time to return to today.</p>
 <p>When you change days, the page keeps your place, so you can compare the same section from one day to the next.</p>
+<p>To see your pet's card without leaving the Tracker, pull down on the DiaPetic logo at the top, or tap the small bar under it. See <a href="guide-pet-tab.html#card">Your pet's card</a>.</p>
 """),
 ("glance", "Summary and alerts", """
 <p><strong>At a glance</strong> sits under the date and shows up to five rings for the day on screen. Choose them with <strong>Edit</strong>: meals, shots, calories, medications, supplements, the check-in, glucose and insulin left. Each ring fills as the day goes on and shows a count in the middle, with a small paw at the end of the colored arc. When a ring is complete, such as both meals logged, the count changes to a paw. A skipped shot fills the Shots ring but does not earn the paw. When the check-in found everything normal, its ring shows a paw. Calories needs a daily calorie target, and glucose needs home glucose checks turned on; if either is missing, DiaPetic offers to set it up. Insulin left always shows the bottle in use today. Each pet keeps its own choice.</p>
@@ -380,14 +381,21 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 
 # ------------------------------------------------------------------
 ("pet-tab", "Your pet's tab and settings", "Pet details, multiple pets, app settings and the app icon.",
-"""<p>The last tab is named after your pet. It contains everything you entered during setup, along with the app's settings. If you have DiaPetic Gold, a small gold tag appears beside your pet's name; tap it to see what Gold includes.</p>""",
+"""<p>The last tab is named after your pet. It opens with your pet's card, followed by everything you entered during setup and the app's settings. If you have DiaPetic Gold, a small gold tag appears beside your pet's name; tap it to see what Gold includes.</p>""",
 [
+("card", "Your pet's card", """
+<p>The top of the tab is a card for your pet, like a business card. It shows the photo, name, breed, age, sex and latest weight, tags for the diabetes type, the insulin and how often it is given, and then the color, birthday, microchip number and vet clinic with its phone number. Tap the phone number to call the clinic. Rows left empty in <strong>Pet details</strong> do not appear on the card.</p>
+<p>Tap the <strong>share</strong> button in the top corner to send a one-page information sheet about your pet by Messages, Mail or AirDrop, for example to a pet sitter.</p>
+<p>The card is also available from the Tracker, Reports, Vet and History tabs. Pull down on the DiaPetic logo, or tap the small bar under it, and the card appears over the screen. Push it up, or tap outside it, to close it.</p>
+<p>With DiaPetic Gold, the card has a gold border and a gold ring around the photo.</p>
+"""),
 ("help", "Help and support", """
 <p>In the App group, <strong>Help and support</strong> opens this guide (<strong>How to use DiaPetic</strong>), the <strong>FAQ &amp; support</strong> page and the <strong>Suggestion box</strong>. For your first two weeks, the Tracker also shows a short card with a link to the guide; tap <strong>Not now</strong> to hide it.</p>
 """),
 ("details", "Pet details", """
-<p>With DiaPetic Gold, you can add a photo of your pet. Tap the circle beside your pet's name at the top of the tab and choose <strong>Choose from Library</strong> or <strong>Take Photo</strong>, then drag and pinch to position your pet in the circle and tap <strong>Use Photo</strong>. <strong>Remove Photo</strong> returns to the first letter of your pet's name. The photo stays on your iPhone and appears on the information sheet and the emergency screen, which can help if your pet is ever lost.</p>
+<p>With DiaPetic Gold, you can add a photo of your pet. Tap the photo circle on your pet's card and choose <strong>Choose from Library</strong> or <strong>Take Photo</strong>, then drag and pinch to position your pet in the circle and tap <strong>Use Photo</strong>. <strong>Remove Photo</strong> returns to the first letter of your pet's name. The photo stays on your iPhone and appears on the information sheet and the emergency screen, which can help if your pet is ever lost.</p>
 <p><strong>Birthday</strong> is optional. Choose an exact date, or an approximate age if you do not know the date, such as for a rescue. The age appears on the information sheet, the PDF report and the clinic summary.</p>
+<p><strong>Diabetes type</strong>, in Pet details, is optional: Type 1, Type 2, In remission or Not sure. When it is set, it appears as a tag on your pet's card.</p>
 <p><strong>Pet details</strong> holds your pet's name, species, breed, color, sex and microchip number. The other rows open their own pages: <strong>Insulin and shot times</strong>, <strong>Meals and treats</strong>, <strong>Medications</strong>, <strong>Home glucose</strong> and <strong>Weight</strong>, which shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
 """),
 ("pets", "Multiple pets", """

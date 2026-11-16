@@ -218,3 +218,16 @@ section { padding-block: 44px; }
 .store-qr .qr-img svg { width: 140px; height: 140px; display: block; border-radius: 10px; }
 .store-qr p { font-size: 0.8rem; color: var(--muted); }
 @media (max-width: 760px), (hover: none) { .store-qr { display: none; } }
+
+/* 1.4 pet card illustration */
+.mock .m-petcard { position: relative; background: #4A4ABF; color: #FFFFFF; border: 4px solid #D9A93A; border-radius: 22px; padding: 16px 12px 14px; text-align: center; margin-bottom: 14px; }
+.mock .m-gold-label { position: absolute; left: 12px; top: 10px; font-size: 8px; font-weight: 800; letter-spacing: 1px; color: #FAD16B; }
+.mock .m-share { position: absolute; right: 12px; top: 6px; font-size: 14px; font-weight: 700; }
+.mock .m-petcard-photo { width: 64px; height: 64px; border-radius: 50%; border: 3px solid #E8C25A; box-sizing: border-box; object-fit: cover; }
+.mock .m-petcard-name { font-size: 20px; font-weight: 800; margin-top: 4px; }
+.mock .m-petcard-sub { font-size: 11px; opacity: 0.9; line-height: 1.35; }
+.mock .m-petcard-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 8px 0 10px; }
+.mock .m-petcard-tags span { background: #FFFFFF; color: #3F3FAE; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 10px; }
+.mock .m-petcard-grid { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; text-align: left; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 9px; font-size: 11px; font-weight: 700; }
+.mock .m-petcard-grid i { display: block; font-style: normal; font-weight: 400; font-size: 9px; opacity: 0.8; }
+
