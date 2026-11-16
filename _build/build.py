@@ -107,13 +107,13 @@ home = f'''
 <div class="wrap">
 <div>
 <p class="eyebrow">Diabetes care for dogs and cats</p>
-<h1>Your pet's care, in one place.</h1>
-<p class="lead">DiaPetic reminds you when each shot is due, shows what was given and when, and helps you share clear records with your vet.</p>
+<h1>Every shot. Every meal.</h1>
+<p class="lead">DiaPetic reminds you when each shot is due and shows when the last one was given, so you do not have to guess. At checkup time, your records become a report for your vet.</p>
 <div class="cta">
 {store_badge(54) if STORE_URL else '<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>'}
 <a class="btn btn-ghost" href="help.html">Read the guide</a>
 </div>
-<p class="note" style="margin-top:14px">Free to download. DiaPetic Gold is $9.99, one time, no subscription.</p>
+<p class="note" style="margin-top:14px">Free to download. Everything stays on your iPhone. No account, no tracking.</p>
 </div>
 <img class="hero-icon" src="img/icon-dog.png" alt="DiaPetic app icon: Obi, a curly-haired dog, with an orange collar and a red blood-drop tag" width="300" height="300">
 </div>
@@ -123,15 +123,15 @@ home = f'''
 <div class="wrap">
 <div class="section-head">
 <p class="eyebrow">What it does</p>
-<h2>Designed for a real diabetic dog's needs</h2>
+<h2>Built for the daily routine of a diabetic dog or cat</h2>
 <p>Diabetes care means insulin twice a day, carefully timed meals, and regular conversations with your vet. DiaPetic keeps it all in one place, so you can see what has been given and what is still due.</p>
 </div>
 <div class="features">
-{feature("syringe", "Quick daily logging", "Record each shot with the time it was given, how much of each meal was eaten, and a brief daily check-in that defaults to normal.")}
+{feature("syringe", "Quick daily logging", "Record each shot with the time it was given, how much of each meal was eaten, and a brief daily check-in that defaults to normal. You can log a shot from the reminder itself, without opening the app.")}
 {feature("bell", "Reminders for each day", "Reminders for insulin, meals, medications, glucose checks and appointments, with a follow-up if a shot has not been recorded.")}
-{feature("doc", "Reports for your veterinarian", "Clear summaries covering 7 to 180 days, including shots, appetite, symptoms, weight, glucose curves and dose history, ready to share as a PDF.")}
+{feature("doc", "Reports for your veterinarian", "Clear summaries covering 7 to 180 days, including shots, appetite, symptoms, weight, glucose curves and dose history, ready to share as a PDF. Your vet can see how things went between visits.")}
 {feature("cross", "Help in an emergency", "An emergency button on every screen with step-by-step guidance for low blood sugar, missed or repeated doses and other urgent situations.")}
-{feature("box", "Supply tracking", "Keeps track of the insulin bottle in use, spare bottles, syringes and food, and alerts you before anything runs low.")}
+{feature("box", "Supply tracking", "Keeps track of the insulin bottle in use, spare bottles, syringes and food, and alerts you before anything runs low. That leaves time to order a refill.")}
 {feature("mic", "A daily journal", "Record observations by typing or speaking. Entries are saved with the day's records and included in your reports.")}
 </div>
 </div>
@@ -141,7 +141,7 @@ home = f'''
 <div class="wrap">
 <div class="section-head">
 <p class="eyebrow">Inside the app</p>
-<h2>Clear screens for everyday care</h2>
+<h2>Real screens from the app</h2>
 </div>
 <div class="shots">
 <figure class="shot"><img src="img/reports.jpg" alt="Reports screen showing food eaten, calories, shots given, weight and a Share a PDF report button" width="600" height="1304" loading="lazy"><figcaption>Progress reports for your vet</figcaption></figure>
@@ -160,7 +160,7 @@ home = f'''
 <div>
 <p class="eyebrow">Our story</p>
 <h2 style="margin-top:10px">Made for Obi</h2>
-<p style="margin-top:14px">DiaPetic began as a tracker for Obi, a diabetic Sheepadoodle, created by his owner to keep his insulin, meals and veterinary notes in order.</p>
+<p style="margin-top:14px">DiaPetic began as a tracker Bryan Flynn built for his diabetic Sheepadoodle, Obi, to keep his insulin, meals and vet notes in order.</p>
 <p>Other families caring for a diabetic pet need the same thing, so DiaPetic is now on the App Store. Everything stays on your iPhone. No account, no tracking.</p>
 </div>
 </div>
@@ -201,7 +201,7 @@ home = f'''
 <div class="get-app">
 <div>
 <h3>{"Download DiaPetic" if STORE_URL else "Coming soon to the App Store"}</h3>
-<p>{"Available for iPhone. Free to download. DiaPetic Gold is one time, no subscription." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
+<p>{"Free to download for iPhone. Start with today's shots and meals, and add DiaPetic Gold ($9.99, one time, no subscription) when you want longer reports or more pets." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
 {store_badge(54) if STORE_URL else NOTIFY}
 </div>
 {store_qr()}
@@ -210,7 +210,7 @@ home = f'''
 </div>
 </section>
 '''
-page("index.html", "DiaPetic: Pet Diabetes Log", "Track insulin, meals and glucose for your diabetic dog or cat, receive reminders, and share clear reports with your veterinarian.", home)
+page("index.html", "DiaPetic: Diabetes Tracker for Dogs and Cats", "Log insulin shots, meals and glucose for your diabetic dog or cat, get reminders, and share clear reports with your vet. Free for iPhone.", home)
 
 # ---------------- Screen illustrations (demo pet "Biscuit") ----------------
 def tog(on): return f'<span class="m-tog{" on" if on else ""}"></span>'
