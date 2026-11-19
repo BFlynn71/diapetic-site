@@ -130,7 +130,7 @@ def page(fname, title, desc, body, nav_key=None, og_type="website", schema=None,
 <footer class="site-foot">
 <div class="wrap">
 <div class="foot-get">{store_badge(40)}</div>
-<p>© 2026 Bryan Flynn · <a href="mailto:support@diapetic.com">support@diapetic.com</a></p>
+<p>© 2026 DiaPetic · <a href="mailto:support@diapetic.com">support@diapetic.com</a></p>
 <p class="foot-social">Follow DiaPetic: <a href="https://www.instagram.com/diapeticapp/" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/share/1FDAjA8MnR/" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@diapetic3" rel="noopener">TikTok</a></p>
 <nav aria-label="Footer">{foot}</nav>
 </div>
@@ -150,12 +150,12 @@ home = f'''
 <div class="wrap">
 <div>
 <h1><span class="eyebrow h1-eyebrow">Diabetes care for dogs and cats</span>Every shot. Every meal.</h1>
-<p class="lead">DiaPetic reminds you when each shot is due and shows when the last one was given, so you do not have to guess. At checkup time, your records become a report for your vet.</p>
+<p class="lead">Made for anyone caring for a diabetic dog or cat, especially in the first weeks after a diagnosis. DiaPetic reminds you when each shot is due and shows when the last one was given, so you do not have to guess. At checkup time, your records become a report for your vet.</p>
 <div class="cta">
 {store_badge(54) if STORE_URL else '<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>'}
 <a class="btn btn-ghost" href="help.html">Read the guide</a>
 </div>
-<p class="note" style="margin-top:14px">Free to download. Everything stays on your iPhone. No account, no tracking.</p>
+<p class="note" style="margin-top:14px">Free to use, with no trial period and no ads. Everything stays on your iPhone. No account, no tracking.</p>
 </div>
 <img class="hero-icon" src="img/icon-dog.png" alt="DiaPetic app icon: Obi, a curly-haired dog, with an orange collar and a red blood-drop tag" width="300" height="300">
 </div>
@@ -178,6 +178,19 @@ home = f'''
 </div>
 </div>
 </section>
+
+<section class="story">
+<div class="wrap">
+<img src="img/icon-dog.png" alt="" width="300" height="300" style="width:min(260px,70%);border-radius:22%;justify-self:center">
+<div>
+<p class="eyebrow">Our story</p>
+<h2 style="margin-top:10px">Made for Obi</h2>
+<p style="margin-top:14px">DiaPetic began as a tracker the developer built for his diabetic Sheepadoodle, Obi, to keep his insulin, meals and vet notes in order.</p>
+<p>Other families caring for a diabetic pet need the same thing, so DiaPetic is now on the App Store. The daily care tools are free, because a new diagnosis brings enough costs already. Everything stays on your iPhone. No account, no tracking.</p>
+</div>
+</div>
+</section>
+
 
 <section>
 <div class="wrap">
@@ -207,44 +220,39 @@ home = f'''
 </div>
 </section>
 
-<section class="story">
-<div class="wrap">
-<img src="img/icon-dog.png" alt="" width="300" height="300" style="width:min(260px,70%);border-radius:22%;justify-self:center">
-<div>
-<p class="eyebrow">Our story</p>
-<h2 style="margin-top:10px">Made for Obi</h2>
-<p style="margin-top:14px">DiaPetic began as a tracker Bryan Flynn built for his diabetic Sheepadoodle, Obi, to keep his insulin, meals and vet notes in order.</p>
-<p>Other families caring for a diabetic pet need the same thing, so DiaPetic is now on the App Store. Everything stays on your iPhone. No account, no tracking.</p>
-</div>
-</div>
-</section>
-
 <section id="get">
 <div class="wrap">
 <div class="section-head">
 <p class="eyebrow">Pricing</p>
 <h2>Free to use, with an optional one-time upgrade</h2>
+<p>The tools for your pet's daily safety are part of the free app: shots, reminders, emergency help and your records.</p>
 </div>
 <div class="pricing">
 <div class="plan">
 <h3>Free</h3>
 <p class="price">$0</p>
+<p class="note">Everything you need for daily care</p>
 <ul>
 <li>Daily logging of shots, meals and check-ins</li>
 <li>Insulin reminders and follow-ups for unrecorded shots</li>
 <li>Emergency guidance on every screen</li>
 <li>Appointments with calendar sync</li>
 <li>Supply tracking, journal and backups</li>
-<li>Reports for the last 30 days</li>
+<li>On-screen reports for the last 30 days</li>
+<li>No trial period and no ads</li>
 </ul>
 </div>
 <div class="plan pro">
 <h3>DiaPetic Gold</h3>
 <p class="price">$9.99 <span class="note">one time, no subscription</span></p>
+<p class="note">Pay once and it is yours. Thank you for supporting DiaPetic.</p>
 <ul>
 <li>PDF and CSV reports for your vet</li>
 <li>90- and 180-day trends</li>
 <li>Multiple pets</li>
+<li>Your pet's photo</li>
+<li>Medication schedules with your own times</li>
+<li>Medication supply with refill reminders</li>
 <li>Custom reminders, such as heartworm prevention, refills and vaccines</li>
 <li>Dog and cat app icons with seasonal designs, or a gold collar tag</li>
 <li>Shared with your Family Sharing group</li>
@@ -254,7 +262,7 @@ home = f'''
 <div class="get-app">
 <div>
 <h3>{"Download DiaPetic" if STORE_URL else "Coming soon to the App Store"}</h3>
-<p>{"Free to download for iPhone. Start with today's shots and meals, and add DiaPetic Gold ($9.99, one time, no subscription) when you want longer reports or more pets." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
+<p>{"Free to use on iPhone. Start with today's shots and meals, and add DiaPetic Gold ($9.99, one time, no subscription) when you want longer reports or more pets." if STORE_URL else "DiaPetic for iPhone will be available on the App Store soon."}</p>
 {store_badge(54) if STORE_URL else NOTIFY}
 </div>
 {store_qr()}
@@ -269,7 +277,7 @@ APP_SCHEMA = {"@context": "https://schema.org", "@type": "SoftwareApplication",
   "description": "An iPhone app for tracking a diabetic dog or cat: insulin shots, meals, glucose readings, reminders, supplies and PDF reports for your vet. Everything stays on your iPhone, with no account. It never recommends insulin doses.",
   "url": f"{SITE}/", "downloadUrl": STORE_URL, "installUrl": STORE_URL,
   "image": f"{SITE}/img/icon-dog.png", "screenshot": f"{SITE}/img/reports.jpg",
-  "author": {"@type": "Person", "name": "Bryan Flynn"}, "publisher": ORG,
+  "author": ORG, "publisher": ORG,
   "offers": [
     {"@type": "Offer", "name": "DiaPetic", "price": "0", "priceCurrency": "USD", "category": "free", "url": STORE_URL},
     {"@type": "Offer", "name": "DiaPetic Gold (one time, no subscription)", "price": "9.99", "priceCurrency": "USD", "url": STORE_URL}]}
@@ -494,6 +502,7 @@ for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
 # ---------------- FAQ ----------------
 faq_groups = [
 ("Using the app", [
+("Is DiaPetic free?", "<p>Yes. Daily logging, insulin reminders, emergency help, the Vet tab, supply tracking, backups and on-screen reports for the last 30 days are free to use, with no trial period and no ads. DiaPetic Gold is an optional one-time purchase of $9.99 that adds PDF reports for your vet, longer trends, more pets and other extras.</p>"),
 ("I forgot to record a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker by swiping back or using the calendar button, tap <strong>Give</strong> on the shot, and choose <strong>A different time…</strong> to enter when it was given.</p>"),
 ("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your vet.</p>"),
 ("Does DiaPetic recommend insulin doses?", "<p>No. Insulin doses must always come from your veterinarian. DiaPetic records the prescribed dose and what was actually given, so your veterinarian has accurate information for making those decisions.</p>"),
@@ -511,10 +520,11 @@ faq_groups = [
 ("What happens to my records if I delete the app?", "<p>Deleting the app removes its data from your iPhone. Your records can be recovered only from a backup, so be sure to make one first.</p>"),
 ]),
 ("DiaPetic Gold and purchases", [
-("What does DiaPetic Gold include? Is it a subscription?", "<p>DiaPetic Gold is a one-time purchase of $9.99, not a subscription. It adds PDF and CSV reports, 90- and 180-day trends, medication schedules with your own times, medication supply with refill reminders, multiple pets, your pet's photo, custom reminders, and dog and cat app icons with seasonal designs or a gold collar tag. It is shared with your Family Sharing group.</p>"),
+("What does DiaPetic Gold include? Is it a subscription?", "<p>It is not a subscription. DiaPetic Gold is a one-time purchase of $9.99. It adds PDF and CSV reports, 90- and 180-day trends, medication schedules with your own times, medication supply with refill reminders, multiple pets, your pet's photo, custom reminders, and dog and cat app icons with seasonal designs or a gold collar tag. It is shared with your Family Sharing group.</p>"),
+("Why is there no subscription?", "<p>DiaPetic was made by the owner of a diabetic dog, who knows how quickly insulin, supplies and vet visits add up. Paying once for Gold felt fairer than another monthly bill. You buy it once, and it is shared with your Family Sharing group.</p>"),
 ("How do I redeem a DiaPetic Gold code?", "<p>Open DiaPetic Gold in the app, from the Gold card in your pet's tab or any button marked (Gold), and tap <strong>Redeem a code</strong>. Type the code and confirm. Gold unlocks as soon as the App Store accepts the code. If the code came with a QR code, you can also scan it with your iPhone's camera.</p>"),
 ("How do I restore DiaPetic Gold on another iPhone?", "<p>Open the Gold screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
-("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not add any features. Everything related to your pet's safety is always free.</p>"),
+("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not add any features. The tools for your pet's safety are part of the free app.</p>"),
 ("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),
 ]),
 ]
@@ -556,7 +566,7 @@ privacy_body = f'''
 <p><strong>Summary:</strong> DiaPetic does not collect your data. The information you enter remains on your iPhone. The app has no accounts, advertising, analytics or tracking, and the developer operates no server that receives your information.</p>
 
 <h2>Who we are</h2>
-<p>DiaPetic is an iPhone app developed by Bryan Flynn ("we," "us"). You can contact us at <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
+<p>DiaPetic ("we," "us") is an iPhone app made by an independent developer. You can contact us at <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
 
 <h2>Information you enter</h2>
 <p>Your pet's details, shots, meals, check-ins, glucose readings, journal entries, supplies, appointments and settings are stored only on your iPhone, in the app's private storage. We have no access to them.</p>
@@ -606,7 +616,7 @@ page("404.html", "Page not found · DiaPetic", "The page you requested does not 
 open(os.path.join(OUT, "CNAME"), "w").write("diapetic.com\n")
 open(os.path.join(OUT, "README.md"), "w").write("# diapetic.com\n\nThe DiaPetic website: home, how to use, FAQ & support, privacy policy. Plain HTML and CSS, hosted on GitHub Pages.\n\nThe pages are generated from `build.py` in the app project; edit there or edit the HTML directly.\n")
 # ---------------- Guides for owners ----------------
-AUTHOR_LINE = "By Bryan Flynn, who cares for Obi, a diabetic Sheepadoodle, and made DiaPetic"
+AUTHOR_LINE = "By the developer of DiaPetic, who cares for Obi, a diabetic Sheepadoodle"
 def nice_date(d): return datetime.date.fromisoformat(d).strftime("%B %-d, %Y")
 for slug, ttag, desc, h1, intro, secs, published, modified in ARTICLES:
     toc = "".join(f'<li><a href="#{a}">{h}</a></li>' for a, h, _ in secs)
@@ -638,7 +648,7 @@ for slug, ttag, desc, h1, intro, secs, published, modified in ARTICLES:
 '''
     schema = {"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": desc,
               "image": f"{SITE}/img/icon-dog.png", "datePublished": published, "dateModified": modified,
-              "author": {"@type": "Person", "name": "Bryan Flynn", "url": f"{SITE}/"},
+              "author": ORG,
               "publisher": ORG, "mainEntityOfPage": page_url(article_file(slug)), "inLanguage": "en"}
     page(article_file(slug), ttag, desc, body, nav_key="help.html", og_type="article", schema=[schema], lastmod=modified)
 

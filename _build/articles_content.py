@@ -2,7 +2,7 @@
 # whether or not they use DiaPetic yet. Separate from the app how-to chapters (guide_content.py).
 # Rules: record-keeping and vet preparation only. Never suggest a dose or a change to treatment;
 # send every health decision to the vet. Website voice: no contractions, "vet" in everyday copy,
-# "veterinarian" in safety lines. Lines with general health information were checked by Bryan
+# "veterinarian" in safety lines. Lines with general health information were checked by the developer
 # (or his vet) before publishing; keep them general and point to the vet.
 # Each article: (slug, title tag, meta description, h1, intro html, [(anchor, h2, html)], published, modified)
 
