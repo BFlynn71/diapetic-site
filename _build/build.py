@@ -39,6 +39,39 @@ CF_BEACON = """<!-- Cloudflare Web Analytics --><script type='module' src='https
 
 NAV = [("index.html", "Home"), ("help.html", "How to use"), ("faq.html", "FAQ & support"), ("privacy.html", "Privacy")]
 
+# ---- Search engines -------------------------------------------------------------
+# Every page gets a canonical address and full Open Graph tags; indexable pages are listed in
+# sitemap.xml, which robots.txt points to. The home page's one address is https://diapetic.com/
+# (links say "/" instead of "index.html", so search engines never see two copies of it).
+SITE = "https://diapetic.com"
+import datetime, json, html as htmlmod
+TODAY = datetime.date.today().isoformat()
+SITEMAP = []   # (url, lastmod), filled in by page()
+
+def href(h):
+    return "/" if h == "index.html" else h
+
+def page_url(fname):
+    return f"{SITE}/" if fname == "index.html" else f"{SITE}/{fname}"
+
+def jsonld(data):
+    return f'\n<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
+
+def plain(s):
+    """HTML answer → plain text for structured data."""
+    import re
+    return htmlmod.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s))).strip().replace(" .", ".").replace(" ,", ",")
+
+ORG = {"@type": "Organization", "name": "DiaPetic", "url": f"{SITE}/", "logo": f"{SITE}/apple-touch-icon.png",
+       "email": "support@diapetic.com",
+       "sameAs": ["https://www.instagram.com/diapeticapp/", "https://www.tiktok.com/@diapetic3", "https://apps.apple.com/app/id6824567991"]}
+
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "articles_content.py")).read())
+def article_file(slug): return f"{slug}.html"
+def article_cards():
+    return "".join(f'<a class="chapter" href="{article_file(a[0])}"><span class="num">{i}</span><span><strong>{a[3]}</strong><span>{a[2]}</span></span></a>'
+                   for i, a in enumerate(ARTICLES, 1))
+
 def icon(path):
     return f'<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{path}</svg>'
 
@@ -56,9 +89,18 @@ ICONS = {
 
 CSSV = hashlib.md5(open(os.path.join(OUT, "style.css"), "rb").read()).hexdigest()[:8]
 
-def page(fname, title, desc, body, nav_key=None):
-    nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == (nav_key or fname) else ""}>{t}</a>' for h, t in NAV)
-    foot = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
+def page(fname, title, desc, body, nav_key=None, og_type="website", schema=None, noindex=False, lastmod=None):
+    nav = "".join(f'<a href="{href(h)}"{" aria-current=\"page\"" if h == (nav_key or fname) else ""}>{t}</a>' for h, t in NAV)
+    foot = "".join(f'<a href="{href(h)}">{t}</a>' for h, t in NAV) + '<a href="help.html#owner-guides">Guides for owners</a>'
+    url = page_url(fname)
+    if noindex:
+        seo = '\n<meta name="robots" content="noindex">'
+    else:
+        seo = f'\n<link rel="canonical" href="{url}">\n<meta property="og:url" content="{url}">'
+        SITEMAP.append((url, lastmod or TODAY))
+    seo += f'\n<meta property="og:type" content="{og_type}">\n<meta property="og:site_name" content="DiaPetic">\n<meta name="twitter:card" content="summary">'
+    for s in (schema or []):
+        seo += jsonld(s)
     html = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -69,6 +111,7 @@ def page(fname, title, desc, body, nav_key=None):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="https://diapetic.com/img/icon-dog.png">
+<meta property="og:image:alt" content="DiaPetic app icon: Obi the dog">{seo}
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -77,7 +120,7 @@ def page(fname, title, desc, body, nav_key=None):
 <body>
 <header class="site-head">
 <div class="wrap">
-<a class="brand" href="index.html" aria-label="DiaPetic home"><img class="brand-icon" src="img/icon-dog.png" alt=""><picture><source srcset="img/logo-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="img/logo.svg" alt="DiaPetic" width="146" height="33"></picture></a>
+<a class="brand" href="/" aria-label="DiaPetic home"><img class="brand-icon" src="img/icon-dog.png" alt=""><picture><source srcset="img/logo-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="img/logo.svg" alt="DiaPetic" width="146" height="33"></picture></a>
 <nav class="nav" aria-label="Main">{nav}</nav>
 </div>
 </header>
@@ -106,8 +149,7 @@ home = f'''
 <section class="hero">
 <div class="wrap">
 <div>
-<p class="eyebrow">Diabetes care for dogs and cats</p>
-<h1>Every shot. Every meal.</h1>
+<h1><span class="eyebrow h1-eyebrow">Diabetes care for dogs and cats</span>Every shot. Every meal.</h1>
 <p class="lead">DiaPetic reminds you when each shot is due and shows when the last one was given, so you do not have to guess. At checkup time, your records become a report for your vet.</p>
 <div class="cta">
 {store_badge(54) if STORE_URL else '<a class="btn btn-primary" href="#get">Coming soon to the App Store</a>'}
@@ -151,6 +193,17 @@ home = f'''
 </div>
 <figure class="shot"><img src="img/icons-grid.png" alt="Thirty-two app icons: Obi the dog and an orange kitty in regular, gold tag, seasonal and holiday styles" width="784" height="1584" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
 </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">Guides for owners</p>
+<h2>Help for the first months of pet diabetes</h2>
+<p>Plain guides on keeping records and getting ready for vet visits, whether or not you use DiaPetic.</p>
+</div>
+<nav class="chapters" aria-label="Guides for owners">{article_cards()}</nav>
 </div>
 </section>
 
@@ -210,7 +263,18 @@ home = f'''
 </div>
 </section>
 '''
-page("index.html", "DiaPetic: Diabetes Tracker for Dogs and Cats", "Log insulin shots, meals and glucose for your diabetic dog or cat, get reminders, and share clear reports with your vet. Free for iPhone.", home)
+APP_SCHEMA = {"@context": "https://schema.org", "@type": "SoftwareApplication",
+  "name": "DiaPetic: Pet Diabetes Log", "alternateName": "DiaPetic",
+  "operatingSystem": "iOS, watchOS", "applicationCategory": "HealthApplication",
+  "description": "An iPhone app for tracking a diabetic dog or cat: insulin shots, meals, glucose readings, reminders, supplies and PDF reports for your vet. Everything stays on your iPhone, with no account. It never recommends insulin doses.",
+  "url": f"{SITE}/", "downloadUrl": STORE_URL, "installUrl": STORE_URL,
+  "image": f"{SITE}/img/icon-dog.png", "screenshot": f"{SITE}/img/reports.jpg",
+  "author": {"@type": "Person", "name": "Bryan Flynn"}, "publisher": ORG,
+  "offers": [
+    {"@type": "Offer", "name": "DiaPetic", "price": "0", "priceCurrency": "USD", "category": "free", "url": STORE_URL},
+    {"@type": "Offer", "name": "DiaPetic Gold (one time, no subscription)", "price": "9.99", "priceCurrency": "USD", "url": STORE_URL}]}
+SITE_SCHEMA = {"@context": "https://schema.org", "@type": "WebSite", "name": "DiaPetic", "url": f"{SITE}/", "publisher": ORG}
+page("index.html", "DiaPetic: Diabetes Tracker for Dogs and Cats", "Log insulin shots, meals and glucose for your diabetic dog or cat, get reminders, and share clear reports with your vet. Free for iPhone, no account.", home, schema=[APP_SCHEMA, SITE_SCHEMA])
 
 # ---------------- Screen illustrations (demo pet "Biscuit") ----------------
 def tog(on): return f'<span class="m-tog{" on" if on else ""}"></span>'
@@ -369,6 +433,15 @@ exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guide_conten
 
 def chapter_file(slug): return f"guide-{slug}.html"
 
+def chapter_desc(summary):
+    """One-line summary plus a closing line, picked so the description lands at 140-160 characters."""
+    for tail in ("Part of the DiaPetic guide to tracking a diabetic dog or cat on iPhone.",
+                 "Part of the free DiaPetic guide to tracking a diabetic dog or cat's care on iPhone.",
+                 "Part of the free DiaPetic guide to tracking a diabetic dog or cat's insulin, meals and care on iPhone."):
+        d = f"{summary} {tail}"
+        if len(d) >= 140: break
+    return d
+
 cards = "".join(
     f'<a class="chapter" href="{chapter_file(slug)}"><span class="num">{i}</span><span><strong>{title}</strong><span>{summary}</span></span></a>'
     for i, (slug, title, summary, _intro, _secs, _mocks) in enumerate(CHAPTERS, 1))
@@ -380,11 +453,14 @@ hub = f'''
 <p>This guide explains each part of DiaPetic in detail. If you are new to the app, begin with <a href="{chapter_file("getting-started")}">Getting started</a> and then read <a href="{chapter_file("tracker")}">The Daily Tracker</a>. You can open the guide from within the app at any time under your pet\u2019s tab \u203a Help and support. The illustrations show a sample pet named Biscuit.</p>
 </header>
 <nav class="chapters" aria-label="Guide chapters">{cards}</nav>
+<h2 id="owner-guides" style="margin-top:44px">Guides for owners</h2>
+<p style="margin-top:8px">Longer guides on keeping records and getting ready for vet visits.</p>
+<nav class="chapters" aria-label="Guides for owners">{article_cards()}</nav>
 <p class="safety" style="margin-top:32px"><strong>Please note:</strong> DiaPetic keeps records and sends reminders. It does not recommend insulin doses or changes to treatment. Always follow your veterinarian\u2019s instructions.</p>
 <p style="margin:20px 0 56px">If you cannot find what you need, see the <a href="faq.html">FAQ</a> or email <a href="mailto:support@diapetic.com">support@diapetic.com</a>.</p>
 </div>
 '''
-page("help.html", "How to use DiaPetic", "The complete DiaPetic guide: setup, daily logging, food, medications, glucose, reminders, supplies, vet visits, reports, emergencies and backups.", hub)
+page("help.html", "How to Use DiaPetic | Pet Diabetes Log Guide", "The complete DiaPetic guide: setup, daily logging, food, medications, glucose, reminders, supplies, vet visits, reports, emergencies and backups.", hub)
 
 for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
     toc = "".join(f'<li><a href="#{a}">{h}</a></li>' for a, h, _ in secs)
@@ -413,7 +489,7 @@ for i, (slug, title, summary, intro, secs, mocks) in enumerate(CHAPTERS):
 </article>
 </div>
 '''
-    page(chapter_file(slug), f"{title} \u00b7 DiaPetic guide", summary, body, nav_key="help.html")
+    page(chapter_file(slug), f"{title} \u00b7 DiaPetic guide", chapter_desc(summary), body, nav_key="help.html")
 
 # ---------------- FAQ ----------------
 faq_groups = [
@@ -463,7 +539,10 @@ faq_body = f'''
 </div>
 </div>
 '''
-page("faq.html", "DiaPetic FAQ and support", "Answers to common questions about DiaPetic and how to contact support.", faq_body)
+FAQ_SCHEMA = {"@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": [{"@type": "Question", "name": plain(q), "acceptedAnswer": {"@type": "Answer", "text": plain(a)}}
+                 for _g, items in faq_groups for q, a in items]}
+page("faq.html", "DiaPetic FAQ | Dog & Cat Diabetes Tracking Questions", "Answers about DiaPetic, the diabetes tracker for dogs and cats: logging shots, reminders, privacy, backups, DiaPetic Gold and how to reach support.", faq_body, schema=[FAQ_SCHEMA])
 
 # ---------------- Privacy ----------------
 privacy_body = f'''
@@ -520,10 +599,51 @@ privacy_body = f'''
 </article>
 </div>
 '''
-page("privacy.html", "DiaPetic privacy policy", "DiaPetic does not collect your data. Everything you enter remains on your iPhone.", privacy_body)
+page("privacy.html", "DiaPetic Privacy Policy", "DiaPetic does not collect your data. Everything you enter stays on your iPhone, with no account, no advertising and no tracking. Read the full policy.", privacy_body)
 
 # 404 and custom domain
-page("404.html", "Page not found · DiaPetic", "The page you requested does not exist.", '<div class="wrap narrow"><header class="page-head"><h1>Page not found</h1><p>The page you requested does not exist. Please visit the <a href="index.html">home page</a>, the <a href="help.html">guide</a> or the <a href="faq.html">FAQ</a>.</p></header></div>')
+page("404.html", "Page not found · DiaPetic", "The page you requested does not exist.", noindex=True, body='<div class="wrap narrow"><header class="page-head"><h1>Page not found</h1><p>The page you requested does not exist. Please visit the <a href="/">home page</a>, the <a href="help.html">guide</a> or the <a href="faq.html">FAQ</a>.</p></header></div>')
 open(os.path.join(OUT, "CNAME"), "w").write("diapetic.com\n")
 open(os.path.join(OUT, "README.md"), "w").write("# diapetic.com\n\nThe DiaPetic website: home, how to use, FAQ & support, privacy policy. Plain HTML and CSS, hosted on GitHub Pages.\n\nThe pages are generated from `build.py` in the app project; edit there or edit the HTML directly.\n")
+# ---------------- Guides for owners ----------------
+AUTHOR_LINE = "By Bryan Flynn, who cares for Obi, a diabetic Sheepadoodle, and made DiaPetic"
+def nice_date(d): return datetime.date.fromisoformat(d).strftime("%B %-d, %Y")
+for slug, ttag, desc, h1, intro, secs, published, modified in ARTICLES:
+    toc = "".join(f'<li><a href="#{a}">{h}</a></li>' for a, h, _ in secs)
+    body_secs = "".join(f'<h2 id="{a}">{h}</h2>{html}' for a, h, html in secs)
+    others = "".join(f'<li><a href="{article_file(o[0])}">{o[3]}</a></li>' for o in ARTICLES if o[0] != slug)
+    body = f'''
+<div class="wrap narrow">
+<header class="page-head">
+<p class="eyebrow"><a href="help.html#owner-guides">Guides for owners</a></p>
+<h1>{h1}</h1>
+<p class="note">{AUTHOR_LINE} · Updated {nice_date(modified)}</p>
+{intro}
+</header>
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>{toc}</ol></nav>
+<article class="article">
+{body_secs}
+<div class="get-app" style="margin-top:36px">
+<div>
+<h3>Try DiaPetic</h3>
+<p>DiaPetic is free on iPhone. Everything stays on your iPhone. No account, no tracking. DiaPetic Gold is $9.99, one time, no subscription. <a href="/">Learn more about DiaPetic</a>.</p>
+{store_badge(48)}
+</div>
+</div>
+<p class="safety" style="margin-top:24px"><strong>Important:</strong> DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care. Always follow your veterinarian\u2019s instructions. This guide is general information, not medical advice for your pet.</p>
+<h2>More guides for owners</h2>
+<ul>{others}</ul>
+</article>
+</div>
+'''
+    schema = {"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": desc,
+              "image": f"{SITE}/img/icon-dog.png", "datePublished": published, "dateModified": modified,
+              "author": {"@type": "Person", "name": "Bryan Flynn", "url": f"{SITE}/"},
+              "publisher": ORG, "mainEntityOfPage": page_url(article_file(slug)), "inLanguage": "en"}
+    page(article_file(slug), ttag, desc, body, nav_key="help.html", og_type="article", schema=[schema], lastmod=modified)
+
+# robots.txt and sitemap.xml
+open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nDisallow: /_build/\n\nSitemap: {SITE}/sitemap.xml\n")
+urls = "".join(f"<url><loc>{u}</loc><lastmod>{m}</lastmod></url>\n" for u, m in SITEMAP)
+open(os.path.join(OUT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
 print("built")

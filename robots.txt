@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_build/
+
+Sitemap: https://diapetic.com/sitemap.xml
