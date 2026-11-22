@@ -99,7 +99,7 @@ CHAPTERS = [
 """),
 ("meds", "Medications, supplements and treats", """
 <p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications on their own schedule and medications given as needed are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
-<p>A supplement given with a meal appears right under that meal, with its own check-off. Other supplements are in the <strong>Supplements</strong> tile, which appears when your pet has any. If a routine closes with a supplement unchecked, its one line says so.</p>
+<p>A supplement given with a meal appears right under that meal, with its own check-off. Supplements given once a day appear in the morning card. If a routine closes with a supplement unchecked, its one line says so.</p>
 <p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your vet.</p>
 """),
 ("weight", "Weight", """
@@ -167,13 +167,13 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 <ol>
 <li>Open <strong>Supplements</strong> or <strong>Medications</strong> and tap <strong>Add supplement</strong> or <strong>Add medication</strong>.</li>
 <li>Enter the name, the <strong>dose as prescribed</strong> (for example, "60 mg capsule") and, if you wish, its purpose.</li>
-<li>For a medication, choose a schedule: with the morning routine, with the evening routine, morning and evening, once a day, or as needed. For a supplement, choose when it is given: with the morning meal, with the evening meal, with both meals, or once a day and not with a meal.</li>
+<li>For a medication, choose a schedule: with the morning routine, with the evening routine, morning and evening, once a day, or as needed. For a supplement, choose when it is given: with the morning meal, with the evening meal, with both meals, or once a day in the morning routine.</li>
 <li>If a dose contains calories, as fish oil and chews often do, enter them so they are included in the day's total.</li>
 <li>Enter the start date and any notes, such as "give with food."</li>
 </ol>
 """),
 ("tracker", "On the Tracker", """
-<p>Scheduled medications appear in the morning or evening card, ready to check off. Supplements given with a meal appear under that meal. Other supplements are a daily check-off in the <strong>Supplements</strong> tile, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
+<p>Scheduled medications appear in the morning or evening card, ready to check off. Supplements given with a meal appear under that meal. Once-a-day supplements are checked off in the morning card, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
 """),
 ("own", "Giving a medication at its own times", """
 <p>When a medication does not fit the morning and evening routine, such as an ointment or ear drops, choose <strong>My own schedule</strong> under <strong>When</strong>. This is part of DiaPetic Gold, a one-time purchase with no subscription.</p>
@@ -186,11 +186,12 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 <p>Each time appears as its own row in the <strong>Medications</strong> section of Tracker, and your reports show doses logged against doses scheduled.</p>
 """),
 ("supply", "Supply and refills", """
-<p>Turn on <strong>Track supply</strong> in a medication's Supply section and enter the number of doses on hand. Each dose you check off counts down. DiaPetic shows about how many doses are left and when the medication will run out at its schedule, with the same timeline as insulin: <strong>Order a refill by</strong>, <strong>Refill due by</strong> when <strong>Auto refill</strong> is on, or <strong>Ask your vet by</strong> when no refills remain. A reminder arrives on that date. Medications given as needed show the count only, because they have no set schedule. When the count reaches zero, tracking stays on and the reminder continues until you enter a new count. To correct the count, enter the number on hand again.</p>
+<p>Turn on <strong>Track supply</strong> in a medication's Supply section and enter the number of doses on hand. Each dose you check off counts down. DiaPetic shows about how many doses are left and when the medication will run out at its schedule, with the same timeline as insulin: <strong>Order a refill by</strong>, <strong>Refill due by</strong> when <strong>Auto refill</strong> is on, or <strong>Ask your vet by</strong> when no refills remain. A reminder arrives on that date. Medications given as needed show the count only, because they have no set schedule. When you check off the last dose on hand, DiaPetic asks whether the medication is finished. Tap <strong>Finished</strong> to stop it after that dose, or <strong>More is coming</strong> to keep it on the schedule. If it continues, tracking stays on and the reminder continues until you enter a new count. To correct the count, enter the number on hand again.</p>
 <p>Supply and refills for medications and supplements is part of DiaPetic Gold, a one-time purchase with no subscription. Insulin supply tracking is always free.</p>
 """),
 ("stop", "Stopping a medication", """
-<p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the date rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
+<p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the last day rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
+<p>For a medication or supplement given more than once a day, choose the <strong>Last dose</strong> as well, for example Morning. Later routines and times that day then no longer show it. When you stop a medication on the same day you checked off its morning dose, DiaPetic chooses Morning for you.</p>
 """),
 ("reminders", "Medication reminders", f"""
 <p>Medications on their own schedule can have their own reminders. Morning and evening medications, and supplements given with a meal, are listed in the shot reminder. Once-a-day medications and supplements can have a separate reminder, and DiaPetic can also remind you before a course of medication ends. These options are in {P("your pet's tab › Reminders › Medications and supplements")}.</p>
