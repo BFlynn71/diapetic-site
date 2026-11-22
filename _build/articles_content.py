@@ -36,7 +36,7 @@ ARTICLES = [
 <p>Write each reading down when you take it. Times written in later are easy to get wrong.</p>
 """),
 ("diapetic", "Keeping it in order with DiaPetic", """
-<p>DiaPetic saves each glucose reading with its time and draws that day's curve, with shots, meals and walks shown on the same chart. You can also enter the low and high alerts your vet gives you. See <a href="guide-glucose.html">Glucose and lab results</a> in the DiaPetic guide.</p>
+<p>DiaPetic saves each glucose reading with its time and draws that day's curve, with shots, meals and walks shown on the same chart. You can also enter the low and high alerts your vet gives you. See <a href="guide-glucose.html">Glucose, ketones and lab results</a> in the DiaPetic guide.</p>
 """),
 ("share", "Sharing the curve with your vet", """
 <p>Send the curve on the same day, while your vet can still ask questions about it. In DiaPetic you can share a day's curve as a picture by text or email, or send a report covering the past weeks. See <a href="guide-reports.html">Reports and sharing</a>.</p>

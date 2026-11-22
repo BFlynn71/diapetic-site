@@ -274,7 +274,7 @@ home = f'''
 APP_SCHEMA = {"@context": "https://schema.org", "@type": "SoftwareApplication",
   "name": "DiaPetic: Pet Diabetes Log", "alternateName": "DiaPetic",
   "operatingSystem": "iOS, watchOS", "applicationCategory": "HealthApplication",
-  "description": "An iPhone app for tracking a diabetic dog or cat: insulin shots, meals, glucose readings, reminders, supplies and PDF reports for your vet. Everything stays on your iPhone, with no account. It never recommends insulin doses.",
+  "description": "An iPhone app for tracking a diabetic dog or cat: insulin shots, meals, glucose readings, ketone tests, reminders, supplies and PDF reports for your vet. Everything stays on your iPhone, with no account. It never recommends insulin doses.",
   "url": f"{SITE}/", "downloadUrl": STORE_URL, "installUrl": STORE_URL,
   "image": f"{SITE}/img/icon-dog.png", "screenshot": f"{SITE}/img/reports.jpg",
   "author": ORG, "publisher": ORG,
@@ -411,7 +411,7 @@ MOCKS = {
 <div class="m-petcard-grid"><div><i>Color</i>Yellow</div><div><i>Birthday</i>Sep 12, 2019</div><div><i>Microchip</i>985112006543210</div><div><i>Vet clinic</i>Maple Street Animal Clinic<br><u>(555) 010-2468</u></div></div>
 </div>
 <div class="m-h">Biscuit's details</div>
-<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home glucose</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
+<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home tests</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
 <div class="m-h">Staying on top of it</div>
 <div class="m-card"><div class="m-row"><span>Reminders</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin Supplies</span><span class="m-v">›</span></div></div>
 <div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
@@ -506,6 +506,7 @@ faq_groups = [
 ("I forgot to record a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker by swiping back or using the calendar button, tap <strong>Give</strong> on the shot, and choose <strong>A different time…</strong> to enter when it was given.</p>"),
 ("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your vet.</p>"),
 ("Does DiaPetic recommend insulin doses?", "<p>No. Insulin doses must always come from your veterinarian. DiaPetic records the prescribed dose and what was actually given, so your veterinarian has accurate information for making those decisions.</p>"),
+("Can I track ketones?", "<p>Yes. Open the <strong>Glucose &amp; ketones</strong> tile on the Tracker and tap <strong>Add ketone test</strong>. You can record a urine strip result (Negative, Trace, Small, Moderate or Large) or a blood ketone meter reading in mmol/L. A positive result asks you to call your veterinarian and links to the DKA guide. Ketone tests are free and appear in History, Reports and the PDF report. See <a href=\"guide-glucose.html#ketones\">Ketone tests</a>.</p>"),
 ("Can I log a shot without opening the app?", "<p>Yes. Press and hold the shot reminder and tap <strong>Given just now</strong>. The button also appears on an Apple Watch. It records the prescribed units at the current time. If the shot needs a second look, for example if a shot is already logged, DiaPetic records nothing and sends a message explaining why.</p>"),
 ("Why did DiaPetic ask if I am sure?", "<p>DiaPetic asks before saving a shot when another shot is already logged within about 10 hours of that time. This helps catch the same shot being given twice, for example when two people care for your pet. The check only compares the times in your records. It never suggests a dose.</p><p>If you are unsure whether a shot was given, do not give another one. Call your vet.</p>"),
 ("Can I use DiaPetic for a cat, or for more than one pet?", "<p>Yes. DiaPetic works for both dogs and cats. Your first pet is free, and additional pets are included with DiaPetic Gold.</p>"),

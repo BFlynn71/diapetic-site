@@ -117,8 +117,8 @@ CHAPTERS = [
 </ol>
 <p>A day can have several entries. Tap an entry to edit it, or swipe left to delete it. Journal entries appear in History, in Reports, in the PDF report and in the clinic summary on the emergency screen. In Reports, the journal is collapsed to keep the page short. Tap it to see the latest entries, or tap <strong>All entries</strong> to see every entry in the period.</p>
 """),
-("glucose", "Glucose readings", """
-<p>If you check your pet's glucose at home, record readings from the <strong>Glucose</strong> tile. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
+("glucose", "Glucose and ketones", """
+<p>If you check your pet's glucose or ketones at home, record them from the <strong>Glucose &amp; ketones</strong> tile. The tile shows the latest glucose reading and, once a ketone test is logged that day, its result. The <a href="guide-glucose.html">Glucose, ketones and lab results</a> chapter covers this in detail.</p>
 """),
 ("walks", "Walks", """
 <p>Record a walk from the <strong>Walks</strong> tile with the time it started and how long it lasted. Exercise can lower blood glucose, so the walk appears as a shaded band on that day's glucose curve.</p>
@@ -198,8 +198,8 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 ], []),
 
 # ------------------------------------------------------------------
-("glucose", "Glucose and lab results", "Home glucose readings, curves, time in range and laboratory results.",
-f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To turn on home monitoring, go to {P("your pet's tab › Home glucose")} and turn on <strong>I check glucose at home</strong>.</p>""",
+("glucose", "Glucose, ketones and lab results", "Home glucose readings, ketone tests, curves, time in range and laboratory results.",
+f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To turn on home monitoring, go to {P("your pet's tab › Home tests")} and turn on <strong>I check glucose at home</strong>.</p>""",
 [
 ("numbers", "Setting your thresholds", """
 <p>Set <strong>Highlight readings below</strong> and <strong>Highlight readings above</strong> to the values your veterinarian recommends. These thresholds determine how readings are colored, when the low-reading alert appears and how time in range is calculated. You can choose mg/dL or mmol/L in the app settings.</p>
@@ -212,6 +212,18 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 <p>Walks logged on the Tracker appear as shaded bands on a single day's curve and when you compare curves, which can help explain a dip.</p>
 <p>A glucose curve is a series of readings taken over the course of a day. In <strong>Reports</strong>, switch to <strong>Glucose</strong> to view your readings as curves, along with weekly glucose, time in range, the relationship between eating and glucose, and any low readings.</p>
 <p>Tap <strong>Compare curves</strong> to overlay up to three days. Veterinarians look closely at the lowest point of a curve and when it occurs to assess how well the insulin is working.</p>
+"""),
+("ketones", "Ketone tests", f"""
+<p>Ketones can be an early sign of diabetic ketoacidosis (DKA), a serious complication that needs a veterinarian. Test for ketones when your vet asks you to, and when your pet is not eating, is vomiting or seems weak.</p>
+<p>To record a test, open the <strong>Glucose &amp; ketones</strong> tile on the Tracker and tap <strong>Add ketone test</strong>. Choose how you tested:</p>
+<ul>
+<li><strong>Urine strip:</strong> match the strip to the color chart on the bottle, then pick the word printed beside that color: Negative, Trace, Small (+), Moderate (++) or Large (+++).</li>
+<li><strong>Blood meter:</strong> enter the reading from a meter made for blood ketones (beta-hydroxybutyrate), in mmol/L.</li>
+</ul>
+<p>Any urine result above Negative, and any blood result at or above your call level, opens a screen that asks you to call your veterinarian, with buttons to call your vet or an emergency clinic and a link to the DKA guide. Trace on a urine strip asks you to call today, or right away if your pet is not eating, is vomiting or seems weak. DiaPetic never gives advice about insulin.</p>
+<p>The blood call level starts at 0.6 mmol/L. Ask your veterinarian which number they want to hear about, and set it in {P("your pet's tab › Home tests")}.</p>
+<p>Ketone tests appear on the Tracker, in History, as a K on a single day's curve in Reports, Glucose, in the PDF and CSV reports, and in the clinic summary on the emergency screen.</p>
+<div class="tip">Ketone tests are free for everyone. They are a record and a reminder to call, not a diagnosis.</div>
 """),
 ("labs", "Lab results", f"""
 <p>Record blood work, such as a fructosamine test, in {P("Reports › Lab results › Add lab result")} or when adding notes after a vet visit. Enter the test, the result, the unit and the date, along with any comments from your vet. Lab results are included in your reports.</p>
@@ -371,7 +383,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>The low blood sugar guide includes a 5-minute timer. After you give sugar on the gums, tap <strong>I've given sugar. Start 5-minute timer</strong> and stay with your pet. When the time is up, DiaPetic asks whether your pet is better and tells you what to do next. You can then record the episode in the journal, which also adds it to your PDF report. Do not wait for the timer to call your veterinarian.</p>
 """),
 ("summary", "Information for the clinic", """
-<p>The emergency screen also prepares a summary from your records, including your pet's details and microchip number, insulin and dose, the last shot, meal and glucose reading, other medications, today's journal entries and your regular veterinarian. You can read it to the clinic over the phone, or tap <strong>Share</strong> or <strong>Copy</strong> to send it.</p>
+<p>The emergency screen also prepares a summary from your records, including your pet's details and microchip number, insulin and dose, the last shot, meal and glucose reading, the last ketone test, other medications, today's journal entries and your regular veterinarian. You can read it to the clinic over the phone, or tap <strong>Share</strong> or <strong>Copy</strong> to send it.</p>
 """),
 ("poison", "Poison control", """
 <p>If your pet may have swallowed something harmful, you can call the <strong>ASPCA Animal Poison Control Center at (888) 426-4435</strong> or the <strong>Pet Poison Helpline at (855) 764-7661</strong> directly from the emergency screen. A consultation fee may apply.</p>
@@ -396,7 +408,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>With DiaPetic Gold, you can add a photo of your pet. Tap the photo circle on your pet's card and choose <strong>Choose from Library</strong> or <strong>Take Photo</strong>, then drag and pinch to position your pet in the circle and tap <strong>Use Photo</strong>. <strong>Remove Photo</strong> returns to the first letter of your pet's name. The photo stays on your iPhone and appears on the information sheet and the emergency screen, which can help if your pet is ever lost.</p>
 <p><strong>Birthday</strong> is optional. Choose an exact date, or an approximate age if you do not know the date, such as for a rescue. The age appears on the information sheet, the PDF report and the clinic summary.</p>
 <p><strong>Diabetes type</strong>, in Pet details, is optional: Type 1, Type 2, In remission or Not sure. When it is set, it appears as a tag on your pet's card.</p>
-<p><strong>Pet details</strong> holds your pet's name, species, breed, color, sex and microchip number. The other rows open their own pages: <strong>Insulin and shot times</strong>, <strong>Meals and treats</strong>, <strong>Medications</strong>, <strong>Home glucose</strong> and <strong>Weight</strong>, which shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
+<p><strong>Pet details</strong> holds your pet's name, species, breed, color, sex and microchip number. The other rows open their own pages: <strong>Insulin and shot times</strong>, <strong>Meals and treats</strong>, <strong>Medications</strong>, <strong>Home tests</strong> and <strong>Weight</strong>, which shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
 """),
 ("pets", "Multiple pets", """
 <p>Use the <strong>pet menu</strong> at the top left of any tab to switch between pets or to <strong>Add a pet</strong>. Your first pet is free; additional pets require DiaPetic Gold. Each pet has its own records, reminders, reports and supplies.</p>
