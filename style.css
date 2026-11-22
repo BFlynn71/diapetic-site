@@ -47,7 +47,7 @@ p { margin: 0; }
 .brand .brand-icon { width: 36px; height: 36px; border-radius: 9px; }
 .brand .logo { display: block; height: 33px; width: auto; }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
-.nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.95rem; padding: 6px 12px; border-radius: 999px; }
+.nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.95rem; padding: 6px 12px; border-radius: 8px; }
 .nav a:hover { color: var(--fg); background: var(--soft); }
 .nav a[aria-current="page"] { color: var(--indigo); background: var(--soft); }
 
@@ -57,7 +57,7 @@ p { margin: 0; }
 .hero .lead { font-size: 1.2rem; color: var(--muted); margin-top: 16px; max-width: 34ch; }
 .hero-icon { width: min(300px, 70%); border-radius: 22%; box-shadow: 0 24px 60px rgba(46, 45, 134, 0.25); justify-self: center; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; align-items: center; }
-.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 999px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 12px; }
 .btn-primary { background: var(--indigo); color: var(--on-indigo); }
 .btn-primary:hover { color: var(--on-indigo); filter: brightness(1.08); }
 .btn-ghost { color: var(--indigo); background: var(--soft); }
@@ -167,7 +167,7 @@ section { padding-block: 44px; }
 .mock .m-sub { display: block; font-size: 12.5px; color: var(--m-sub); margin-top: 2px; }
 .mock .m-b { font-weight: 600; }
 .mock .m-foot { font-size: 12px; color: var(--m-sub); padding: 4px 6px; }
-.mock .m-pill { font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.mock .m-pill { font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
 .mock .m-seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 14px 12px; }
 .mock .m-seg span { text-align: center; font-size: 13px; font-weight: 600; padding: 7px 0; border-radius: 9px; background: var(--m-bg); }
 .mock .m-tog { width: 44px; height: 26px; border-radius: 13px; background: var(--m-sep); position: relative; flex-shrink: 0; }
@@ -227,7 +227,7 @@ section { padding-block: 44px; }
 .mock .m-petcard-name { font-size: 20px; font-weight: 800; margin-top: 4px; }
 .mock .m-petcard-sub { font-size: 11px; opacity: 0.9; line-height: 1.35; }
 .mock .m-petcard-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 8px 0 10px; }
-.mock .m-petcard-tags span { background: #FFFFFF; color: #3F3FAE; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 10px; }
+.mock .m-petcard-tags span { background: #FFFFFF; color: #3F3FAE; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
 .mock .m-petcard-grid { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; text-align: left; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 9px; font-size: 11px; font-weight: 700; }
 .mock .m-petcard-grid i { display: block; font-style: normal; font-weight: 400; font-size: 9px; opacity: 0.8; }
 
