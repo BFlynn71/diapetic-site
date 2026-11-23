@@ -232,3 +232,26 @@ section { padding-block: 44px; }
 .mock .m-petcard-grid i { display: block; font-style: normal; font-weight: 400; font-size: 9px; opacity: 0.8; }
 
 .h1-eyebrow { display: block; font-family: inherit; line-height: 1.4; margin-bottom: 12px; }
+
+/* 1.5 routine card: stacked Morning and Evening tabs */
+.mock .m-rt { --rt-band: #CC660A; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.10)); }
+.mock .m-rt-tabs { display: flex; align-items: flex-end; }
+.mock .m-rt-tabs span { white-space: nowrap; font-weight: 800; font-size: 13.5px; padding: 9px 12px; border-radius: 12px 12px 0 0; }
+.mock .m-rt-front { flex: 0 0 56%; background: var(--rt-band); color: #FFFFFF; position: relative; z-index: 2; box-shadow: 3px 0 4px rgba(0,0,0,0.18); }
+.mock .m-rt-front i { font-style: normal; font-weight: 600; opacity: 0.85; }
+.mock .m-rt-back { flex: 1; margin-left: -12px; padding-left: 22px !important; background: color-mix(in srgb, #6160D1 78%, transparent); color: #FFFFFF; }
+.mock .m-rt-band { display: flex; align-items: center; gap: 4px; background: var(--rt-band); color: #FFFFFF; padding: 2px 14px 10px; font-size: 11px; }
+.mock .m-rt-band b { margin-left: 6px; white-space: nowrap; }
+.mock .m-rt-seg { flex: 1; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.3); }
+.mock .m-rt-seg.on { background: #FFFFFF; }
+.mock .m-rt-body { background: color-mix(in srgb, var(--rt-band) 22%, var(--m-card)); border: 2px solid var(--m-card); border-top: 0; border-radius: 0 0 18px 18px; }
+.mock .m-rt-item { display: flex; gap: 10px; padding: 11px 12px; border-top: 1px solid color-mix(in srgb, var(--rt-band) 30%, transparent); }
+.mock .m-rt-item:first-child { border-top: 0; }
+.mock .m-rt-item > div { flex: 1; min-width: 0; }
+.mock .m-rt-ic { width: 26px; height: 26px; border-radius: 7px; background: var(--rt-band); display: grid; place-items: center; font-size: 13px; flex-shrink: 0; }
+.mock .m-rt-d { font-size: 11.5px; color: var(--m-sub); white-space: nowrap; }
+.mock .m-rt-meal { padding: 8px 0 0; }
+.mock .m-rt-meal span { background: var(--m-card); }
+.mock .m-rt-meal span.sel { background: var(--rt-band); color: #FFFFFF; }
+.mock .m-rt-give { margin-top: 8px; background: var(--rt-band); color: #FFFFFF; text-align: center; font-weight: 800; font-size: 14px; padding: 9px; border-radius: 10px; white-space: nowrap; }
+.mock .m-rt-chip { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; background: var(--m-card); padding: 6px 12px 6px 8px; border-radius: 10px; font-weight: 600; font-size: 13px; white-space: nowrap; }

@@ -204,7 +204,7 @@ home = f'''
 <figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call and calendar buttons" width="600" height="560" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
 <figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="473" loading="lazy"><figcaption>Detailed nutrition tracking</figcaption></figure>
 </div>
-<figure class="shot"><img src="img/icons-grid.png" alt="Thirty-two app icons: Obi the dog and an orange kitty in regular, gold tag, seasonal and holiday styles" width="784" height="1584" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
+<figure class="shot"><img src="img/icons-grid.png" alt="Thirty-four app icons: Obi the dog and an orange kitty in regular, gold tag, seasonal and holiday styles" width="784" height="1784" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
 </div>
 </div>
 </section>
@@ -317,18 +317,21 @@ MOCKS = {
 
 "day": fig('''
 ''' + glance([ring("Meals","1/2",0.5,"var(--m-orange)"), ring("Shots","0/2",0,"var(--m-indigo)"), ring("Calories","48%",0.48,"#A65BE8")]) + '''
-<div class="m-h" style="color:var(--m-orange-t)">☀︎ Due now: Morning · 7:00 AM</div>
-<div class="m-card m-morning">
-<div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
-<div class="m-seg"><span style="background:var(--m-orange-f);color:var(--m-orange-o)">All</span><span>Most</span><span>Some</span><span>None</span></div>
-<div class="m-row"><span><span class="m-b">Fish oil</span><span class="m-sub">1 capsule · Supplement</span></span><span class="m-check" aria-hidden="true"></span></div>
-<div class="m-row"><span><span class="m-b">Insulin</span><span class="m-sub">8 units of Vetsulin</span></span>''' + pill("Give 8 u", "--m-orange", True) + '''</div>
-</div>
+<div class="m-rt">
+<div class="m-rt-tabs"><span class="m-rt-front">☀︎ Morning <i>· 7:00 AM</i></span><span class="m-rt-back">☾ Evening</span></div>
+<div class="m-rt-band"><span class="m-rt-seg"></span><span class="m-rt-seg"></span><span class="m-rt-seg"></span><b>0 of 3 done</b></div>
+<div class="m-rt-body">
+<div class="m-rt-item"><span class="m-rt-ic">🍴</span><div><span class="m-b">Meal</span> <span class="m-rt-d">Feed first</span>
+<div class="m-seg m-rt-meal"><span>All</span><span>Most</span><span>Some</span><span>None</span></div></div></div>
+<div class="m-rt-item"><span class="m-rt-ic">💉</span><div><span class="m-b">Insulin</span> <span class="m-rt-d">8 units Vetsulin U-40</span>
+<div class="m-rt-give">Give 8 units</div></div></div>
+<div class="m-rt-item"><span class="m-rt-ic">💊</span><div><span class="m-b">Supplements</span> <span class="m-rt-d">1 to check off</span>
+<div><span class="m-rt-chip"><span class="m-check" aria-hidden="true"></span>Fish oil</span></div></div></div>
+</div></div>
 <div class="m-sheet" style="margin-top:10px">
 <div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
 <div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
 </div>
-<div class="m-card m-evening" style="margin-top:10px"><div class="m-row"><span><span class="m-b">☾ Evening · 7:00 PM</span><span class="m-sub">Meal, Fish oil, 8 units</span></span><span class="m-v">›</span></div></div>
 <div class="m-h" style="margin-top:12px">Today's log</div>
 <div class="m-tiles">
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-ins</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
@@ -336,7 +339,7 @@ MOCKS = {
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Log weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 </div>
-''', "At a glance rings sit under the date. The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with At a glance rings for meals, shots and calories, the morning routine due on a soft orange card, the meal marked All, Fish oil listed under the meal, a Give 8 units button, the When was the shot given menu, the evening routine on a soft indigo line, and tiles for check-ins, glucose, walks and weight"),
+''', "At a glance rings sit under the date. The routine for the time of day is in front, with the other routine's tab behind it, and tiles open the rest of the day.", "Tracker with At a glance rings for meals, shots and calories, the routine card with the Morning tab in front and the Evening tab behind, a progress bar showing 0 of 3 done, meal buttons All, Most, Some and None, a Give 8 units button, Fish oil to check off, the When was the shot given menu, and tiles for check-ins, glucose and ketones, walks and weight"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
