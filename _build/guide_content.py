@@ -225,7 +225,7 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 </ul>
 <p>Any urine result above Negative, and any blood result at or above your call level, opens a screen that asks you to call your veterinarian, with buttons to call your vet or an emergency clinic and a link to the DKA guide. Trace on a urine strip asks you to call today, or right away if your pet is not eating, is vomiting or seems weak. DiaPetic never gives advice about insulin.</p>
 <p>The blood call level starts at 0.6 mmol/L. Ask your veterinarian which number they want to hear about, and set it in {P("your pet's tab › Home tests")}.</p>
-<p>Ketone tests appear on the Tracker, in History, as a K on a single day's curve in Reports, Glucose, in the PDF and CSV reports, and in the clinic summary on the emergency screen.</p>
+<p>Ketone tests appear on the Tracker, in History, as a tag with the result on a single day's curve in Reports, Glucose (green when nothing was found, amber or red when it says to call your veterinarian), in the PDF and CSV reports, and in the clinic summary on the emergency screen.</p>
 <div class="tip">Ketone tests are free for everyone. They are a record and a reminder to call, not a diagnosis.</div>
 """),
 ("labs", "Lab results", f"""
