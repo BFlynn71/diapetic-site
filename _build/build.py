@@ -526,7 +526,7 @@ faq_groups = [
 ("How do I redeem a DiaPetic Gold code?", "<p>Open DiaPetic Gold in the app, from the Gold card in your pet's tab or any button marked (Gold), and tap <strong>Redeem a code</strong>. Type the code and confirm. Gold unlocks as soon as the App Store accepts the code. If the code came with a QR code, you can also scan it with your iPhone's camera.</p>"),
 ("How do I restore DiaPetic Gold on another iPhone?", "<p>Open the Gold screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
 ("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not add any features. The tools for your pet's safety are part of the free app.</p>"),
-("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),
+("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App icon. Choose Obi the dog or Kitty, then choose Seasons and holidays (the icon changes through the year), keep it the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),
 ]),
 ]
 groups = ""
