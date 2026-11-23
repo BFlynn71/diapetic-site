@@ -13,13 +13,13 @@ ARTICLES = [
 "Your vet asked for a glucose curve. Learn what to record, how to keep each reading in order, and how to share a clear curve with your dog or cat's vet.",
 "How to track a dog or cat's glucose curve at home",
 """<p>A glucose curve is a set of blood sugar readings taken across one day. Your vet uses it to see how your pet's insulin is working: when blood sugar is lowest, how long the insulin lasts, and whether readings stay in the range your vet wants.</p>
-<p>Many vets now ask owners to do curves at home. A pet at home is calmer and eats as usual, which can give a truer picture than a day at the clinic.</p>
+<p>Many vets now ask owners to do curves at home. A pet at home is calmer and eats as usual, which can give a truer picture than a day at the clinic. This matters most for cats, whose blood sugar can rise from the stress of a clinic visit.</p>
 <p>This guide is about keeping good records. Your vet decides the schedule, the target range and any change to insulin.</p>""",
 [
 ("before", "Before the curve day", """
 <ul>
-<li>Ask your vet when to start, how often to test and which reading means you should call. Many vets ask for a reading every one to two hours for about 12 hours.</li>
-<li>Use the meter your vet recommends. Pet meters and human meters can show different numbers for the same drop of blood, so tell your vet which one you use.</li>
+<li>Ask your vet when to start, how often to test and which reading means you should call. Veterinary guidelines describe a reading before the meal and shot, then about every two hours for 10 to 12 hours, with checks more often when readings are low.</li>
+<li>Use the meter your vet recommends. Veterinary guidelines favor meters calibrated for dogs and cats, because meters made for people can show different numbers for the same drop of blood. Tell your vet which one you use.</li>
 <li>Plan an ordinary day, with the usual food, meal times and walks.</li>
 <li>Set out test strips, lancets, cotton balls and a small reward for afterward.</li>
 </ul>
@@ -51,7 +51,7 @@ ARTICLES = [
 "Twice-Daily Pet Insulin and Meal Schedule Tips",
 "How to keep twice-daily insulin shots and meals on time for a diabetic dog or cat, share care at home, and help prevent missed or double doses.",
 "Managing twice-daily pet insulin shots and meal schedules",
-"""<p>Most diabetic dogs and cats get insulin twice a day, with meals to match. The routine soon becomes part of the day, but busy mornings, shared care and changes in plans make it easy to lose track. This guide covers ways to keep the schedule steady and the record clear.</p>""",
+"""<p>Many diabetic dogs and cats get insulin twice a day, about 12 hours apart, with meals to match. The routine soon becomes part of the day, but busy mornings, shared care and changes in plans make it easy to lose track. This guide covers ways to keep the schedule steady and the record clear.</p>""",
 [
 ("vet", "Set the routine with your vet", """
 <p>Ask your vet these questions now, before you need the answers:</p>
@@ -79,7 +79,7 @@ ARTICLES = [
 <p>Do not give another shot to be safe. Call your veterinarian and follow their advice.</p>
 """),
 ("meals", "Meals", """
-<p>Record how much of each meal was eaten. A pet that eats less than usual for more than one meal is worth a call to your vet. DiaPetic records each meal as All, Most, Some or None. See <a href="guide-food.html">Food and nutrition</a>.</p>
+<p>Do not give insulin to a pet that has not eaten unless your vet has told you what to do. Call your vet instead. Record how much of each meal was eaten. A pet that eats less than usual for more than one meal is worth a call to your vet. DiaPetic records each meal as All, Most, Some or None. See <a href="guide-food.html">Food and nutrition</a>.</p>
 """),
 ("away", "Weekends, travel and sitters", """
 <p>Keep shot times steady on weekends and while traveling. When someone else is caring for your pet, give them your vet's written instructions and a contact number. DiaPetic can share a one-page pet information sheet with insulin and vet details. See <a href="guide-reports.html#infosheet">Pet information sheet</a>.</p>
@@ -174,7 +174,7 @@ ARTICLES = [
 "Ketones and DKA in Dogs and Cats: What to Record",
 "What ketones mean for a diabetic dog or cat, how home ketone tests work, what to write down, and the DKA warning signs that mean you should call your vet now.",
 "Ketones and DKA in diabetic dogs and cats: what to record and when to call your vet",
-"""<p>When a diabetic pet does not have enough insulin working, the body cannot use sugar for energy and starts breaking down fat instead. That makes ketones. A build-up of ketones can lead to diabetic ketoacidosis (DKA), a serious emergency that needs a veterinarian.</p>
+"""<p>When a diabetic pet's body cannot use sugar for energy, often because there is not enough insulin working, it starts breaking down fat instead. That makes ketones. A build-up of ketones can lead to diabetic ketoacidosis (DKA), a serious emergency that needs a veterinarian.</p>
 <p>Some vets ask owners to test for ketones at home, especially in the first weeks after a diagnosis or when a pet is unwell. This guide covers how home tests work and what to record. Your vet decides when to test, what the results mean and what to do next.</p>""",
 [
 ("signs", "Signs that mean call your vet now", """
@@ -190,14 +190,14 @@ ARTICLES = [
 <p>Do not wait for a ketone test if your pet shows these signs. A negative test does not rule out a problem.</p>
 """),
 ("when", "When vets ask for a ketone test", """
-<p>Ask your vet whether they want you to test for ketones at home, and when. Many ask for a test when a pet is not eating, is vomiting or seems unwell, or when glucose readings are higher than usual. Write down their answer so everyone who helps with care can find it.</p>
+<p>Ask your vet whether they want you to test for ketones at home, and when. Many ask for a test when a pet is not eating, is vomiting or seems unwell, or when glucose readings are higher than usual. If your cat takes an oral diabetes medicine instead of insulin, your vet may ask you to check ketones regularly, because ketones can build up even when glucose readings look normal. Write down their answer so everyone who helps with care can find it.</p>
 """),
 ("tests", "Urine strips and blood meters", """
 <ul>
 <li><strong>Urine strips</strong> change color when ketones are in the urine. Dip the strip in fresh urine, wait the time printed on the bottle, then compare it with the color chart. Results are words such as Negative, Trace, Small, Moderate or Large.</li>
 <li><strong>Blood ketone meters</strong> measure ketones in a drop of blood and show a number in mmol/L. Ask your vet which meter to use and which number they want to hear about.</li>
 </ul>
-<p>The two tests measure ketones in different ways, so a urine strip and a blood meter can give different results at the same time. Tell your vet which test you used.</p>
+<p>Urine strips do not detect the main ketone the body makes, so they can read lower than a blood meter, especially early on. Veterinary guidelines note that blood meters pick up the early stages of DKA more accurately. Tell your vet which test you used.</p>
 """),
 ("record", "What to write down", """
 <ul class="checklist">
@@ -216,3 +216,12 @@ ARTICLES = [
 """),
 ], "2026-11-23", "2026-11-23"),
 ]
+
+# Further reading shown at the end of each guide (general sources checked Nov 23, 2026)
+SOURCES = {
+"glucose-curve-at-home": ['<a href="https://www.aaha.org/diabetes-management/">AAHA Diabetes Management Guidelines</a>', '<a href="https://www.redcross.org/take-a-class/resources/learn-pet-first-aid/dog/hypoglycemia-blood-sugar-emergencies">American Red Cross Pet First Aid: Low blood sugar</a>'],
+"insulin-and-meal-schedule": ['<a href="https://www.aaha.org/diabetes-management/">AAHA Diabetes Management Guidelines</a>', '<a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/health-info/diabetes">Cornell Riney Canine Health Center: Diabetes</a>'],
+"diabetic-pet-vet-visit-checklist": ['<a href="https://www.aaha.org/diabetes-management/">AAHA Diabetes Management Guidelines</a>'],
+"pet-insulin-supplies": ['<a href="https://www.aaha.org/diabetes-management/">AAHA Diabetes Management Guidelines</a>', '<a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/health-info/diabetes">Cornell Riney Canine Health Center: Diabetes</a>'],
+"ketones-dka-diabetic-pets": ['<a href="https://www.aaha.org/diabetes-management/">AAHA Diabetes Management Guidelines</a>', '<a href="https://vet.cornell.edu/animal-health-diagnostic-center/about/news/discontinuation-acetest-confirmation-urinary-ketones">Cornell Animal Health Diagnostic Center: urine ketone testing</a>', '<a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/health-info/diabetes">Cornell Riney Canine Health Center: Diabetes</a>'],
+}

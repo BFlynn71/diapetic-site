@@ -626,6 +626,8 @@ def nice_date(d): return datetime.date.fromisoformat(d).strftime("%B %-d, %Y")
 for slug, ttag, desc, h1, intro, secs, published, modified in ARTICLES:
     toc = "".join(f'<li><a href="#{a}">{h}</a></li>' for a, h, _ in secs)
     body_secs = "".join(f'<h2 id="{a}">{h}</h2>{html}' for a, h, html in secs)
+    src = SOURCES.get(slug, [])
+    sources_html = f'<p class="note" style="margin-top:20px"><strong>Further reading:</strong> {" · ".join(src)}</p>' if src else ""
     others = "".join(f'<li><a href="{article_file(o[0])}">{o[3]}</a></li>' for o in ARTICLES if o[0] != slug)
     body = f'''
 <div class="wrap narrow">
@@ -646,6 +648,7 @@ for slug, ttag, desc, h1, intro, secs, published, modified in ARTICLES:
 </div>
 </div>
 <p class="safety" style="margin-top:24px"><strong>Important:</strong> DiaPetic is a record-keeping tool. It does not recommend insulin doses or changes to treatment and is not a substitute for veterinary care. Always follow your veterinarian\u2019s instructions. This guide is general information, not medical advice for your pet.</p>
+{sources_html}
 <h2>More guides for owners</h2>
 <ul>{others}</ul>
 </article>
