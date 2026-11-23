@@ -64,7 +64,7 @@ def plain(s):
 
 ORG = {"@type": "Organization", "name": "DiaPetic", "url": f"{SITE}/", "logo": f"{SITE}/apple-touch-icon.png",
        "email": "support@diapetic.com",
-       "sameAs": ["https://www.instagram.com/diapeticapp/", "https://www.tiktok.com/@diapetic3", "https://apps.apple.com/app/id6824567991"]}
+       "sameAs": ["https://www.instagram.com/diapeticapp/", "https://www.tiktok.com/@diapeticapp", "https://apps.apple.com/app/id6824567991"]}
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "articles_content.py")).read())
 def article_file(slug): return f"{slug}.html"
@@ -131,7 +131,7 @@ def page(fname, title, desc, body, nav_key=None, og_type="website", schema=None,
 <div class="wrap">
 <div class="foot-get">{store_badge(40)}</div>
 <p>© 2026 DiaPetic · <a href="mailto:support@diapetic.com">support@diapetic.com</a></p>
-<p class="foot-social">Follow DiaPetic: <a href="https://www.instagram.com/diapeticapp/" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/share/1FDAjA8MnR/" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@diapetic3" rel="noopener">TikTok</a></p>
+<p class="foot-social">Follow DiaPetic: <a href="https://www.instagram.com/diapeticapp/" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/share/1FDAjA8MnR/" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@diapeticapp" rel="noopener">TikTok</a></p>
 <nav aria-label="Footer">{foot}</nav>
 </div>
 </footer>
