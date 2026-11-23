@@ -204,7 +204,7 @@ home = f'''
 <figure class="shot"><img src="img/appointment.jpg" alt="Next vet appointment card with call and calendar buttons" width="600" height="560" loading="lazy"><figcaption>Appointments synced with your calendar</figcaption></figure>
 <figure class="shot"><img src="img/diet.jpg" alt="Diet summary with calories per pound and the morning and evening split" width="600" height="473" loading="lazy"><figcaption>Detailed nutrition tracking</figcaption></figure>
 </div>
-<figure class="shot"><img src="img/icons-grid.png" alt="Thirty-two app icons: Obi the dog and an orange kitty in regular, gold tag, seasonal and holiday styles" width="784" height="1584" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
+<figure class="shot"><img src="img/icons-grid.png" alt="Thirty-four app icons: Obi the dog and an orange kitty in regular, gold tag, seasonal and holiday styles" width="784" height="1784" loading="lazy"><figcaption>Dog and cat app icons with seasonal designs (Gold)</figcaption></figure>
 </div>
 </div>
 </section>
@@ -274,7 +274,7 @@ home = f'''
 APP_SCHEMA = {"@context": "https://schema.org", "@type": "SoftwareApplication",
   "name": "DiaPetic: Pet Diabetes Log", "alternateName": "DiaPetic",
   "operatingSystem": "iOS, watchOS", "applicationCategory": "HealthApplication",
-  "description": "An iPhone app for tracking a diabetic dog or cat: insulin shots, meals, glucose readings, reminders, supplies and PDF reports for your vet. Everything stays on your iPhone, with no account. It never recommends insulin doses.",
+  "description": "An iPhone app for tracking a diabetic dog or cat: insulin shots, meals, glucose readings, ketone tests, reminders, supplies and PDF reports for your vet. Everything stays on your iPhone, with no account. It never recommends insulin doses.",
   "url": f"{SITE}/", "downloadUrl": STORE_URL, "installUrl": STORE_URL,
   "image": f"{SITE}/img/icon-dog.png", "screenshot": f"{SITE}/img/reports.jpg",
   "author": ORG, "publisher": ORG,
@@ -317,26 +317,29 @@ MOCKS = {
 
 "day": fig('''
 ''' + glance([ring("Meals","1/2",0.5,"var(--m-orange)"), ring("Shots","0/2",0,"var(--m-indigo)"), ring("Calories","48%",0.48,"#A65BE8")]) + '''
-<div class="m-h" style="color:var(--m-orange-t)">☀︎ Due now: Morning · 7:00 AM</div>
-<div class="m-card m-morning">
-<div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
-<div class="m-seg"><span style="background:var(--m-orange-f);color:var(--m-orange-o)">All</span><span>Most</span><span>Some</span><span>None</span></div>
-<div class="m-row"><span><span class="m-b">Fish oil</span><span class="m-sub">1 capsule · Supplement</span></span><span class="m-check" aria-hidden="true"></span></div>
-<div class="m-row"><span><span class="m-b">Insulin</span><span class="m-sub">8 units of Vetsulin</span></span>''' + pill("Give 8 u", "--m-orange", True) + '''</div>
-</div>
+<div class="m-rt">
+<div class="m-rt-tabs"><span class="m-rt-front">☀︎ Morning <i>· 7:00 AM</i></span><span class="m-rt-back">☾ Evening</span></div>
+<div class="m-rt-band"><span class="m-rt-seg"></span><span class="m-rt-seg"></span><span class="m-rt-seg"></span><b>0 of 3 done</b></div>
+<div class="m-rt-body">
+<div class="m-rt-item"><span class="m-rt-ic">🍴</span><div><span class="m-b">Meal</span> <span class="m-rt-d">Feed first</span>
+<div class="m-seg m-rt-meal"><span>All</span><span>Most</span><span>Some</span><span>None</span></div></div></div>
+<div class="m-rt-item"><span class="m-rt-ic">💉</span><div><span class="m-b">Insulin</span> <span class="m-rt-d">8 units Vetsulin U-40</span>
+<div class="m-rt-give">Give 8 units</div></div></div>
+<div class="m-rt-item"><span class="m-rt-ic">💊</span><div><span class="m-b">Supplements</span> <span class="m-rt-d">1 to check off</span>
+<div><span class="m-rt-chip"><span class="m-check" aria-hidden="true"></span>Fish oil</span></div></div></div>
+</div></div>
 <div class="m-sheet" style="margin-top:10px">
 <div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
 <div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
 </div>
-<div class="m-card m-evening" style="margin-top:10px"><div class="m-row"><span><span class="m-b">☾ Evening · 7:00 PM</span><span class="m-sub">Meal, Fish oil, 8 units</span></span><span class="m-v">›</span></div></div>
 <div class="m-h" style="margin-top:12px">Today's log</div>
 <div class="m-tiles">
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-ins</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
-<div class="m-tile"><span class="m-sub" style="color:var(--m-red-t)">Glucose</span><b>142</b><span class="m-sub">at 6:50 AM</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-red-t)">Glucose &amp; ketones</span><b>142</b><span class="m-sub">at 6:50 AM</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Log weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 </div>
-''', "At a glance rings sit under the date. The routine that is due opens in full, and tiles open the rest of the day.", "Tracker with At a glance rings for meals, shots and calories, the morning routine due on a soft orange card, the meal marked All, Fish oil listed under the meal, a Give 8 units button, the When was the shot given menu, the evening routine on a soft indigo line, and tiles for check-ins, glucose, walks and weight"),
+''', "At a glance rings sit under the date. The routine for the time of day is in front, with the other routine's tab behind it, and tiles open the rest of the day.", "Tracker with At a glance rings for meals, shots and calories, the routine card with the Morning tab in front and the Evening tab behind, a progress bar showing 0 of 3 done, meal buttons All, Most, Some and None, a Give 8 units button, Fish oil to check off, the When was the shot given menu, and tiles for check-ins, glucose and ketones, walks and weight"),
 
 "journal": fig('''
 <div class="m-nav"><span>Cancel</span><b>Thu, Oct 15</b><span class="m-b">Save</span></div>
@@ -411,7 +414,7 @@ MOCKS = {
 <div class="m-petcard-grid"><div><i>Color</i>Yellow</div><div><i>Birthday</i>Sep 12, 2019</div><div><i>Microchip</i>985112006543210</div><div><i>Vet clinic</i>Maple Street Animal Clinic<br><u>(555) 010-2468</u></div></div>
 </div>
 <div class="m-h">Biscuit's details</div>
-<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home glucose</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
+<div class="m-card"><div class="m-row"><span>Pet details</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin and shot times</span><span class="m-v">›</span></div><div class="m-row"><span>Meals and treats</span><span class="m-v">›</span></div><div class="m-row"><span>Supplements</span><span class="m-v">›</span></div><div class="m-row"><span>Medications</span><span class="m-v">›</span></div><div class="m-row"><span>Home tests</span><span class="m-v">›</span></div><div class="m-row"><span>Weight</span><span class="m-v">›</span></div></div>
 <div class="m-h">Staying on top of it</div>
 <div class="m-card"><div class="m-row"><span>Reminders</span><span class="m-v">›</span></div><div class="m-row"><span>Insulin Supplies</span><span class="m-v">›</span></div></div>
 <div class="m-card" style="margin-top:10px"><div class="m-row"><span>Support DiaPetic</span><span class="m-v">›</span></div></div>
@@ -506,6 +509,7 @@ faq_groups = [
 ("I forgot to record a shot. Can I add it later?", "<p>Yes. Go to that day on the Tracker by swiping back or using the calendar button, tap <strong>Give</strong> on the shot, and choose <strong>A different time…</strong> to enter when it was given.</p>"),
 ("What does \"Not logged\" mean?", "<p>It means the scheduled time has passed and no shot has been recorded yet. It does not necessarily mean the shot was missed. If reminders are on, DiaPetic will send a follow-up.</p><p>If you are unsure whether the shot was given, do not give another one. Call your vet.</p>"),
 ("Does DiaPetic recommend insulin doses?", "<p>No. Insulin doses must always come from your veterinarian. DiaPetic records the prescribed dose and what was actually given, so your veterinarian has accurate information for making those decisions.</p>"),
+("Can I track ketones?", "<p>Yes. Open the <strong>Glucose &amp; ketones</strong> tile on the Tracker and tap <strong>Add ketone test</strong>. You can record a urine strip result (Negative, Trace, Small, Moderate or Large) or a blood ketone meter reading in mmol/L. A positive result asks you to call your veterinarian and links to the DKA guide. Ketone tests are free and appear in History, Reports and the PDF report. See <a href=\"guide-glucose.html#ketones\">Ketone tests</a>.</p>"),
 ("Can I log a shot without opening the app?", "<p>Yes. Press and hold the shot reminder and tap <strong>Given just now</strong>. The button also appears on an Apple Watch. It records the prescribed units at the current time. If the shot needs a second look, for example if a shot is already logged, DiaPetic records nothing and sends a message explaining why.</p>"),
 ("Why did DiaPetic ask if I am sure?", "<p>DiaPetic asks before saving a shot when another shot is already logged within about 10 hours of that time. This helps catch the same shot being given twice, for example when two people care for your pet. The check only compares the times in your records. It never suggests a dose.</p><p>If you are unsure whether a shot was given, do not give another one. Call your vet.</p>"),
 ("Can I use DiaPetic for a cat, or for more than one pet?", "<p>Yes. DiaPetic works for both dogs and cats. Your first pet is free, and additional pets are included with DiaPetic Gold.</p>"),
@@ -525,7 +529,7 @@ faq_groups = [
 ("How do I redeem a DiaPetic Gold code?", "<p>Open DiaPetic Gold in the app, from the Gold card in your pet's tab or any button marked (Gold), and tap <strong>Redeem a code</strong>. Type the code and confirm. Gold unlocks as soon as the App Store accepts the code. If the code came with a QR code, you can also scan it with your iPhone's camera.</p>"),
 ("How do I restore DiaPetic Gold on another iPhone?", "<p>Open the Gold screen in your pet's tab and tap <strong>Restore purchase</strong> while signed in with the same Apple Account.</p>"),
 ("What are tips?", "<p>Tips are optional contributions, available under <em>Support DiaPetic</em>, that help cover the cost of maintaining the app. They do not add any features. The tools for your pet's safety are part of the free app.</p>"),
-("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App icon. Choose Obi the dog or Kitty, then choose whether the icon changes with the seasons, stays the same all year, keeps one seasonal theme, or shows the Gold tag look with a gold collar tag and a star.</p>"),
+("How do I change the app icon?", "<p>With DiaPetic Gold, go to your pet's tab › App icon. Choose Obi the dog or Kitty, then choose Seasons and holidays (the icon changes through the year), keep it the same all year, keep one seasonal look, or choose the Gold tag look with a gold collar tag and a star.</p>"),
 ]),
 ]
 groups = ""

@@ -17,7 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=f23caa93">
+<link rel="stylesheet" href="style.css?v=f3e1ebb9">
 <meta name="apple-itunes-app" content="app-id=6824567991">
 </head>
 <body>
@@ -35,7 +35,7 @@
 <h1>The Daily Tracker</h1>
 <p>The Tracker is where you record each day's care. It always opens on today, and if you return to the app after more than five minutes, or on a new day, it returns to today automatically.</p>
 </header>
-<nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#days">Moving between days</a></li><li><a href="#glance">Summary and alerts</a></li><li><a href="#meals">Recording a meal</a></li><li><a href="#shots">Recording a shot</a></li><li><a href="#meds">Medications, supplements and treats</a></li><li><a href="#weight">Weight</a></li><li><a href="#checkin">The daily check-in</a></li><li><a href="#journal">The journal</a></li><li><a href="#glucose">Glucose readings</a></li><li><a href="#walks">Walks</a></li><li><a href="#supplies">Supplies</a></li><li><a href="#history">Correcting an earlier day</a></li></ol></nav>
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#days">Moving between days</a></li><li><a href="#glance">Summary and alerts</a></li><li><a href="#meals">Recording a meal</a></li><li><a href="#shots">Recording a shot</a></li><li><a href="#meds">Medications, supplements and treats</a></li><li><a href="#weight">Weight</a></li><li><a href="#checkin">The daily check-in</a></li><li><a href="#journal">The journal</a></li><li><a href="#glucose">Glucose and ketones</a></li><li><a href="#walks">Walks</a></li><li><a href="#supplies">Supplies</a></li><li><a href="#history">Correcting an earlier day</a></li></ol></nav>
 <article class="article">
 <h2 id="days">Moving between days</h2>
 <p>Swipe left or right, or use the <strong>‹ ›</strong> arrows beside the date, to move one day at a time. To go further back, tap the <strong>calendar</strong> button beside "Daily Tracker" and choose a date, or use one of the shortcuts for one week, two weeks or one month ago. Tap the date at any time to return to today.</p>
@@ -43,49 +43,54 @@
 <p>To see your pet's card without leaving the Tracker, pull down on the DiaPetic logo at the top, or tap the small bar under it. See <a href="guide-pet-tab.html#card">Your pet's card</a>.</p>
 <h2 id="glance">Summary and alerts</h2>
 <p><strong>At a glance</strong> sits under the date and shows up to five rings for the day on screen. Choose them with <strong>Edit</strong>: meals, shots, calories, medications, supplements, the check-in, glucose and insulin left. Each ring fills as the day goes on and shows a count in the middle, with a small paw at the end of the colored arc. When a ring is complete, such as both meals logged, the count changes to a paw. A skipped shot fills the Shots ring but does not earn the paw. When the check-in found everything normal, its ring shows a paw. Calories needs a daily calorie target, and glucose needs home glucose checks turned on; if either is missing, DiaPetic offers to set it up. Insulin left always shows the bottle in use today. Each pet keeps its own choice.</p>
-<p>Morning stays above evening all day. The routine that needs attention opens in full, labeled <strong>Due now</strong> or <strong>Next</strong>. A finished routine shrinks to one line; tap the line to open it and make changes. Below the routines, <strong>Today's log</strong> shows tiles for check-ins, glucose, medications, treats, walks, the journal and weight. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
+<p>The morning and evening routines share one card with two tabs, like folder dividers: <strong>Morning</strong> on the left and <strong>Evening</strong> on the right. The routine for the time of day is in front, and the evening routine takes over halfway between your two shot times. The other routine's tab peeks out from behind with its status, such as <strong>Later</strong> or <strong>Done</strong>; tap it to bring that routine to the front and check or change anything. The colored band under the tabs shows how many of the routine's items are done. When both routines are finished, the card shows <strong>All done for today</strong>; tap it to see the details.</p>
+<p>If the morning shot still is not logged when the evening routine takes over, a banner at the top asks you to log it or mark it skipped, and the Morning tab shows a warning badge. If the shot was given, log it so it is not given twice. If not, follow your veterinarian's instructions for a late dose.</p>
+<p>Below the routines, <strong>Today's log</strong> shows tiles for check-ins, glucose, medications, treats, walks, the journal and weight. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
 <ul>
 <li><strong>Eating less than usual</strong> appears when recent meals have been smaller than normal.</li>
 <li><strong>Low reading</strong> appears when a glucose reading falls below your low threshold, with buttons to call your veterinarian or emergency clinic.</li>
 <li>An <strong>appointment reminder</strong> appears the day before and the day of a visit, along with what to bring.</li>
 </ul>
 <h2 id="meals">Recording a meal</h2>
-<p>The morning and evening cards each begin with the meal. Tap <strong>All</strong>, <strong>Most</strong>, <strong>Some</strong> or <strong>None</strong> to record how much your pet ate. To clear the entry, tap the same button again.</p>
-<p>For a precise record, tap the meal row to open the meal details and enter the amount offered and the amount left over, using the same unit for both. Grams are the most accurate. You can also add a note, such as "ate slowly" or "vomited afterward."</p>
+<p>Each routine begins with the meal. Tap <strong>All</strong>, <strong>Most</strong>, <strong>Some</strong> or <strong>None</strong> to record how much your pet ate. To clear the entry, tap the same button again. Once the meal is recorded, it shrinks to one line; tap <strong>Change</strong> to adjust it.</p>
+<p>For a precise record, tap the details button beside the meal to open the meal details and enter the amount offered and the amount left over, using the same unit for both. Grams are the most accurate. You can also add a note, such as "ate slowly" or "vomited afterward."</p>
 <p>If your pet eats less than half of a meal, DiaPetic reminds you to follow your veterinarian's instructions before giving insulin.</p>
 <h2 id="shots">Recording a shot</h2>
 <ol>
-<li>Tap <strong>Give</strong> on the Insulin row, which shows the prescribed dose, for example "Give 8 u."</li>
+<li>Tap <strong>Give</strong> under Insulin, which shows the prescribed dose, for example "Give 8 units."</li>
 <li>Choose when the shot was given: <strong>Just now</strong>, <strong>At the scheduled time</strong>, or <strong>A different time…</strong> to enter the exact time.</li>
-<li>The row then confirms the dose and time, for example "8 units given at 7:04 AM," so anyone checking later can see that it was given.</li>
+<li>Insulin then shows a check with the dose and time, for example "8 units at 7:04 AM," so anyone checking later can see that it was given.</li>
 </ol>
 <p>If another shot is already logged within about 10 hours of the time you chose, DiaPetic asks whether you are sure before saving. This check helps when two people care for the same pet. Tap <strong>Log this shot</strong> to save it, or <strong>Cancel</strong> to save nothing. The check only compares the times in your records. It never suggests a dose.</p>
 <p>To change the time or units, add a note, or record a <strong>skipped</strong> shot (for example, when your veterinarian has advised skipping a dose because your pet did not eat), tap the details button beside the shot. You can also delete an entry made by mistake.</p>
 <div class="tip">If you are unsure whether a shot was given, <strong>do not give another one.</strong> Check the Tracker first. If the shot is not recorded and no one remembers giving it, call your veterinarian. The emergency screen includes a guide for this situation.</div>
-<figure class="shotfig"><div class="mock" role="img" aria-label="Tracker with At a glance rings for meals, shots and calories, the morning routine due on a soft orange card, the meal marked All, Fish oil listed under the meal, a Give 8 units button, the When was the shot given menu, the evening routine on a soft indigo line, and tiles for check-ins, glucose, walks and weight">
+<figure class="shotfig"><div class="mock" role="img" aria-label="Tracker with At a glance rings for meals, shots and calories, the routine card with the Morning tab in front and the Evening tab behind, a progress bar showing 0 of 3 done, meal buttons All, Most, Some and None, a Give 8 units button, Fish oil to check off, the When was the shot given menu, and tiles for check-ins, glucose and ketones, walks and weight">
 <div class="m-row" style="border:0;padding:0 2px"><span class="m-b">At a glance</span><span class="m-v" style="color:var(--m-indigo-t)">Edit</span></div><div style="display:flex;gap:4px;margin:4px 0 12px"><div style="text-align:center;flex:1"><svg viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-sep)" stroke-width="5"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-orange)" stroke-width="5" stroke-linecap="round" stroke-dasharray="47.1 94.2" transform="rotate(-90 20 20)"/><text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="var(--m-fg)">1/2</text></svg><span class="m-sub" style="font-weight:700;color:var(--m-fg)">Meals</span></div><div style="text-align:center;flex:1"><svg viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-sep)" stroke-width="5"/><text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="var(--m-fg)">0/2</text></svg><span class="m-sub" style="font-weight:700;color:var(--m-fg)">Shots</span></div><div style="text-align:center;flex:1"><svg viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--m-sep)" stroke-width="5"/><circle cx="20" cy="20" r="15" fill="none" stroke="#A65BE8" stroke-width="5" stroke-linecap="round" stroke-dasharray="45.2 94.2" transform="rotate(-90 20 20)"/><text x="20" y="24" text-anchor="middle" font-size="10" font-weight="800" fill="var(--m-fg)">48%</text></svg><span class="m-sub" style="font-weight:700;color:var(--m-fg)">Calories</span></div></div>
-<div class="m-h" style="color:var(--m-orange-t)">☀︎ Due now: Morning · 7:00 AM</div>
-<div class="m-card m-morning">
-<div class="m-row" style="border:0"><span><span class="m-b">Meal</span><span class="m-sub">1 cup kibble · ≈390 kcal</span></span></div>
-<div class="m-seg"><span style="background:var(--m-orange-f);color:var(--m-orange-o)">All</span><span>Most</span><span>Some</span><span>None</span></div>
-<div class="m-row"><span><span class="m-b">Fish oil</span><span class="m-sub">1 capsule · Supplement</span></span><span class="m-check" aria-hidden="true"></span></div>
-<div class="m-row"><span><span class="m-b">Insulin</span><span class="m-sub">8 units of Vetsulin</span></span><span class="m-pill m-fill" style="background:var(--m-orange-f);color:var(--m-orange-o)">Give 8 u</span></div>
-</div>
+<div class="m-rt">
+<div class="m-rt-tabs"><span class="m-rt-front">☀︎ Morning <i>· 7:00 AM</i></span><span class="m-rt-back">☾ Evening</span></div>
+<div class="m-rt-band"><span class="m-rt-seg"></span><span class="m-rt-seg"></span><span class="m-rt-seg"></span><b>0 of 3 done</b></div>
+<div class="m-rt-body">
+<div class="m-rt-item"><span class="m-rt-ic">🍴</span><div><span class="m-b">Meal</span> <span class="m-rt-d">Feed first</span>
+<div class="m-seg m-rt-meal"><span>All</span><span>Most</span><span>Some</span><span>None</span></div></div></div>
+<div class="m-rt-item"><span class="m-rt-ic">💉</span><div><span class="m-b">Insulin</span> <span class="m-rt-d">8 units Vetsulin U-40</span>
+<div class="m-rt-give">Give 8 units</div></div></div>
+<div class="m-rt-item"><span class="m-rt-ic">💊</span><div><span class="m-b">Supplements</span> <span class="m-rt-d">1 to check off</span>
+<div><span class="m-rt-chip"><span class="m-check" aria-hidden="true"></span>Fish oil</span></div></div></div>
+</div></div>
 <div class="m-sheet" style="margin-top:10px">
 <div><b>When was the shot given?</b>Record the time Biscuit actually got the insulin.</div>
 <div>Just now (7:04 AM)</div><div>At the scheduled time (7:00 AM)</div><div>A different time…</div>
 </div>
-<div class="m-card m-evening" style="margin-top:10px"><div class="m-row"><span><span class="m-b">☾ Evening · 7:00 PM</span><span class="m-sub">Meal, Fish oil, 8 units</span></span><span class="m-v">›</span></div></div>
 <div class="m-h" style="margin-top:12px">Today's log</div>
 <div class="m-tiles">
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Check-ins</span><b>Normal</b><span class="m-sub">Nothing different</span></div>
-<div class="m-tile"><span class="m-sub" style="color:var(--m-red-t)">Glucose</span><b>142</b><span class="m-sub">at 6:50 AM</span></div>
+<div class="m-tile"><span class="m-sub" style="color:var(--m-red-t)">Glucose &amp; ketones</span><b>142</b><span class="m-sub">at 6:50 AM</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-green-t)">Walks</span><b>No walks</b><span class="m-sub">Add a walk</span></div>
 <div class="m-tile"><span class="m-sub" style="color:var(--m-indigo-t)">Log weight</span><b>48 lb</b><span class="m-sub">Last on Oct 12</span></div>
 </div>
-</div><figcaption>At a glance rings sit under the date. The routine that is due opens in full, and tiles open the rest of the day.</figcaption></figure><h2 id="meds">Medications, supplements and treats</h2>
-<p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications on their own schedule and medications given as needed are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
-<p>A supplement given with a meal appears right under that meal, with its own check-off. Other supplements are in the <strong>Supplements</strong> tile, which appears when your pet has any. If a routine closes with a supplement unchecked, its one line says so.</p>
+</div><figcaption>At a glance rings sit under the date. The routine for the time of day is in front, with the other routine's tab behind it, and tiles open the rest of the day.</figcaption></figure><h2 id="meds">Medications, supplements and treats</h2>
+<p>Medications and supplements for the morning or evening appear as buttons under <strong>Medications</strong> in that routine. Tap one to check it off. To change when it was given, press and hold it and choose <strong>Change the time</strong>. Medications on their own schedule and medications given as needed are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
+<p>Supplements given with a meal appear in that meal's routine, and supplements given once a day appear in the morning routine. An unchecked supplement never keeps a routine from counting as done, so a forgotten supplement can never hide the next shot.</p>
 <p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your vet.</p>
 <h2 id="weight">Weight</h2>
 <p>Tap the <strong>Log weight</strong> tile to record a weight. For a reliable trend, weigh your pet at about the same time of day on the same scale. If your vet gives a <strong>body condition score</strong> at a checkup (on a scale of 1 to 9, where 4 to 5 is usually ideal), you can record it here as well.</p>
@@ -105,8 +110,8 @@
 <div style="text-align:center;font-weight:600;color:var(--m-indigo-t);font-size:14px">Tap to talk about the day</div>
 <div class="m-card" style="margin-top:8px"><div class="m-row" style="display:block">Ate all his breakfast but seemed tired after our walk. Drinking a bit more water tonight. Ask the vet about the new food.</div></div>
 <div class="m-card"><div class="m-row"><span>Time</span><span class="m-v">8:40 PM</span></div></div>
-</div><figcaption>Tap the microphone to dictate a journal entry.</figcaption></figure><h2 id="glucose">Glucose readings</h2>
-<p>If you check your pet's glucose at home, record readings from the <strong>Glucose</strong> tile. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
+</div><figcaption>Tap the microphone to dictate a journal entry.</figcaption></figure><h2 id="glucose">Glucose and ketones</h2>
+<p>If you check your pet's glucose or ketones at home, record them from the <strong>Glucose &amp; ketones</strong> tile. The tile shows the latest glucose reading and, once a ketone test is logged that day, its result. The <a href="guide-glucose.html">Glucose, ketones and lab results</a> chapter covers this in detail.</p>
 <h2 id="walks">Walks</h2>
 <p>Record a walk from the <strong>Walks</strong> tile with the time it started and how long it lasted. Exercise can lower blood glucose, so the walk appears as a shaded band on that day's glucose curve.</p>
 <h2 id="supplies">Supplies</h2>

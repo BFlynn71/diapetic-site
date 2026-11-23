@@ -75,7 +75,9 @@ CHAPTERS = [
 """),
 ("glance", "Summary and alerts", """
 <p><strong>At a glance</strong> sits under the date and shows up to five rings for the day on screen. Choose them with <strong>Edit</strong>: meals, shots, calories, medications, supplements, the check-in, glucose and insulin left. Each ring fills as the day goes on and shows a count in the middle, with a small paw at the end of the colored arc. When a ring is complete, such as both meals logged, the count changes to a paw. A skipped shot fills the Shots ring but does not earn the paw. When the check-in found everything normal, its ring shows a paw. Calories needs a daily calorie target, and glucose needs home glucose checks turned on; if either is missing, DiaPetic offers to set it up. Insulin left always shows the bottle in use today. Each pet keeps its own choice.</p>
-<p>Morning stays above evening all day. The routine that needs attention opens in full, labeled <strong>Due now</strong> or <strong>Next</strong>. A finished routine shrinks to one line; tap the line to open it and make changes. Below the routines, <strong>Today's log</strong> shows tiles for check-ins, glucose, medications, treats, walks, the journal and weight. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
+<p>The morning and evening routines share one card with two tabs, like folder dividers: <strong>Morning</strong> on the left and <strong>Evening</strong> on the right. The routine for the time of day is in front, and the evening routine takes over halfway between your two shot times. The other routine's tab peeks out from behind with its status, such as <strong>Later</strong> or <strong>Done</strong>; tap it to bring that routine to the front and check or change anything. The colored band under the tabs shows how many of the routine's items are done. When both routines are finished, the card shows <strong>All done for today</strong>; tap it to see the details.</p>
+<p>If the morning shot still is not logged when the evening routine takes over, a banner at the top asks you to log it or mark it skipped, and the Morning tab shows a warning badge. If the shot was given, log it so it is not given twice. If not, follow your veterinarian's instructions for a late dose.</p>
+<p>Below the routines, <strong>Today's log</strong> shows tiles for check-ins, glucose, medications, treats, walks, the journal and weight. Each tile shows where things stand, and tapping it opens that section. Alerts appear at the top of the page when something needs attention:</p>
 <ul>
 <li><strong>Eating less than usual</strong> appears when recent meals have been smaller than normal.</li>
 <li><strong>Low reading</strong> appears when a glucose reading falls below your low threshold, with buttons to call your veterinarian or emergency clinic.</li>
@@ -83,23 +85,23 @@ CHAPTERS = [
 </ul>
 """),
 ("meals", "Recording a meal", """
-<p>The morning and evening cards each begin with the meal. Tap <strong>All</strong>, <strong>Most</strong>, <strong>Some</strong> or <strong>None</strong> to record how much your pet ate. To clear the entry, tap the same button again.</p>
-<p>For a precise record, tap the meal row to open the meal details and enter the amount offered and the amount left over, using the same unit for both. Grams are the most accurate. You can also add a note, such as "ate slowly" or "vomited afterward."</p>
+<p>Each routine begins with the meal. Tap <strong>All</strong>, <strong>Most</strong>, <strong>Some</strong> or <strong>None</strong> to record how much your pet ate. To clear the entry, tap the same button again. Once the meal is recorded, it shrinks to one line; tap <strong>Change</strong> to adjust it.</p>
+<p>For a precise record, tap the details button beside the meal to open the meal details and enter the amount offered and the amount left over, using the same unit for both. Grams are the most accurate. You can also add a note, such as "ate slowly" or "vomited afterward."</p>
 <p>If your pet eats less than half of a meal, DiaPetic reminds you to follow your veterinarian's instructions before giving insulin.</p>
 """),
 ("shots", "Recording a shot", """
 <ol>
-<li>Tap <strong>Give</strong> on the Insulin row, which shows the prescribed dose, for example "Give 8 u."</li>
+<li>Tap <strong>Give</strong> under Insulin, which shows the prescribed dose, for example "Give 8 units."</li>
 <li>Choose when the shot was given: <strong>Just now</strong>, <strong>At the scheduled time</strong>, or <strong>A different time…</strong> to enter the exact time.</li>
-<li>The row then confirms the dose and time, for example "8 units given at 7:04 AM," so anyone checking later can see that it was given.</li>
+<li>Insulin then shows a check with the dose and time, for example "8 units at 7:04 AM," so anyone checking later can see that it was given.</li>
 </ol>
 <p>If another shot is already logged within about 10 hours of the time you chose, DiaPetic asks whether you are sure before saving. This check helps when two people care for the same pet. Tap <strong>Log this shot</strong> to save it, or <strong>Cancel</strong> to save nothing. The check only compares the times in your records. It never suggests a dose.</p>
 <p>To change the time or units, add a note, or record a <strong>skipped</strong> shot (for example, when your veterinarian has advised skipping a dose because your pet did not eat), tap the details button beside the shot. You can also delete an entry made by mistake.</p>
 <div class="tip">If you are unsure whether a shot was given, <strong>do not give another one.</strong> Check the Tracker first. If the shot is not recorded and no one remembers giving it, call your veterinarian. The emergency screen includes a guide for this situation.</div>
 """),
 ("meds", "Medications, supplements and treats", """
-<p>Medications scheduled for the morning or evening appear in the matching card. Tap a medication to check it off, or tap its time to change when it was given. Medications on their own schedule and medications given as needed are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
-<p>A supplement given with a meal appears right under that meal, with its own check-off. Other supplements are in the <strong>Supplements</strong> tile, which appears when your pet has any. If a routine closes with a supplement unchecked, its one line says so.</p>
+<p>Medications and supplements for the morning or evening appear as buttons under <strong>Medications</strong> in that routine. Tap one to check it off. To change when it was given, press and hold it and choose <strong>Change the time</strong>. Medications on their own schedule and medications given as needed are in the <strong>Medications</strong> tile, which appears when your pet has any of these.</p>
+<p>Supplements given with a meal appear in that meal's routine, and supplements given once a day appear in the morning routine. An unchecked supplement never keeps a routine from counting as done, so a forgotten supplement can never hide the next shot.</p>
 <p>To record a treat from your list, tap <strong>Add a treat</strong> and enter how many were given. For anything outside the meal plan, such as table scraps or a snack your pet found, tap <strong>Something else</strong>. Extra food can raise blood sugar, so these entries are useful to your vet.</p>
 """),
 ("weight", "Weight", """
@@ -117,8 +119,8 @@ CHAPTERS = [
 </ol>
 <p>A day can have several entries. Tap an entry to edit it, or swipe left to delete it. Journal entries appear in History, in Reports, in the PDF report and in the clinic summary on the emergency screen. In Reports, the journal is collapsed to keep the page short. Tap it to see the latest entries, or tap <strong>All entries</strong> to see every entry in the period.</p>
 """),
-("glucose", "Glucose readings", """
-<p>If you check your pet's glucose at home, record readings from the <strong>Glucose</strong> tile. The <a href="guide-glucose.html">Glucose and lab results</a> chapter covers this in detail. If you do not check at home, the section remains minimized.</p>
+("glucose", "Glucose and ketones", """
+<p>If you check your pet's glucose or ketones at home, record them from the <strong>Glucose &amp; ketones</strong> tile. The tile shows the latest glucose reading and, once a ketone test is logged that day, its result. The <a href="guide-glucose.html">Glucose, ketones and lab results</a> chapter covers this in detail.</p>
 """),
 ("walks", "Walks", """
 <p>Record a walk from the <strong>Walks</strong> tile with the time it started and how long it lasted. Exercise can lower blood glucose, so the walk appears as a shaded band on that day's glucose curve.</p>
@@ -167,13 +169,13 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 <ol>
 <li>Open <strong>Supplements</strong> or <strong>Medications</strong> and tap <strong>Add supplement</strong> or <strong>Add medication</strong>.</li>
 <li>Enter the name, the <strong>dose as prescribed</strong> (for example, "60 mg capsule") and, if you wish, its purpose.</li>
-<li>For a medication, choose a schedule: with the morning routine, with the evening routine, morning and evening, once a day, or as needed. For a supplement, choose when it is given: with the morning meal, with the evening meal, with both meals, or once a day and not with a meal.</li>
+<li>For a medication, choose a schedule: with the morning routine, with the evening routine, morning and evening, once a day, or as needed. For a supplement, choose when it is given: with the morning meal, with the evening meal, with both meals, or once a day in the morning routine.</li>
 <li>If a dose contains calories, as fish oil and chews often do, enter them so they are included in the day's total.</li>
 <li>Enter the start date and any notes, such as "give with food."</li>
 </ol>
 """),
 ("tracker", "On the Tracker", """
-<p>Scheduled medications appear in the morning or evening card, ready to check off. Supplements given with a meal appear under that meal. Other supplements are a daily check-off in the <strong>Supplements</strong> tile, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
+<p>Scheduled medications appear in the morning or evening card, ready to check off. Supplements given with a meal appear under that meal. Once-a-day supplements are checked off in the morning card, and medications given as needed have a <strong>Give</strong> button. Reports show the percentage of scheduled doses that were recorded.</p>
 """),
 ("own", "Giving a medication at its own times", """
 <p>When a medication does not fit the morning and evening routine, such as an ointment or ear drops, choose <strong>My own schedule</strong> under <strong>When</strong>. This is part of DiaPetic Gold, a one-time purchase with no subscription.</p>
@@ -186,11 +188,12 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 <p>Each time appears as its own row in the <strong>Medications</strong> section of Tracker, and your reports show doses logged against doses scheduled.</p>
 """),
 ("supply", "Supply and refills", """
-<p>Turn on <strong>Track supply</strong> in a medication's Supply section and enter the number of doses on hand. Each dose you check off counts down. DiaPetic shows about how many doses are left and when the medication will run out at its schedule, with the same timeline as insulin: <strong>Order a refill by</strong>, <strong>Refill due by</strong> when <strong>Auto refill</strong> is on, or <strong>Ask your vet by</strong> when no refills remain. A reminder arrives on that date. Medications given as needed show the count only, because they have no set schedule. When the count reaches zero, tracking stays on and the reminder continues until you enter a new count. To correct the count, enter the number on hand again.</p>
+<p>Turn on <strong>Track supply</strong> in a medication's Supply section and enter the number of doses on hand. Each dose you check off counts down. DiaPetic shows about how many doses are left and when the medication will run out at its schedule, with the same timeline as insulin: <strong>Order a refill by</strong>, <strong>Refill due by</strong> when <strong>Auto refill</strong> is on, or <strong>Ask your vet by</strong> when no refills remain. A reminder arrives on that date. Medications given as needed show the count only, because they have no set schedule. When you check off the last dose on hand, DiaPetic asks whether the medication is finished. Tap <strong>Finished</strong> to stop it after that dose, or <strong>More is coming</strong> to keep it on the schedule. If it continues, tracking stays on and the reminder continues until you enter a new count. To correct the count, enter the number on hand again.</p>
 <p>Supply and refills for medications and supplements is part of DiaPetic Gold, a one-time purchase with no subscription. Insulin supply tracking is always free.</p>
 """),
 ("stop", "Stopping a medication", """
-<p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the date rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
+<p>When your pet stops taking a medication, turn on <strong>Stopped</strong> and enter the last day rather than deleting it. This keeps its history in your reports. Deleting is best reserved for entries added by mistake.</p>
+<p>For a medication or supplement given more than once a day, choose the <strong>Last dose</strong> as well, for example Morning. Later routines and times that day then no longer show it. When you stop a medication on the same day you checked off its morning dose, DiaPetic chooses Morning for you.</p>
 """),
 ("reminders", "Medication reminders", f"""
 <p>Medications on their own schedule can have their own reminders. Morning and evening medications, and supplements given with a meal, are listed in the shot reminder. Once-a-day medications and supplements can have a separate reminder, and DiaPetic can also remind you before a course of medication ends. These options are in {P("your pet's tab › Reminders › Medications and supplements")}.</p>
@@ -198,8 +201,8 @@ f"""<p>Record everything your pet takes in addition to insulin in {P("your pet's
 ], []),
 
 # ------------------------------------------------------------------
-("glucose", "Glucose and lab results", "Home glucose readings, curves, time in range and laboratory results.",
-f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To turn on home monitoring, go to {P("your pet's tab › Home glucose")} and turn on <strong>I check glucose at home</strong>.</p>""",
+("glucose", "Glucose, ketones and lab results", "Home glucose readings, ketone tests, curves, time in range and laboratory results.",
+f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To turn on home monitoring, go to {P("your pet's tab › Home tests")} and turn on <strong>I check glucose at home</strong>.</p>""",
 [
 ("numbers", "Setting your thresholds", """
 <p>Set <strong>Highlight readings below</strong> and <strong>Highlight readings above</strong> to the values your veterinarian recommends. These thresholds determine how readings are colored, when the low-reading alert appears and how time in range is calculated. You can choose mg/dL or mmol/L in the app settings.</p>
@@ -212,6 +215,18 @@ f"""<p>Monitor glucose at home only if your veterinarian has asked you to. To tu
 <p>Walks logged on the Tracker appear as shaded bands on a single day's curve and when you compare curves, which can help explain a dip.</p>
 <p>A glucose curve is a series of readings taken over the course of a day. In <strong>Reports</strong>, switch to <strong>Glucose</strong> to view your readings as curves, along with weekly glucose, time in range, the relationship between eating and glucose, and any low readings.</p>
 <p>Tap <strong>Compare curves</strong> to overlay up to three days. Veterinarians look closely at the lowest point of a curve and when it occurs to assess how well the insulin is working.</p>
+"""),
+("ketones", "Ketone tests", f"""
+<p>Ketones can be an early sign of diabetic ketoacidosis (DKA), a serious complication that needs a veterinarian. Test for ketones when your vet asks you to, and when your pet is not eating, is vomiting or seems weak.</p>
+<p>To record a test, open the <strong>Glucose &amp; ketones</strong> tile on the Tracker and tap <strong>Add ketone test</strong>. Choose how you tested:</p>
+<ul>
+<li><strong>Blood meter:</strong> enter the reading from a meter made for blood ketones (beta-hydroxybutyrate), in mmol/L.</li>
+<li><strong>Urine strip:</strong> match the strip to the color chart on the bottle, then pick the word printed beside that color: Negative, Trace, Small (+), Moderate (++) or Large (+++).</li>
+</ul>
+<p>Any urine result above Negative, and any blood result at or above your call level, opens a screen that asks you to call your veterinarian, with buttons to call your vet or an emergency clinic and a link to the DKA guide. Trace on a urine strip asks you to call today, or right away if your pet is not eating, is vomiting or seems weak. DiaPetic never gives advice about insulin.</p>
+<p>The blood call level starts at 0.6 mmol/L. Ask your veterinarian which number they want to hear about, and set it in {P("your pet's tab › Home tests")}.</p>
+<p>Ketone tests appear on the Tracker, in History, as a small test-tube mark on a single day's curve in Reports, Glucose (amber or red when it says to call your veterinarian), with the results written out under the chart, in the PDF and CSV reports, and in the clinic summary on the emergency screen.</p>
+<div class="tip">Ketone tests are free for everyone. They are a record and a reminder to call, not a diagnosis.</div>
 """),
 ("labs", "Lab results", f"""
 <p>Record blood work, such as a fructosamine test, in {P("Reports › Lab results › Add lab result")} or when adding notes after a vet visit. Enter the test, the result, the unit and the date, along with any comments from your vet. Lab results are included in your reports.</p>
@@ -371,7 +386,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>The low blood sugar guide includes a 5-minute timer. After you give sugar on the gums, tap <strong>I've given sugar. Start 5-minute timer</strong> and stay with your pet. When the time is up, DiaPetic asks whether your pet is better and tells you what to do next. You can then record the episode in the journal, which also adds it to your PDF report. Do not wait for the timer to call your veterinarian.</p>
 """),
 ("summary", "Information for the clinic", """
-<p>The emergency screen also prepares a summary from your records, including your pet's details and microchip number, insulin and dose, the last shot, meal and glucose reading, other medications, today's journal entries and your regular veterinarian. You can read it to the clinic over the phone, or tap <strong>Share</strong> or <strong>Copy</strong> to send it.</p>
+<p>The emergency screen also prepares a summary from your records, including your pet's details and microchip number, insulin and dose, the last shot, meal and glucose reading, the last ketone test, other medications, today's journal entries and your regular veterinarian. You can read it to the clinic over the phone, or tap <strong>Share</strong> or <strong>Copy</strong> to send it.</p>
 """),
 ("poison", "Poison control", """
 <p>If your pet may have swallowed something harmful, you can call the <strong>ASPCA Animal Poison Control Center at (888) 426-4435</strong> or the <strong>Pet Poison Helpline at (855) 764-7661</strong> directly from the emergency screen. A consultation fee may apply.</p>
@@ -396,7 +411,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <p>With DiaPetic Gold, you can add a photo of your pet. Tap the photo circle on your pet's card and choose <strong>Choose from Library</strong> or <strong>Take Photo</strong>, then drag and pinch to position your pet in the circle and tap <strong>Use Photo</strong>. <strong>Remove Photo</strong> returns to the first letter of your pet's name. The photo stays on your iPhone and appears on the information sheet and the emergency screen, which can help if your pet is ever lost.</p>
 <p><strong>Birthday</strong> is optional. Choose an exact date, or an approximate age if you do not know the date, such as for a rescue. The age appears on the information sheet, the PDF report and the clinic summary.</p>
 <p><strong>Diabetes type</strong>, in Pet details, is optional: Type 1, Type 2, In remission or Not sure. When it is set, it appears as a tag on your pet's card.</p>
-<p><strong>Pet details</strong> holds your pet's name, species, breed, color, sex and microchip number. The other rows open their own pages: <strong>Insulin and shot times</strong>, <strong>Meals and treats</strong>, <strong>Medications</strong>, <strong>Home glucose</strong> and <strong>Weight</strong>, which shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
+<p><strong>Pet details</strong> holds your pet's name, species, breed, color, sex and microchip number. The other rows open their own pages: <strong>Insulin and shot times</strong>, <strong>Meals and treats</strong>, <strong>Medications</strong>, <strong>Home tests</strong> and <strong>Weight</strong>, which shows the weight trend, the body condition score, and the starting and target weights. Further down are the meal plan, insulin and shot times, other medications, reminders, supplies and home glucose settings.</p>
 """),
 ("pets", "Multiple pets", """
 <p>Use the <strong>pet menu</strong> at the top left of any tab to switch between pets or to <strong>Add a pet</strong>. Your first pet is free; additional pets require DiaPetic Gold. Each pet has its own records, reminders, reports and supplies.</p>
@@ -405,7 +420,7 @@ f"""<p>All reminders are managed in {P("your pet's tab › Reminders")}. The <st
 <ul>
 <li><strong>Appearance</strong> follows your iPhone's setting by default, or can be set to light or dark.</li>
 <li><strong>Glucose units</strong> can be mg/dL or mmol/L, and <strong>weight units</strong> can be lb or kg.</li>
-<li><strong>App icon</strong> (Gold), in its own row in the App group, lets you choose Obi the dog or Kitty. The icon can change with the calendar, including the seasons, Halloween, Diabetes awareness in November, the December holidays, New Year's, Valentine's Day and your pet's birthday (with an exact birth date). United States holidays appear when the iPhone's region is set to the United States, and the seasons follow the hemisphere. You can also keep one look all year or choose the <strong>Gold tag</strong> look, with a gold collar tag and a star.</li>
+<li><strong>App icon</strong> (Gold), in its own row in the App group, lets you choose Obi the dog or Kitty. With <strong>Seasons and holidays</strong>, the icon changes through the year: winter, spring, summer and fall, Halloween, Diabetes awareness in November, the December holidays, New Year's, Valentine's Day and your pet's birthday (with an exact birth date). United States holidays appear when the iPhone's region is set to the United States, and the seasons follow the hemisphere. You can also keep one look all year or choose the <strong>Gold tag</strong> look, with a gold collar tag and a star.</li>
 <li><strong>Backup</strong>, also in the App group, is described in <a href="guide-backups.html">Backups and a new iPhone</a>.</li>
 <li><strong>Rate DiaPetic</strong> is in App settings. <strong>Support DiaPetic</strong>, where you can leave an optional tip, is just below Insulin Supplies.</li>
 <li><strong>About DiaPetic</strong> includes privacy information and links to this website and the privacy policy.</li>

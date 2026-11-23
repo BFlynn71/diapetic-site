@@ -47,7 +47,7 @@ p { margin: 0; }
 .brand .brand-icon { width: 36px; height: 36px; border-radius: 9px; }
 .brand .logo { display: block; height: 33px; width: auto; }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
-.nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.95rem; padding: 6px 12px; border-radius: 999px; }
+.nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.95rem; padding: 6px 12px; border-radius: 8px; }
 .nav a:hover { color: var(--fg); background: var(--soft); }
 .nav a[aria-current="page"] { color: var(--indigo); background: var(--soft); }
 
@@ -57,7 +57,7 @@ p { margin: 0; }
 .hero .lead { font-size: 1.2rem; color: var(--muted); margin-top: 16px; max-width: 34ch; }
 .hero-icon { width: min(300px, 70%); border-radius: 22%; box-shadow: 0 24px 60px rgba(46, 45, 134, 0.25); justify-self: center; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; align-items: center; }
-.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 999px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 12px; }
 .btn-primary { background: var(--indigo); color: var(--on-indigo); }
 .btn-primary:hover { color: var(--on-indigo); filter: brightness(1.08); }
 .btn-ghost { color: var(--indigo); background: var(--soft); }
@@ -167,7 +167,7 @@ section { padding-block: 44px; }
 .mock .m-sub { display: block; font-size: 12.5px; color: var(--m-sub); margin-top: 2px; }
 .mock .m-b { font-weight: 600; }
 .mock .m-foot { font-size: 12px; color: var(--m-sub); padding: 4px 6px; }
-.mock .m-pill { font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.mock .m-pill { font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
 .mock .m-seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 14px 12px; }
 .mock .m-seg span { text-align: center; font-size: 13px; font-weight: 600; padding: 7px 0; border-radius: 9px; background: var(--m-bg); }
 .mock .m-tog { width: 44px; height: 26px; border-radius: 13px; background: var(--m-sep); position: relative; flex-shrink: 0; }
@@ -227,8 +227,31 @@ section { padding-block: 44px; }
 .mock .m-petcard-name { font-size: 20px; font-weight: 800; margin-top: 4px; }
 .mock .m-petcard-sub { font-size: 11px; opacity: 0.9; line-height: 1.35; }
 .mock .m-petcard-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 8px 0 10px; }
-.mock .m-petcard-tags span { background: #FFFFFF; color: #3F3FAE; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 10px; }
+.mock .m-petcard-tags span { background: #FFFFFF; color: #3F3FAE; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
 .mock .m-petcard-grid { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; text-align: left; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 9px; font-size: 11px; font-weight: 700; }
 .mock .m-petcard-grid i { display: block; font-style: normal; font-weight: 400; font-size: 9px; opacity: 0.8; }
 
 .h1-eyebrow { display: block; font-family: inherit; line-height: 1.4; margin-bottom: 12px; }
+
+/* 1.5 routine card: stacked Morning and Evening tabs */
+.mock .m-rt { --rt-band: #CC660A; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.10)); }
+.mock .m-rt-tabs { display: flex; align-items: flex-end; }
+.mock .m-rt-tabs span { white-space: nowrap; font-weight: 800; font-size: 13.5px; padding: 9px 12px; border-radius: 12px 12px 0 0; }
+.mock .m-rt-front { flex: 0 0 56%; background: var(--rt-band); color: #FFFFFF; position: relative; z-index: 2; box-shadow: 3px 0 4px rgba(0,0,0,0.18); }
+.mock .m-rt-front i { font-style: normal; font-weight: 600; opacity: 0.85; }
+.mock .m-rt-back { flex: 1; margin-left: -12px; padding-left: 22px !important; background: color-mix(in srgb, #6160D1 78%, transparent); color: #FFFFFF; }
+.mock .m-rt-band { display: flex; align-items: center; gap: 4px; background: var(--rt-band); color: #FFFFFF; padding: 2px 14px 10px; font-size: 11px; }
+.mock .m-rt-band b { margin-left: 6px; white-space: nowrap; }
+.mock .m-rt-seg { flex: 1; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.3); }
+.mock .m-rt-seg.on { background: #FFFFFF; }
+.mock .m-rt-body { background: color-mix(in srgb, var(--rt-band) 22%, var(--m-card)); border: 2px solid var(--m-card); border-top: 0; border-radius: 0 0 18px 18px; }
+.mock .m-rt-item { display: flex; gap: 10px; padding: 11px 12px; border-top: 1px solid color-mix(in srgb, var(--rt-band) 30%, transparent); }
+.mock .m-rt-item:first-child { border-top: 0; }
+.mock .m-rt-item > div { flex: 1; min-width: 0; }
+.mock .m-rt-ic { width: 26px; height: 26px; border-radius: 7px; background: var(--rt-band); display: grid; place-items: center; font-size: 13px; flex-shrink: 0; }
+.mock .m-rt-d { font-size: 11.5px; color: var(--m-sub); white-space: nowrap; }
+.mock .m-rt-meal { padding: 8px 0 0; }
+.mock .m-rt-meal span { background: var(--m-card); }
+.mock .m-rt-meal span.sel { background: var(--rt-band); color: #FFFFFF; }
+.mock .m-rt-give { margin-top: 8px; background: var(--rt-band); color: #FFFFFF; text-align: center; font-weight: 800; font-size: 14px; padding: 9px; border-radius: 10px; white-space: nowrap; }
+.mock .m-rt-chip { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; background: var(--m-card); padding: 6px 12px 6px 8px; border-radius: 10px; font-weight: 600; font-size: 13px; white-space: nowrap; }

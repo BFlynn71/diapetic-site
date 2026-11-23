@@ -36,7 +36,7 @@ ARTICLES = [
 <p>Write each reading down when you take it. Times written in later are easy to get wrong.</p>
 """),
 ("diapetic", "Keeping it in order with DiaPetic", """
-<p>DiaPetic saves each glucose reading with its time and draws that day's curve, with shots, meals and walks shown on the same chart. You can also enter the low and high alerts your vet gives you. See <a href="guide-glucose.html">Glucose and lab results</a> in the DiaPetic guide.</p>
+<p>DiaPetic saves each glucose reading with its time and draws that day's curve, with shots, meals and walks shown on the same chart. You can also enter the low and high alerts your vet gives you. See <a href="guide-glucose.html">Glucose, ketones and lab results</a> in the DiaPetic guide.</p>
 """),
 ("share", "Sharing the curve with your vet", """
 <p>Send the curve on the same day, while your vet can still ask questions about it. In DiaPetic you can share a day's curve as a picture by text or email, or send a report covering the past weeks. See <a href="guide-reports.html">Reports and sharing</a>.</p>
@@ -107,6 +107,7 @@ ARTICLES = [
 <li>The name of the food and how much is fed at each meal</li>
 <li>A list of treats, supplements and other medications</li>
 <li>Recent glucose readings or a home glucose curve</li>
+<li>Home ketone test results, if you test for ketones</li>
 <li>Notes on changes in water drinking, urination, appetite or energy</li>
 <li>Your questions</li>
 <li>Supplies you need refilled</li>
@@ -114,7 +115,7 @@ ARTICLES = [
 """),
 ("summary", "Why a summary helps", """
 <p>A summary turns weeks of days into something your vet can read in a minute. Patterns stand out that are easy to miss day to day, such as appetite slowly dropping or readings drifting higher.</p>
-<p>DiaPetic summarizes 7, 14, 30, 90 or 180 days, with shots, appetite, symptoms, weight, glucose curves, dose history, lab results and journal notes. The last 30 days are free. PDF reports and 90- and 180-day trends come with DiaPetic Gold, $9.99, one time, no subscription. See <a href="guide-reports.html">Reports and sharing</a>.</p>
+<p>DiaPetic summarizes 7, 14, 30, 90 or 180 days, with shots, appetite, symptoms, weight, glucose curves, ketone tests, dose history, lab results and journal notes. The last 30 days are free. PDF reports and 90- and 180-day trends come with DiaPetic Gold, $9.99, one time, no subscription. See <a href="guide-reports.html">Reports and sharing</a>.</p>
 """),
 ("after", "After the visit", """
 <ul>
@@ -124,7 +125,7 @@ ARTICLES = [
 </ul>
 <p>DiaPetic's Vet tab keeps appointments, what to bring, questions for your vet and clinic contacts together. See <a href="guide-vet.html">Your vet</a>.</p>
 """),
-], "2026-11-18", "2026-11-18"),
+], "2026-11-18", "2026-11-22"),
 
 # ------------------------------------------------------------------
 ("pet-insulin-supplies",
