@@ -169,7 +169,7 @@ home = f'''
 <p>Diabetes care means insulin twice a day, carefully timed meals, and regular conversations with your vet. DiaPetic keeps it all in one place, so you can see what has been given and what is still due.</p>
 </div>
 <div class="features">
-{feature("syringe", "Quick daily logging", "Record each shot with the time it was given, how much of each meal was eaten, and a brief daily check-in that defaults to normal. You can log a shot from the reminder itself, without opening the app.")}
+{feature("syringe", "Quick daily logging", "Record each shot with the time it was given, how much of each meal was eaten, glucose and ketone results, and a brief daily check-in that defaults to normal. You can log a shot from the reminder itself, without opening the app.")}
 {feature("bell", "Reminders for each day", "Reminders for insulin, meals, medications, glucose checks and appointments, with a follow-up if a shot has not been recorded.")}
 {feature("doc", "Reports for your veterinarian", "Clear summaries covering 7 to 180 days, including shots, appetite, symptoms, weight, glucose curves and dose history, ready to share as a PDF. Your vet can see how things went between visits.")}
 {feature("cross", "Help in an emergency", "An emergency button on every screen with step-by-step guidance for low blood sugar, missed or repeated doses and other urgent situations.")}
@@ -234,6 +234,7 @@ home = f'''
 <p class="note">Everything you need for daily care</p>
 <ul>
 <li>Daily logging of shots, meals and check-ins</li>
+<li>Glucose and ketone records</li>
 <li>Insulin reminders and follow-ups for unrecorded shots</li>
 <li>Emergency guidance on every screen</li>
 <li>Appointments with calendar sync</li>
