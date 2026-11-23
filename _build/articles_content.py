@@ -168,4 +168,51 @@ ARTICLES = [
 </ul>
 """),
 ], "2026-11-18", "2026-11-18"),
+
+# ------------------------------------------------------------------
+("ketones-dka-diabetic-pets",
+"Ketones and DKA in Dogs and Cats: What to Record",
+"What ketones mean for a diabetic dog or cat, how home ketone tests work, what to write down, and the DKA warning signs that mean you should call your vet now.",
+"Ketones and DKA in diabetic dogs and cats: what to record and when to call your vet",
+"""<p>When a diabetic pet does not have enough insulin working, the body cannot use sugar for energy and starts breaking down fat instead. That makes ketones. A build-up of ketones can lead to diabetic ketoacidosis (DKA), a serious emergency that needs a veterinarian.</p>
+<p>Some vets ask owners to test for ketones at home, especially in the first weeks after a diagnosis or when a pet is unwell. This guide covers how home tests work and what to record. Your vet decides when to test, what the results mean and what to do next.</p>""",
+[
+("signs", "Signs that mean call your vet now", """
+<p>Call your veterinarian or an emergency clinic right away if your diabetic pet:</p>
+<ul class="checklist">
+<li>Will not eat, or eats much less than usual</li>
+<li>Is vomiting</li>
+<li>Seems weak, very tired or unlike themselves</li>
+<li>Is drinking or urinating much more than usual</li>
+<li>Has breath that smells sweet or like nail polish remover</li>
+<li>Is breathing fast or deeply</li>
+</ul>
+<p>Do not wait for a ketone test if your pet shows these signs. A negative test does not rule out a problem.</p>
+"""),
+("when", "When vets ask for a ketone test", """
+<p>Ask your vet whether they want you to test for ketones at home, and when. Many ask for a test when a pet is not eating, is vomiting or seems unwell, or when glucose readings are higher than usual. Write down their answer so everyone who helps with care can find it.</p>
+"""),
+("tests", "Urine strips and blood meters", """
+<ul>
+<li><strong>Urine strips</strong> change color when ketones are in the urine. Dip the strip in fresh urine, wait the time printed on the bottle, then compare it with the color chart. Results are words such as Negative, Trace, Small, Moderate or Large.</li>
+<li><strong>Blood ketone meters</strong> measure ketones in a drop of blood and show a number in mmol/L. Ask your vet which meter to use and which number they want to hear about.</li>
+</ul>
+<p>The two tests measure ketones in different ways, so a urine strip and a blood meter can give different results at the same time. Tell your vet which test you used.</p>
+"""),
+("record", "What to write down", """
+<ul class="checklist">
+<li>The time of the test, which test you used and the result</li>
+<li>A glucose reading taken at the same time, if you check glucose at home</li>
+<li>Whether your pet ate, and how much</li>
+<li>When the last insulin shot was given</li>
+<li>Vomiting, weakness, drinking or anything else unusual</li>
+<li>What your vet said to do</li>
+</ul>
+<p>Do not change or skip an insulin dose because of a ketone result. Call your veterinarian and follow their instructions.</p>
+"""),
+("diapetic", "Recording ketone tests in DiaPetic", """
+<p>In DiaPetic, open the <strong>Glucose &amp; ketones</strong> tile on the Tracker and tap <strong>Add ketone test</strong>. Choose a blood meter or a urine strip and enter the result. Any urine result above Negative, and any blood result at or above the level you set with your vet, opens a screen that asks you to call your veterinarian, with buttons to call your vet or an emergency clinic.</p>
+<p>Ketone tests appear on the Tracker, in History, on that day's glucose curve, in reports and in the clinic summary on the emergency screen. They are part of the free app. See <a href="guide-glucose.html#ketones">Ketone tests</a> in the DiaPetic guide and <a href="guide-emergency.html">When something seems wrong</a>.</p>
+"""),
+], "2026-11-23", "2026-11-23"),
 ]
